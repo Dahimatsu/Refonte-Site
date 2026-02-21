@@ -1,15 +1,194 @@
 @font-face {
     font-family: 'Fractul';
-    src: url('../fonts/FractulAlt-Regular.woff2') format('woff2'); 
-    font-weight: normal;
+    src: url('../fonts/FractulAlt/FractulAlt-Hairline.woff2') format('woff2');
+    font-weight: 100;
     font-style: normal;
-    font-display: swap; 
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-HairlineItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-Thin.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-ThinItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fractul';
+    src: url('../fonts/FractulAlt/FractulAlt-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Aktiv Grotesk';
-    src: url('../fonts/AktivGrotesk-Regular.woff2') format('woff2');
-    font-weight: normal;
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-Light.woff2') format('woff2');
+    font-weight: 300;
     font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk/AktivGroteskCorp-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
