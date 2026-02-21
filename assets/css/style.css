@@ -106,9 +106,16 @@ body.no-scroll {
 }
 
 .btn-itu:hover {
-    background-color: transparent;
+    background-color: var(--bg-color);
     color: var(--itu-vert);
-    box-shadow: 0 0 20px rgba(178, 210, 53, 0.5);
+    border: 2px solid var(--itu-vert); 
+    box-shadow: 6px 6px 0px var(--itu-vert);
+    transform: translate(-4px, -4px);
+}
+
+.btn-itu:active {
+    box-shadow: 0px 0px 0px var(--itu-vert);
+    transform: translate(2px, 2px); 
 }
 
 .itu-navbar {
@@ -136,15 +143,8 @@ body.no-scroll {
     transform: translateY(-2px); 
 }
 
-/* =========================================
-   STYLE DU MENU OFFCANVAS
-   ========================================= */
 .offcanvas-title {
     color: var(--itu-bleu);
-}
-
-[data-bs-theme="dark"] .offcanvas-title {
-    color: var(--itu-vert);
 }
 
 .offcanvas-link {
@@ -156,4 +156,19 @@ body.no-scroll {
 .offcanvas-link:hover {
     color: var(--itu-vert) !important;
     padding-left: 10px !important; 
+}
+
+.transition-header {
+    transition: all 0.4s ease-in-out;
+    background-color: var(--bg-color);
+}
+
+.header-scrolled {
+    background-color: var(--bg-color) !important;
+    margin: 10px;
+}
+
+.header-scrolled .itu-navbar {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
