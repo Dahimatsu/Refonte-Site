@@ -118,13 +118,19 @@ body.no-scroll {
     transform: translate(2px, 2px); 
 }
 
+#itu-hero-title,
+#itu-hero-subtitle,
+#itu-hero-btn-wrapper {
+    opacity: 0;
+}
+
 .itu-navbar {
     background-color: var(--bg-color) !important; 
     transition: background-color 0.3s ease;
 }
 
 .navbar-brand img {
-    width: 150px;
+    width: 140px;
     transition: transform 0.3s ease;
 }
 

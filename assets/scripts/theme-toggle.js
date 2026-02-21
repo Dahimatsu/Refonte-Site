@@ -1,12 +1,8 @@
-/* =========================================
-   GESTION DU THEME (BOUTON SIMPLE)
-   ========================================= */
 const themeToggleBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const navbarLogo = document.getElementById('navbar-logo');
 const htmlElement = document.documentElement;
 
-// Fonction pour appliquer le thème
 function applyTheme(theme) {
     if (theme === 'dark') {
         htmlElement.setAttribute('data-bs-theme', 'dark');

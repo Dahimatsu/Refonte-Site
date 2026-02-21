@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css"/>
     <!-- Scripts -->
     <script src="assets/scripts/scripts.js" defer></script>
     <script src="assets/scripts/theme-toggle.js" defer></script>
@@ -110,20 +111,22 @@
             <div class="container position-relative z-1 px-4">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h1 class="itu-hero-title text-white text-uppercase mb-3">
+                        <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
                             Education is our <br>
                             <span class="itu-text-green">foundation.</span>
                         </h1>
-                        <p class="lead text-white mb-3 fs-4 fw-light">Université specialisée en <span class="fw-bold">Informatique.</span></p>
+                        <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">Université specialisée en <span class="fw-bold">Informatique.</span></p>
                         
-                        <a href="#inscrire" class="btn-itu">
-                            <span>Rejoignez-nous</span>
-                        </a>
+                        <div id="itu-hero-btn-wrapper" class="d-inline-block">
+                            <a href="#inscrire" class="btn-itu">
+                                <span>Rejoignez-nous</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="options" class="min-vh-100"></section>
+        <section id="options"></section>
         <section id="inscrire"></section>
         <section id="diplome"></section>
         <section id="parcours"></section>
