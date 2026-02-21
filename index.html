@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta author="Binary Beasts">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre -->
+    <title>Accueil - IT University</title>
+    <!-- Link -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- Scripts -->
+    <script src="assets/scripts/scripts.js" defer></script>
+    <script src="assets/scripts/theme-toggle.js" defer></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body class="no-scroll">
+    <!-- <div id="preloader" class="d-flex justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0">
+        <img src="assets/images/ITU_logo_semi-negatif.png" alt="Logo IT University" class="logo-pulse">
+    </div> -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg itu-navbar py-3 shadow-sm">
+            <div class="container">
+                
+                <a class="navbar-brand" href="#accueil">
+                    <img src="assets/images/ITU_logo_positif.png" alt="IT University" height="40" id="navbar-logo">
+                </a>
+
+                <div class="d-none d-lg-flex mx-auto">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item"><a class="nav-link text-uppercase active" href="#accueil">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link text-uppercase" href="#parcours">Parcours</a></li>
+                        <li class="nav-item"><a class="nav-link text-uppercase" href="#inscrire">Inscription</a></li>
+                        <li class="nav-item"><a class="nav-link text-uppercase" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 gap-sm-3 ms-auto ms-lg-0">
+
+                    <button id="theme-toggle" class="btn btn-outline-dark btn-sm d-flex align-items-center justify-content-center mx-2" style="width: 38px; height: 38px; flex-shrink: 0;" aria-label="Changer de thème">
+                        <i id="theme-icon" class="bi bi-moon-fill fs-6"></i>
+                    </button>
+
+                    <button class="btn border-0 p-1 ms-1 text-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#ituOffcanvas" aria-controls="ituOffcanvas" title="Menu">
+                        <i class="bi bi-list fs-2 text-body"></i> </button>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ituOffcanvas" aria-labelledby="ituOffcanvasLabel">
+        
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title font-title fw-bold" id="ituOffcanvasLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+        </div>
+        
+        <div class="offcanvas-body d-flex flex-column gap-4">
+            
+            <div class="d-lg-none pb-4 border-bottom">
+                <h6 class="text-muted text-uppercase fw-bold mb-3 small">Navigation Principale</h6>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item"><a class="nav-link fs-5 fw-bold px-0 offcanvas-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-bold px-0 offcanvas-link" href="#parcours">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-bold px-0 offcanvas-link" href="#inscrire">Inscription</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-bold px-0 offcanvas-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h6 class="text-muted text-uppercase fw-bold mb-3 small">Accès Rapides</h6>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link px-0 offcanvas-link" href="#espace-etudiant"><i class="bi bi-person-badge me-2"></i>Espace Étudiant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-0 offcanvas-link" href="#alumni"><i class="bi bi-mortarboard me-2"></i>Réseau Alumni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-0 offcanvas-link" href="#bibliotheque"><i class="bi bi-book me-2"></i>Bibliothèque ITU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-0 offcanvas-link" href="#actualites"><i class="bi bi-newspaper me-2"></i>Actualités & Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <main>
+        <section class="hero position-relative vh-100 d-flex align-items-center text-start" id="accueil">
+            
+            <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1" data-bs-ride="carousel" data-bs-pause="false">
+                <div class="carousel-inner w-100 h-100">
+                    <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
+                        <img src="assets/images/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+                    </div>
+                    <div class="carousel-item w-100 h-100" data-bs-interval="4000">
+                        <img src="assets/images/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container position-relative z-1 px-4">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="itu-hero-title text-white text-uppercase mb-3">
+                            Education is our <br>
+                            <span class="itu-text-green">foundation.</span>
+                        </h1>
+                        <p class="lead text-white mb-5 fs-4 fw-light">Université specialisée en informatique.</p>
+                        
+                        <a href="#inscrire" class="btn-itu">
+                            <span>Rejoignez-nous</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="options"></section>
+        <section id="inscrire"></section>
+        <section id="diplome"></section>
+        <section id="parcours"></section>
+        <section id="partenaires"></section>
+        <section id="contact"></section>
+        <section id="footer"></section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+
+:root {
+    --itu-bleu: #283a97;
+    --itu-vert: #b2d235;    
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: var(--itu-bleu);
+    --font-title: 'Fractul', sans-serif;
+    --font-text: 'Aktiv Grotesk', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: var(--itu-bleu);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+#preloader {
+    background-color: var(--itu-bleu); 
+    z-index: 9999; 
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.logo-pulse {
+    width: 500px; 
+    animation: pulse 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.itu-hero-title {
+    font-family: var(--font-title);
+    font-weight: 900; 
+    font-style: italic;
+    font-size: clamp(3rem, 6vw, 5.5rem); 
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.itu-text-green {
+    color: var(--itu-vert);
+}
+
+.btn-itu {
+    display: inline-block;
+    background-color: var(--itu-vert);
+    color: var(--itu-bleu);
+    padding: 15px 40px;
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid var(--itu-vert);
+}
+
+.btn-itu:hover {
+    background-color: transparent;
+    color: var(--itu-vert);
+    box-shadow: 0 0 20px rgba(178, 210, 53, 0.5);
+}
+
+.itu-navbar {
+    background-color: var(--bg-color) !important; 
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand img {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.itu-navbar .nav-link {
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--itu-bleu) !important; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.itu-navbar .nav-link:hover,
+.itu-navbar .nav-link.active {
+    color: var(--itu-vert) !important; 
+    transform: translateY(-2px); 
+}
+
+/* =========================================
+   STYLE DU MENU OFFCANVAS
+   ========================================= */
+.offcanvas-title {
+    color: var(--itu-bleu);
+}
+
+[data-bs-theme="dark"] .offcanvas-title {
+    color: var(--itu-vert);
+}
+
+.offcanvas-link {
+    color: var(--text-color) !important;
+    font-family: var(--font-title);
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.offcanvas-link:hover {
+    color: var(--itu-vert) !important;
+    padding-left: 10px !important; 
+}

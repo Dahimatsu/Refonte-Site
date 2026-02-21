@@ -1,0 +1,32 @@
+
+[data-bs-theme="dark"] {
+    --bg-color: var(--itu-bleu); 
+    --text-color: #f5f5f5;
+    --heading-color: var(--itu-vert); 
+
+    --bs-body-bg: var(--itu-bleu);
+    --bs-body-color: #f5f5f5;
+}
+
+[data-bs-theme="dark"] a {
+    color: var(--itu-vert);
+}
+
+[data-bs-theme="dark"] .itu-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-bs-theme="dark"] .itu-navbar .nav-link:hover,
+[data-bs-theme="dark"] .itu-navbar .nav-link.active {
+    color: var(--itu-vert) !important;
+}
+
+[data-bs-theme="dark"] .btn-itu {
+    background-color: var(--itu-vert);
+    color: var(--itu-bleu) !important;
+}
+
+[data-bs-theme="dark"] .btn-itu:hover {
+    background-color: transparent;
+    color: var(--itu-vert) !important;
+}
