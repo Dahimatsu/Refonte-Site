@@ -19,6 +19,17 @@
     /* Typographie */
     --font-title: 'Fractul', sans-serif;
     --font-text: 'Aktiv Grotesk', sans-serif;
+
+    /* Puces */
+    --puce-itu-bleu: url('../puces/puce-itu-bleu.svg');
+    --puce-itu-vert: url('../puces/puce-itu-vert.svg');
+    --puce-itu-global: url('../puces/puce-itu-global.svg');
+
+    /* Patterns */
+    --ascendant-pattern: url('../patterns/ascendant.svg');
+    --descendant-pattern: url('../patterns/descendant.svg');
+    --fill-pattern: url('../patterns/fill.svg');
+    --stroke-pattern: url('../patterns/stroke.svg');
 }
 
 /* =========================================
@@ -69,6 +80,49 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* =========================================
+   COMPOSANT MAÎTRE : LISTES AVEC PUCES SVG
+   ========================================= */
+
+
+.itu-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.itu-list li {
+    position: relative;
+    padding-left: 45px; 
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center; 
+}
+
+.itu-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 32px; 
+    background-image: var(--active-puce, var(--puce-itu-global));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.itu-list-global {
+    --active-puce: var(--puce-itu-global);
+}
+
+.itu-list-vert {
+    --active-puce: var(--puce-itu-vert);
+}
+
+.itu-list-bleu {
+    --active-puce: var(--puce-itu-bleu);
 }
 
 /* =========================================
@@ -350,12 +404,27 @@ img {
 /* =========================================
    BANNIÈRE CALL TO ACTION
    ========================================= */
+/* 1. Le conteneur principal */
 .itu-cta-banner {
-    background-color: var(--itu-vert);
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 28" width="56" height="28"%3E%3Cpath fill="rgba(255,255,255,0.08)" d="M56 28V14l-28-7v14zm-28 0V14L0 21v7z"/%3E%3Cpath fill="rgba(255,255,255,0.12)" d="M28 14L0 7v14l28 7z"/%3E%3Cpath fill="rgba(255,255,255,0.15)" d="M56 14L28 0v14l28 7z"/%3E%3C/svg%3E');
-    background-size: 1500px auto; 
-    background-repeat: no-repeat;
+    background-color: var(--itu-vert); 
+    position: relative;
     overflow: hidden; 
+    z-index: 1; 
+}
+
+.itu-cta-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--stroke-pattern);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
 }
 
 .cta-title {
@@ -373,20 +442,6 @@ img {
 /* =========================================
    SECTION PARCOURS
    ========================================= */
-.parcours-card {
-    border-color: var(--itu-bleu) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.parcours-card.design-card {
-    border-color: var(--itu-vert) !important;
-}
-
-.parcours-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
 
 .itu-badge {
     font-family: var(--font-title);
@@ -404,12 +459,6 @@ img {
 .itu-badge-bleu {
     color: var(--itu-vert);
     background-color: var(--itu-bleu);
-}
-
-/* Mode sombre pour les cards */
-[data-bs-theme="dark"] .parcours-card {
-    background-color: #222222 !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .itu-article {
@@ -436,7 +485,145 @@ img {
 }
 
 .pattern {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg width="120" height="120" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M60 0L120 30v60L60 120 0 90V30z" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/%3E%3Cpath d="M60 0v60l60-30M0 30l60 30v60" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/%3E%3C/svg%3E');
-    background-size: 150px;
+    position: relative;
+    z-index: 1; 
+}
+
+.pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--stroke-pattern);
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05; 
+    z-index: -1;
+}
+
+/* =========================================
+   SECTION CONTACT
+   ========================================= */
+
+/* Lignes de séparation verticales (Uniquement sur écran large pc/tablette) */
+@media (min-width: 992px) {
+    .contact-block {
+        position: relative;
+    }
+    
+    /* Le fameux trait gris de ta maquette */
+    .contact-block::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.15); 
+    }
+}
+
+/* Effet au survol sur l'adresse email */
+.contact-link {
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--itu-vert) !important;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.itu-footer {
+    background-color: #000000;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--itu-vert);
+    padding-left: 5px; 
+}
+
+.social-link {
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-link:hover {
+    color: var(--itu-vert);
+    transform: translateY(-4px);
+}
+
+.contact-link {
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--itu-vert);
+}
+
+.contact-link:hover i {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
+}
+
+/* =========================================
+   BOUTON SCROLL TO TOP
+   ========================================= */
+.btn-itu-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    background-color: var(--itu-vert);
+    color: var(--itu-bleu);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.btn-itu-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-itu-top:hover {
+    background-color: var(--itu-bleu);
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .btn-itu-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
 }

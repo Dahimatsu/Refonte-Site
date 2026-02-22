@@ -101,13 +101,11 @@
     height: 60px; 
     width: auto;
     margin: 0 40px; 
-    filter: grayscale(100%) opacity(0.5);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .partenaire-logo:hover {
-    filter: grayscale(0%) opacity(1);
     transform: scale(1.1);
 }
 

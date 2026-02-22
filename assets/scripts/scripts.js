@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
 
         const wordEl = document.getElementById('animated-foundation');
         const wordText = wordEl.innerText;
-        wordEl.innerHTML = ''; 
+        wordEl.innerHTML = '';
 
         const charWrappers = [];
 
@@ -82,9 +82,9 @@ window.addEventListener('load', () => {
             anime.animate(charWrappers, {
                 translateY: ['0%', '-100%'],
                 duration: 750,
-                delay: anime.stagger(150, { from: 'center' }), 
-                ease: 'inOutQuad', 
-                alternate: true, 
+                delay: anime.stagger(150, { from: 'center' }),
+                ease: 'inOutQuad',
+                alternate: true,
                 loop: true,
                 loopDelay: 3500,
             });
@@ -123,16 +123,16 @@ let isDragging = false;
 
 scrollDot.addEventListener('mousedown', (e) => {
     isDragging = true;
-    document.body.style.userSelect = 'none'; 
+    document.body.style.userSelect = 'none';
 });
 
 document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
 
     const trackRect = scrollTrack.getBoundingClientRect();
-    
+
     let percent = ((e.clientY - trackRect.top) / trackRect.height) * 100;
-    
+
     percent = Math.max(0, Math.min(100, percent));
 
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -140,27 +140,27 @@ document.addEventListener('mousemove', (e) => {
 
     window.scrollTo({
         top: newScrollPosition,
-        behavior: 'auto' 
+        behavior: 'auto',
     });
 });
 
 document.addEventListener('mouseup', () => {
     if (isDragging) {
         isDragging = false;
-        document.body.style.userSelect = ''; 
+        document.body.style.userSelect = '';
     }
 });
 
 /* =========================================
    CHANGEMENT DE COULEUR DU HEADER AU SCROLL
    ========================================= */
-const navbarLogo = document.getElementById('navbar-logo'); 
+const navbarLogo = document.getElementById('navbar-logo');
 const sections = document.querySelectorAll('section[data-section-theme]');
 
 window.addEventListener('scroll', () => {
-    let currentSectionTheme = 'dark'; 
-    
-    sections.forEach(section => {
+    let currentSectionTheme = 'dark';
+
+    sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= 80 && rect.bottom >= 80) {
             currentSectionTheme = section.getAttribute('data-section-theme');
@@ -170,12 +170,36 @@ window.addEventListener('scroll', () => {
     if (currentSectionTheme === 'dark') {
         header.classList.add('header-text-light');
         header.classList.remove('header-text-dark');
-        
-        navbarLogo.src = 'assets/images/logo_semi-negatif.png'; 
+
+        navbarLogo.src = 'assets/images/logo_semi-negatif.png';
     } else {
         header.classList.add('header-text-dark');
         header.classList.remove('header-text-light');
-        
-        navbarLogo.src = 'assets/images/logo_positif.png'; 
+
+        navbarLogo.src = 'assets/images/logo_positif.png';
     }
+});
+
+const currentYear = new Date().getFullYear();
+document.getElementById('current-year').textContent = currentYear;
+
+// =========================================
+// SCROLL TO TOP
+// =========================================
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add("show");
+    } else {
+        scrollToTopBtn.classList.remove("show");
+    }
+});
+
+
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
