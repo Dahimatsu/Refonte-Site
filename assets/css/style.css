@@ -28,6 +28,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -102,8 +107,6 @@ img {
    ========================================= */
 .btn-itu {
     display: inline-block;
-    background-color: var(--itu-vert);
-    color: var(--itu-bleu);
     padding: 15px 40px;
     font-family: var(--font-title);
     font-weight: 800;
@@ -112,20 +115,31 @@ img {
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid var(--itu-vert);
+    background-color: var(--btn-theme);
+    border: 2px solid var(--btn-theme);
+    color: var(--btn-text) !important;
 }
 
 .btn-itu:hover {
     background-color: var(--bg-color);
-    color: var(--itu-vert);
-    border: 2px solid var(--itu-vert); 
-    box-shadow: 6px 6px 0px var(--itu-vert);
+    color: var(--btn-theme) !important; 
+    box-shadow: 6px 6px 0px var(--btn-theme);
     transform: translate(-4px, -4px);
 }
 
 .btn-itu:active {
-    box-shadow: 0px 0px 0px var(--itu-vert);
+    box-shadow: 0px 0px 0px var(--btn-theme);
     transform: translate(2px, 2px); 
+}
+
+.btn-itu-vert {
+    --btn-theme: var(--itu-vert);
+    --btn-text: var(--itu-bleu); 
+}
+
+.btn-itu-bleu {
+    --btn-theme: var(--itu-bleu);
+    --btn-text: #ffffff;
 }
 
 /* =========================================
@@ -195,6 +209,32 @@ img {
 }
 
 /* =========================================
+   COULEURS DYNAMIQUES DU HEADER
+   ========================================= */
+.header-text-light .nav-link,
+.header-text-light .navbar-brand,
+.header-text-light .btn {
+    color: #ffffff !important;
+}
+.header-text-light i {
+    color: #ffffff !important; 
+}
+
+.header-text-dark .nav-link,
+.header-text-dark .navbar-brand,
+.header-text-dark .btn {
+    color: var(--itu-bleu) !important;
+}
+.header-text-dark i {
+    color: var(--itu-bleu) !important; 
+}
+
+.transition-header .nav-link:hover,
+.transition-header .btn:hover {
+    color: var(--itu-vert) !important;
+}
+
+/* =========================================
     MENU OFFCANVAS
    ========================================= */
 .itu-offcanvas {
@@ -228,4 +268,121 @@ img {
 .itu-big-menu .nav-link:focus {
     color: var(--itu-vert);
     transform: translateX(30px);
+}
+
+/* =========================================
+   INDICATEUR DE SCROLL
+   ========================================= */
+.scroll-indicator-wrapper {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40vh; 
+    z-index: 3; 
+}
+
+.scroll-track {
+    position: relative;
+    width: 2px; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.scroll-tick {
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2); 
+    left: 0; 
+}
+
+.scroll-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--itu-vert); 
+}
+
+.scroll-dot {
+    cursor: grab;
+    position: absolute;
+    left: 1px; 
+    top: 0%; 
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--itu-vert);
+    border-radius: 50%;
+}
+
+.scroll-dot:active {
+    cursor: grabbing;
+}
+
+/* =========================================
+   BANNIÈRE CALL TO ACTION
+   ========================================= */
+.itu-cta-banner {
+    background-color: var(--itu-vert);
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 28" width="56" height="28"%3E%3Cpath fill="rgba(255,255,255,0.08)" d="M56 28V14l-28-7v14zm-28 0V14L0 21v7z"/%3E%3Cpath fill="rgba(255,255,255,0.12)" d="M28 14L0 7v14l28 7z"/%3E%3Cpath fill="rgba(255,255,255,0.15)" d="M56 14L28 0v14l28 7z"/%3E%3C/svg%3E');
+    background-size: 1500px auto; 
+    background-repeat: no-repeat;
+    overflow: hidden; 
+}
+
+.cta-title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--itu-black);
+    font-weight: 900;
+}
+
+.cta-text {
+    color: var(--itu-black);
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   SECTION PARCOURS (Cards)
+   ========================================= */
+.parcours-card {
+    border-color: var(--itu-bleu) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parcours-card.design-card {
+    border-color: var(--itu-vert) !important;
+}
+
+.parcours-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.itu-badge {
+    font-family: var(--font-title);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.itu-badge-vert {
+    color: var(--itu-bleu);
+    background-color: var(--itu-vert);
+}
+
+.itu-badge-bleu {
+    color: var(--itu-vert);
+    background-color: var(--itu-bleu);
+}
+
+/* Mode sombre pour les cards */
+[data-bs-theme="dark"] .parcours-card {
+    background-color: #222222 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
