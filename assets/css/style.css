@@ -85,8 +85,6 @@ img {
 /* =========================================
    COMPOSANT MAÎTRE : LISTES AVEC PUCES SVG
    ========================================= */
-
-
 .itu-list {
     list-style: none;
     padding-left: 0;
@@ -503,39 +501,50 @@ img {
     opacity: 0.05; 
     z-index: -1;
 }
-
 /* =========================================
-   SECTION CONTACT
+   CARROUSEL PARTENAIRES
    ========================================= */
+.partenaires-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+}
 
-/* Lignes de séparation verticales (Uniquement sur écran large pc/tablette) */
-@media (min-width: 992px) {
-    .contact-block {
-        position: relative;
+
+.partenaires-track {
+    display: flex;
+    align-items: center;
+    width: max-content; 
+    animation: scrollPartenaires 25s linear infinite; 
+}
+
+.partenaires-slider:hover .partenaires-track {
+    animation-play-state: paused;
+}
+
+.partenaire-logo {
+    height: 60px; 
+    width: auto;
+    margin: 0 40px; 
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partenaire-logo:hover {
+    transform: scale(1.1);
+}
+
+@keyframes scrollPartenaires {
+    0% {
+        transform: translateX(0);
     }
-    
-    /* Le fameux trait gris de ta maquette */
-    .contact-block::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 1px;
-        height: 60px;
-        background-color: rgba(255, 255, 255, 0.15); 
+    100% {
+        transform: translateX(-50%);
     }
 }
-
-/* Effet au survol sur l'adresse email */
-.contact-link {
-    transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-    color: var(--itu-vert) !important;
-}
-
 /* =========================================
    FOOTER
    ========================================= */
@@ -578,6 +587,51 @@ img {
 .contact-link:hover i {
     transform: scale(1.2); 
     transition: transform 0.3s ease;
+}
+
+.newsletter-form .form-control {
+    color: #ffffff !important;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--itu-vert) !important;
+    box-shadow: none;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+.newsletter-form .btn-itu-vert {
+    background-color: var(--itu-vert);
+    border: 1px solid var(--itu-vert);
+    color: var(--itu-bleu);
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .btn-itu-vert:hover {
+    background-color: transparent;
+    color: var(--itu-vert);
+}
+
+.newsletter-form .form-check-input {
+    accent-color: var(--itu-vert);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+
+.newsletter-form .form-check-input:hover {
+    border-color: var(--itu-vert);
+}
+
+.newsletter-form .form-check-label {
+    cursor: pointer;
 }
 
 /* =========================================
@@ -628,47 +682,3 @@ img {
     }
 }
 
-.newsletter-form .form-control {
-    color: #ffffff !important;
-    padding: 12px 15px;
-    transition: all 0.3s ease;
-}
-
-.newsletter-form .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border-color: var(--itu-vert) !important;
-    box-shadow: none;
-}
-
-.newsletter-form .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-
-.newsletter-form .btn-itu-vert {
-    background-color: var(--itu-vert);
-    border: 1px solid var(--itu-vert);
-    color: var(--itu-bleu);
-    transition: all 0.3s ease;
-}
-
-.newsletter-form .btn-itu-vert:hover {
-    background-color: transparent;
-    color: var(--itu-vert);
-}
-
-.newsletter-form .form-check-input {
-    accent-color: var(--itu-vert);
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1); 
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: none;
-}
-
-.newsletter-form .form-check-input:hover {
-    border-color: var(--itu-vert);
-}
-
-.newsletter-form .form-check-label {
-    cursor: pointer;
-}
