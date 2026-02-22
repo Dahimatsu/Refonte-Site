@@ -2,8 +2,20 @@
 <html lang="fr" data-bs-theme="light">
     <head>
         <meta charset="UTF-8" />
-        <meta author="Binary Beasts" />
+        <!-- Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011,qui a ppour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication." />
+        <meta name="author" content="Binary Beasts" />
+        <meta name="keywords" content="université, informatique, design, Madagascar, Antananarivo, Andoharanofotsy, master, licence, développement web, technologie" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="content-language" content="fr" />
+        <!-- Property -->
+        <meta property="og:title" content="IT University - Université spécialisée en informatique" />
+        <meta property="og:description" content="Rejoignez l'élite de l'informatique et du design digital à Madagascar." />
+        <meta property="og:image" content="https://nom-de-domaine.mg/assets/images/remise_diplome.jpg" />
+        <meta property="og:url" content="https://nom-de-domaine.mg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="fr_FR" />
         <!-- Titre -->
         <title>IT University - Université spécialisée en informatique</title>
         <!-- Link -->
@@ -132,7 +144,7 @@
 
             <!-- Options section -->
             <section id="options" class="min-vh-100 d-flex flex-column flex-lg-row" data-section-theme="dark">
-                <aside class="w-100 position-relative d-flex flex-column justify-content-center px-4 px-lg-5 py-5" style="flex: 1; background-color: var(--itu-gris); min-height: 50vh">
+                <article class="w-100 position-relative d-flex flex-column justify-content-center px-4 px-lg-5 py-5" style="flex: 1; background-color: var(--itu-gris); min-height: 50vh">
                     <div class="position-relative z-1">
                         <h6 class="text-uppercase fw-bold mb-2" style="color: var(--itu-vert); letter-spacing: 2px">Nos formations</h6>
                         <h2 class="display-4 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Choisissez votre<br />Option</h2>
@@ -142,9 +154,9 @@
                     <div class="position-absolute top-0 start-0 w-100 h-100 z-0 bg-dark">
                         <img src="assets/images/option-image.jpg" alt="Image d'illustration des options de formation" loading="lazy" class="w-100 h-100" style="object-fit: cover; opacity: 0.6" />
                     </div>
-                </aside>
+                </article>
 
-                <aside class="w-100 d-flex flex-column p-0" style="flex: 1">
+                <article class="w-100 d-flex flex-column p-0" style="flex: 1">
                     <article class="itu-article itu-article-bleu w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0 text-white" style="background-color: var(--itu-bleu); flex: 1">
                         <div class="w-100 mx-auto" style="max-width: 500px">
                             <h3 class="fw-bold mb-4 text-white text-uppercase">INFORMATIQUE</h3>
@@ -175,7 +187,7 @@
                             </div>
                         </div>
                     </article>
-                </aside>
+                </article>
             </section>
 
             <!-- Inscrire Section -->
@@ -263,10 +275,11 @@
                 </div>
             </section>
         </main>
+        <!-- Footer -->
         <footer class="itu-footer text-white pt-5" data-section-theme="dark">
-            <div class="container py-5">
+            <section class="container py-5">
                 <div class="row gy-5">
-                    <div class="col-lg-6 pe-lg-5">
+                    <section class="col-lg-6 pe-lg-5">
                         <h4 class="text-uppercase mb-2" style="color: var(--itu-vert); font-family: var(--font-title); font-style: italic">Rejoignez-nous</h4>
                         <h2 class="display-4 fw-bold mb-4 text-uppercase" style="font-family: var(--font-title); line-height: 1.1">Votre carrière<br />commence ici</h2>
 
@@ -301,9 +314,9 @@
                                 <span class="fs-5">Andoharanofotsy, Antananarivo</span>
                             </a>
                         </article>
-                    </div>
+                    </section>
 
-                    <nav class="col-lg-3 mt-lg-5 pt-lg-4">
+                    <nav class="col-lg-3 mt-lg-5 pt-lg-4" aria-label="Liens rapides du pied de page">
                         <h5 class="fw-bold mb-4 fs-4" style="color: var(--itu-vert)">Découvrir</h5>
                         <ul class="list-unstyled footer-links">
                             <li class="mb-3"><a href="#">Vos Diplômes</a></li>
@@ -317,20 +330,27 @@
                         </ul>
                     </nav>
 
-                    <div class="col-lg-3 mt-lg-5 pt-lg-4">
-                        <h5 class="fw-bold mb-4 fs-4" style="color: var(--itu-vert)">Informations</h5>
-                        <ul class="list-unstyled footer-links">
-                            <li class="mb-3"><a href="#">Accessibilité</a></li>
-                            <li class="mb-3"><a href="#">Mentions Légales</a></li>
-                            <li class="mb-3"><a href="#">Politique de Confidentialité</a></li>
-                            <li class="mb-3"><a href="#">Règlement Intérieur</a></li>
-                            <li class="mb-3"><a href="#">Politique des Cookies</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                    <section class="col-lg-3 mt-lg-5 pt-lg-4">
+                        <h5 class="fw-bold mb-4 fs-4" style="color: var(--itu-vert)">Newsletter</h5>
+                        <p class="text-white opacity-75 mb-4">Restez informé des actualités et des prochaines admissions de l'université.</p>
 
-            <div class="footer-bottom py-4 mt-4" style="background-color: #080808; border-top: 1px solid rgba(255, 255, 255, 0.05)">
+                        <form action="#" method="POST" class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control bg-transparent text-white border-secondary" placeholder="Votre email" aria-label="Votre email" required style="border-radius: 0; border-right: none" />
+                                <button class="btn btn-itu-vert" type="submit" style="border-radius: 0; padding: 10px 20px" title="Envoyer" aria-label="Envoyer">
+                                    <i class="bi bi-send-fill"></i>
+                                </button>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="newsletterCheck" required />
+                                <label class="form-check-label text-white opacity-50 small" for="newsletterCheck" style="font-size: 0.75rem"> J'accepte de recevoir des actualités de l'ITU. </label>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </section>
+
+            <section class="footer-bottom py-4 mt-4" style="background-color: #080808; border-top: 1px solid rgba(255, 255, 255, 0.05)">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -342,9 +362,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </footer>
-        <button id="scrollToTopBtn" class="btn-itu-top" title="Retour en haut">
+        <button id="scrollToTopBtn" class="btn-itu-top" title="Retour en haut" style="opacity: 0" aria-label="Retour en haut">
             <i class="bi bi-chevron-up"></i>
         </button>
         <div id="scroll-indicator-wrapper" class="scroll-indicator-wrapper d-none d-lg-block" style="opacity: 0">

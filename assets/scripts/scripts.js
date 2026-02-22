@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
     const heroSubtitle = document.getElementById('itu-hero-subtitle');
     const heroBtnWrapper = document.getElementById('itu-hero-btn-wrapper');
     const scrollWrapper = document.getElementById('scroll-indicator-wrapper');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
     setTimeout(() => {
         anime.animate(preloader, {
@@ -28,6 +29,7 @@ window.addEventListener('load', () => {
 
         setTimeout(() => {
             scrollWrapper.style.opacity = '1';
+            scrollToTopBtn.style.opacity = '1';
         }, 100);
 
         setTimeout(() => {

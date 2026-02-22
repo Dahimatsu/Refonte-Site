@@ -627,3 +627,48 @@ img {
         height: 45px;
     }
 }
+
+.newsletter-form .form-control {
+    color: #ffffff !important;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--itu-vert) !important;
+    box-shadow: none;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+.newsletter-form .btn-itu-vert {
+    background-color: var(--itu-vert);
+    border: 1px solid var(--itu-vert);
+    color: var(--itu-bleu);
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .btn-itu-vert:hover {
+    background-color: transparent;
+    color: var(--itu-vert);
+}
+
+.newsletter-form .form-check-input {
+    accent-color: var(--itu-vert);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+
+.newsletter-form .form-check-input:hover {
+    border-color: var(--itu-vert);
+}
+
+.newsletter-form .form-check-label {
+    cursor: pointer;
+}
