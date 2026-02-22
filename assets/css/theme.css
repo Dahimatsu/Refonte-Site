@@ -1,16 +1,18 @@
+/* Variables mode sombre */
 [data-bs-theme="dark"] {
-    --bg-color: var(--itu-bleu); 
+    --bg-color: var(--itu-black); 
     --text-color: #f5f5f5;
     --heading-color: var(--itu-vert); 
-
-    --bs-body-bg: var(--itu-bleu);
-    --bs-body-color: #f5f5f5;
+    --bs-body-bg: var(--itu-black); 
+    --bs-body-color: #f5f5f5; 
 }
 
+/* Liens */
 [data-bs-theme="dark"] a {
     color: var(--itu-vert);
 }
 
+/* Navbar */
 [data-bs-theme="dark"] .itu-navbar .nav-link {
     color: rgba(255, 255, 255, 0.9) !important;
 }
@@ -20,6 +22,12 @@
     color: var(--itu-vert) !important;
 }
 
+[data-bs-theme="dark"] .header-scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Boutons */
 [data-bs-theme="dark"] .btn-itu {
     background-color: var(--itu-vert);
     color: var(--itu-bleu) !important;
@@ -37,24 +45,17 @@
     transform: translate(2px, 2px);
 }
 
-[data-bs-theme="dark"] .offcanvas-title {
+/* Bouton Thème */
+[data-bs-theme="dark"] #theme-toggle:hover {
+    background-color: var(--itu-black); 
+    color: #ffffff !important; 
+}
+
+/* Menu Offcanvas */
+[data-bs-theme="dark"] .itu-big-menu .nav-link {
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .itu-big-menu .nav-link:hover {
     color: var(--itu-vert);
 }
-
-#theme-toggle {
-    transition: all 0.3s ease;
-}
-
-#theme-toggle:hover {
-    background-color: #e9ecef; 
-    color: var(--text-color); 
-}
-
-[data-bs-theme="dark"] #theme-toggle:hover {
-    background-color: #1d2d79; 
-    color: #ffffff !important; 
-    border-color: #1d2d79;
-}
-
-
-

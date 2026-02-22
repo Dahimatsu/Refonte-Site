@@ -1,14 +1,29 @@
-
+/* =========================================
+   VARIABLES
+   ========================================= */
 :root {
+    /* Couleurs ITU */
     --itu-bleu: #283a97;
     --itu-vert: #b2d235;    
+    --itu-violet : #536ae4;
+    --itu-rose: #a46a91;
+    --itu-rouge: #fd3022;
+    --itu-gris: #d0dce7;
+    --itu-black: #333333;
+    
+    /* Thème Clair par défaut */
     --bg-color: #ffffff;
     --text-color: #333333;
     --heading-color: var(--itu-bleu);
+    
+    /* Typographie */
     --font-title: 'Fractul', sans-serif;
     --font-text: 'Aktiv Grotesk', sans-serif;
 }
 
+/* =========================================
+   RESET & BASE
+   ========================================= */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -21,6 +36,10 @@ body {
     color: var(--text-color) !important;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,38 +66,16 @@ img {
     display: block;
 }
 
-body.no-scroll {
-    overflow: hidden;
-}
-
+/* =========================================
+   PRELOADER & HERO
+   ========================================= */
 #preloader {
-    background-color: var(--itu-bleu); 
+    background-color: var(--itu-bleu);
     z-index: 9999; 
-    transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
-#preloader img{
+#preloader img {
     width: 350px;
-}
-
-.logo-pulse {
-    width: 500px; 
-    animation: pulse 1.2s infinite alternate ease-in-out;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.95);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1.05);
-    }
-}
-
-.fade-out {
-    opacity: 0;
-    visibility: hidden;
 }
 
 .itu-hero-title {
@@ -94,6 +91,15 @@ body.no-scroll {
     color: var(--itu-vert);
 }
 
+#itu-hero-title,
+#itu-hero-subtitle,
+#itu-hero-btn-wrapper {
+    opacity: 0;
+}
+
+/* =========================================
+   BOUTONS 
+   ========================================= */
 .btn-itu {
     display: inline-block;
     background-color: var(--itu-vert);
@@ -122,20 +128,16 @@ body.no-scroll {
     transform: translate(2px, 2px); 
 }
 
-#itu-hero-title,
-#itu-hero-subtitle,
-#itu-hero-btn-wrapper {
-    opacity: 0;
-}
-
-.itu-navbar {
-    background-color: var(--bg-color) !important; 
-    transition: background-color 0.3s ease;
-}
-
+/* =========================================
+   NAVBAR
+   ========================================= */
 .navbar-brand img {
     width: 150px;
     transition: transform 0.3s ease;
+}
+
+.itu-navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .itu-navbar .nav-link {
@@ -153,32 +155,77 @@ body.no-scroll {
     transform: translateY(-2px); 
 }
 
-.offcanvas-title {
-    color: var(--itu-bleu);
-}
-
-.offcanvas-link {
-    color: var(--text-color) !important;
-    font-family: var(--font-title);
-    transition: color 0.3s ease, padding-left 0.3s ease;
-}
-
-.offcanvas-link:hover {
-    color: var(--itu-vert) !important;
-    padding-left: 10px !important; 
-}
-
+/* Header de base */
 .transition-header {
     transition: all 0.4s ease-in-out;
-    background-color: var(--bg-color);
+    background-color: transparent !important;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
+/* Header quand on scrolle */
 .header-scrolled {
-    background-color: var(--bg-color) !important;
-    margin: 10px;
+    top: 15px; 
+    left: 15px;
+    right: 15px;
+    width: auto !important; 
+    border-radius:10px;
+    background: rgba(255, 255, 255, 0) !important; 
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: #ffffff38 0.1px solid;
+    border-right: #ffffff38 0.1px solid;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .header-scrolled .itu-navbar {
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
+}
+
+/* Bouton Thème Hover Mode Clair */
+#theme-toggle {
+    transition: all 0.3s ease;
+    border: none;
+}
+#theme-toggle:hover {
+    background-color: #e9ecef; 
+    color: var(--text-color) !important; 
+}
+
+/* =========================================
+    MENU OFFCANVAS
+   ========================================= */
+.itu-offcanvas {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+}
+
+@media (min-width: 992px) {
+    .itu-offcanvas {
+        width: 50vw !important;
+    }
+}
+@media (max-width: 991.98px) {
+    .itu-offcanvas {
+        width: 100vw !important;
+    }
+}
+
+.itu-big-menu .nav-link {
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 6vw, 6rem); 
+    font-weight: 700;
+    color: var(--itu-bleu); 
+    line-height: 1.1;
+    padding: 0.2rem 0;
+    transition: color 0.3s ease, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.itu-big-menu .nav-link:hover,
+.itu-big-menu .nav-link:focus {
+    color: var(--itu-vert);
+    transform: translateX(30px);
 }
