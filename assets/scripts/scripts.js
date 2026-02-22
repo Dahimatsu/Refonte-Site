@@ -96,8 +96,24 @@ window.addEventListener('load', () => {
 
 const header = document.getElementById('main-header');
 
+/* =========================================
+   DRAG & DROP BARRE SCROLL 
+   ========================================= */
+const scrollTrack = document.querySelector('.scroll-track');
 const scrollFill = document.getElementById('scroll-fill');
 const scrollDot = document.getElementById('scroll-dot');
+let isDragging = false;
+
+const updateScrollUI = () => {
+    if (!scrollFill || !scrollDot) return;
+    
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    scrollFill.style.height = `${scrollPercent}%`;
+    scrollDot.style.top = `${scrollPercent}%`;
+};
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -105,53 +121,65 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('header-scrolled');
     }
-
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-
-    if (scrollFill && scrollDot) {
-        scrollFill.style.height = `${scrollPercent}%`;
-        scrollDot.style.top = `${scrollPercent}%`;
+    
+    if (!isDragging) {
+        updateScrollUI();
     }
 });
 
-/* =========================================
-   DRAG & DROP DE LA BARRE DE SCROLL
-   ========================================= */
-const scrollTrack = document.querySelector('.scroll-track');
-let isDragging = false;
+const updateScrollFromEvent = (e) => {
+    if (!scrollTrack) return;
+    
+    const trackRect = scrollTrack.getBoundingClientRect();
+    const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+    
+    let percent = (clientY - trackRect.top) / trackRect.height;
+    
+    percent = Math.max(0, Math.min(1, percent));
 
-scrollDot.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    document.body.style.userSelect = 'none';
-});
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    
+    window.scrollTo({
+        top: percent * docHeight,
+        behavior: 'auto'
+    });
+    
+    if (scrollFill && scrollDot) {
+        scrollFill.style.height = `${percent * 100}%`;
+        scrollDot.style.top = `${percent * 100}%`;
+    }
+};
+
+if (scrollDot) {
+    scrollDot.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        scrollDot.classList.add('active');
+        document.body.style.userSelect = 'none';
+        document.body.style.cursor = 'grabbing';
+    });
+}
 
 document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
-
-    const trackRect = scrollTrack.getBoundingClientRect();
-
-    let percent = ((e.clientY - trackRect.top) / trackRect.height) * 100;
-
-    percent = Math.max(0, Math.min(100, percent));
-
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const newScrollPosition = (percent / 100) * docHeight;
-
-    window.scrollTo({
-        top: newScrollPosition,
-        behavior: 'auto',
-    });
+    updateScrollFromEvent(e);
 });
 
 document.addEventListener('mouseup', () => {
     if (isDragging) {
         isDragging = false;
+        if (scrollDot) scrollDot.classList.remove('active');
         document.body.style.userSelect = '';
+        document.body.style.cursor = '';
     }
 });
+
+if (scrollTrack) {
+    scrollTrack.addEventListener('click', (e) => {
+        if (e.target !== scrollDot) {
+            updateScrollFromEvent(e);
+        }
+    });
+}
 
 /* =========================================
    CHANGEMENT DE COULEUR DU HEADER AU SCROLL
