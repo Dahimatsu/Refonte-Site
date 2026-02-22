@@ -72,3 +72,50 @@
 [data-bs-theme="dark"] #inscrire {
     background-color: var(--bg-color);
 }
+
+/* =========================================
+   CARROUSEL PARTENAIRES
+   ========================================= */
+.partenaires-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+}
+
+
+.partenaires-track {
+    display: flex;
+    align-items: center;
+    width: max-content; 
+    animation: scrollPartenaires 25s linear infinite; 
+}
+
+.partenaires-slider:hover .partenaires-track {
+    animation-play-state: paused;
+}
+
+.partenaire-logo {
+    height: 60px; 
+    width: auto;
+    margin: 0 40px; 
+    filter: grayscale(100%) opacity(0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partenaire-logo:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+@keyframes scrollPartenaires {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
