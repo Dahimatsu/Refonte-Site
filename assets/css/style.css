@@ -271,6 +271,32 @@ img {
 }
 
 /* =========================================
+   ANIMATION HERO
+   ========================================= */
+.char-clip {
+    overflow: hidden;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.char-wrapper {
+    display: inline-block;
+    position: relative;
+    color: var(--itu-vert);
+}
+
+.char-clone {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    color: var(--itu-bleu);
+}
+
+
+/* =========================================
    INDICATEUR DE SCROLL
    ========================================= */
 .scroll-indicator-wrapper {
@@ -385,4 +411,19 @@ img {
 [data-bs-theme="dark"] .parcours-card {
     background-color: #222222 !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.itu-article {
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.itu-article-vert {
+    background-color: var(--itu-vert);
+    color: var(--itu-bleu);
+}
+
+.itu-article-bleu {
+    background-color: var(--itu-bleu);
+    color: #ffffff;
 }

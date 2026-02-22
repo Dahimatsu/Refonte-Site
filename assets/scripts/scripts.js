@@ -49,6 +49,46 @@ window.addEventListener('load', () => {
             heroBtnWrapper.classList.add('animate__animated', 'animate__fadeInUp');
             heroBtnWrapper.style.opacity = '1';
         }, 1000);
+
+        const wordEl = document.getElementById('animated-foundation');
+        const wordText = wordEl.innerText;
+        wordEl.innerHTML = ''; 
+
+        const charWrappers = [];
+
+        wordText.split('').forEach((char) => {
+            const clipSpan = document.createElement('span');
+            clipSpan.className = 'char-clip';
+
+            const wrapperSpan = document.createElement('span');
+            wrapperSpan.className = 'char-wrapper';
+
+            const originalSpan = document.createElement('span');
+            originalSpan.innerText = char;
+
+            const cloneSpan = document.createElement('span');
+            cloneSpan.className = 'char-clone';
+            cloneSpan.innerText = char;
+
+            wrapperSpan.appendChild(originalSpan);
+            wrapperSpan.appendChild(cloneSpan);
+            clipSpan.appendChild(wrapperSpan);
+            wordEl.appendChild(clipSpan);
+
+            charWrappers.push(wrapperSpan);
+        });
+
+        setTimeout(() => {
+            anime.animate(charWrappers, {
+                translateY: ['0%', '-100%'],
+                duration: 750,
+                delay: anime.stagger(150, { from: 'center' }), 
+                ease: 'inOutQuad', 
+                alternate: true, 
+                loop: true,
+                loopDelay: 4000,
+            });
+        }, 1500);
     }, 3000);
 });
 
@@ -118,27 +158,21 @@ const navbarLogo = document.getElementById('navbar-logo');
 const sections = document.querySelectorAll('section[data-section-theme]');
 
 window.addEventListener('scroll', () => {
-    let currentSectionTheme = 'dark'; // Par défaut (comme le Hero au chargement)
+    let currentSectionTheme = 'dark'; 
     
-    // On détecte quelle section est actuellement sous le header
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
-        // 80 correspond à peu près à la hauteur de ton header
         if (rect.top <= 80 && rect.bottom >= 80) {
             currentSectionTheme = section.getAttribute('data-section-theme');
         }
     });
 
-    // On applique le style en fonction de la section
     if (currentSectionTheme === 'dark') {
-        // Section SOMBRE -> Header CLAIR
         header.classList.add('header-text-light');
         header.classList.remove('header-text-dark');
         
-        // On met le logo blanc (semi-négatif)
         navbarLogo.src = 'assets/images/logo_semi-negatif.png'; 
     } else {
-        // Section CLAIRE -> Header SOMBRE (Bleu ITU)
         header.classList.add('header-text-dark');
         header.classList.remove('header-text-light');
         
