@@ -103,6 +103,31 @@ img {
 }
 
 /* =========================================
+   ANIMATION HERO
+   ========================================= */
+.char-clip {
+    overflow: hidden;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.char-wrapper {
+    display: inline-block;
+    position: relative;
+    color: var(--itu-vert);
+}
+
+.char-clone {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    color: var(--itu-bleu);
+}
+
+/* =========================================
    BOUTONS 
    ========================================= */
 .btn-itu {
@@ -269,32 +294,6 @@ img {
     color: var(--itu-vert);
     transform: translateX(30px);
 }
-
-/* =========================================
-   ANIMATION HERO
-   ========================================= */
-.char-clip {
-    overflow: hidden;
-    padding-right: 0.2rem;
-    padding-left: 0.2rem;
-    display: inline-block;
-    position: relative;
-    vertical-align: bottom;
-}
-
-.char-wrapper {
-    display: inline-block;
-    position: relative;
-    color: var(--itu-vert);
-}
-
-.char-clone {
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    color: var(--itu-bleu);
-}
-
 
 /* =========================================
    INDICATEUR DE SCROLL
