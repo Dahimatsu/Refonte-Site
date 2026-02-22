@@ -86,7 +86,7 @@ window.addEventListener('load', () => {
                 ease: 'inOutQuad', 
                 alternate: true, 
                 loop: true,
-                loopDelay: 4000,
+                loopDelay: 3500,
             });
         }, 1500);
     }, 3000);

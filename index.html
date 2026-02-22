@@ -20,10 +20,21 @@
     <script src="assets/scripts/scripts.js" defer></script>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 </head>
+
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-itu" viewBox="0 0 24 24">
+        <path d="M2,10 L12,18 L22,10 L22,18 L12,24 L2,18 Z" fill="var(--color-chevron)" />
+        <polygon points="12,2 20,6 20,14 12,18 4,14 4,6" fill="var(--color-hexa)" />
+    </symbol>
+</svg>
+
 <body class="no-scroll">
+    <!-- PRELOADER -->
     <div id="preloader" class="d-flex flex-column justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0 z-3">
         <img src="assets/images/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" >
     </div>
+
+    <!-- Header -->
     <header class="fixed-top transition-header" id="main-header" style="opacity: 0;">
         <nav class="navbar navbar-expand-lg itu-navbar py-3">
             <div class="container-fluid">
@@ -47,6 +58,8 @@
         </nav>
         <svg class="d-none"></svg>
     </header>
+
+    <!-- Off-canvas -->
     <div class="offcanvas offcanvas-end itu-offcanvas" tabindex="-1" id="ituOffcanvas" aria-labelledby="ituOffcanvasLabel">
         
         <div class="offcanvas-header p-4 p-lg-5">
@@ -75,9 +88,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Main content -->
     <main>
+        <!-- Hero Section -->
         <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
-            
+
             <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1" data-bs-ride="carousel" data-bs-pause="false">
                 <div class="carousel-inner w-100 h-100">
                     <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
@@ -109,6 +125,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- CTA Banner Section -->
         <section class="itu-cta-banner position-relative" data-section-theme="dark">
             <div class="container py-5 position-relative z-1">
                 <div class="row align-items-center">
@@ -129,6 +147,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Options section -->
         <section id="options" class="min-vh-100 d-flex flex-column flex-lg-row" data-section-theme="dark">
             
             <aside class="w-100 position-relative d-flex flex-column justify-content-center px-4 px-lg-5 py-5" style="flex: 1; background-color: var(--itu-gris); min-height: 50vh;">
@@ -152,10 +172,19 @@
                     <div class="w-100 mx-auto" style="max-width: 500px;">
                         <h3 class="fw-bold mb-4 text-white text-uppercase">INFORMATIQUE</h3>
                         
-                        <ul class="list-unstyled mb-4 fs-5">
-                            <li class="mb-3"><i class="bi bi-hexagon-fill me-2" style="color: var(--itu-vert);"></i> Développement</li>
-                            <li class="mb-3"><i class="bi bi-hexagon-fill me-2" style="color: var(--itu-vert);"></i> Web & Design</li>
-                            <li class="mb-3"><i class="bi bi-hexagon-fill me-2" style="color: var(--itu-vert);"></i> Réseaux & Base de données</li>
+                        <ul class="list-unstyled mb-4 fs-5" style="--color-chevron: var(--itu-vert); --color-hexa: #ffffff;">
+                            <li class="mb-3 d-flex align-items-start">
+                                <svg width="32" height="32" class="me-3 flex-shrink-0 mt-1"><use href="#icon-itu"></use></svg>
+                                <span>Développement</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <svg width="32" height="32" class="me-3 flex-shrink-0 mt-1"><use href="#icon-itu"></use></svg>
+                                <span>Web & Design</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <svg width="32" height="32" class="me-3 flex-shrink-0 mt-1"><use href="#icon-itu"></use></svg>
+                                <span>Réseaux & Base de données</span>
+                            </li>
                         </ul>
                         
                         <div class="mt-2">
@@ -168,9 +197,15 @@
                     <div class="w-100 mx-auto" style="max-width: 500px;">
                         <h3 class="fw-bold mb-4 text-uppercase" style="color: var(--itu-bleu);">DESIGN</h3>
                         
-                        <ul class="list-unstyled mb-4 fs-5">
-                            <li class="mb-3"><i class="bi bi-hexagon-fill me-2" style="color: var(--itu-bleu);"></i> Design & Communication Digitale</li>
-                            <li class="mb-3"><i class="bi bi-hexagon-fill me-2" style="color: var(--itu-bleu);"></i> Content management & digital marketing</li>
+                        <ul class="list-unstyled mb-4 fs-5" style="--color-chevron: var(--itu-bleu); --color-hexa: #ffffff;">
+                            <li class="mb-3 d-flex align-items-start">
+                                <svg width="32" height="32" class="me-3 flex-shrink-0 mt-1"><use href="#icon-itu"></use></svg>
+                                <span>Design & Communication Digitale</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <svg width="32" height="32" class="me-3 flex-shrink-0 mt-1"><use href="#icon-itu"></use></svg>
+                                <span>Content management & digital marketing</span>
+                            </li>
                         </ul>
                         
                         <div class="mt-2">
@@ -182,8 +217,89 @@
             </aside>
 
         </section>
-        <section id="inscrire"></section>
-        <section id="diplome"></section>
+
+        <!-- Inscrire Section -->
+        <section id="inscrire" class="py-5 position-relative overflow-hidden" data-section-theme="light">
+        
+            <div class="position-absolute top-0 start-0 w-100 h-100 z-0 pattern"></div>
+
+            <div class="container py-5 my-lg-5 position-relative z-1">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        
+                        <div class="mb-3">
+                            <i class="bi bi-mortarboard-fill" style="font-size: 3rem; color: var(--itu-vert);"></i>
+                        </div>
+                        
+                        <h2 class="display-5 fw-bold mb-4" style="color: var(--itu-bleu);">Rentrée universitaire 2026</h2>
+                        
+                        <div class="itu-separator mb-4"></div>
+                        
+                        <p class="fs-4 mb-5" style="color: var(--text-color);">
+                            Rejoignez les <strong>meilleurs</strong>,<br>
+                            Rejoignez <strong>IT University</strong>
+                        </p>
+                        
+                        <a href="#contact" class="btn-itu btn-itu-vert">
+                            Comment s'inscrire ?
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 text-center">
+                        <img src="assets/images/illustration-rentree.png" alt="Illustration Rentrée ITU" class="img-fluid floating-img" style="max-width: 90%;">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Diplome Section -->
+        <section id="diplome" class="vh-100 position-relative overflow-hidden d-flex align-items-center" data-section-theme="dark">
+        
+            <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
+                <img src="assets/images/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100" style="object-fit: cover; object-position: center;">
+                
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.4) 100%);"></div>
+            </div>
+
+            <div class="container position-relative z-1">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6 text-white">
+                        
+                        <h6 class="text-uppercase fw-bold mb-3" style="color: var(--itu-vert); letter-spacing: 2px;">L'aboutissement</h6>
+                        <h2 class="display-3 fw-bold mb-5 text-white" style="font-family: var(--font-title);">Vos diplômes<br>reconnus</h2>
+                        
+                        <div class="itu-glass-card p-4 p-lg-5 rounded-4 mb-5">
+                            <p class="fs-4 mb-2 text-white opacity-75">L'université offre</p>
+                            <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert);">3 diplômes</span></h4>
+                            
+                            <ul class="list-unstyled mt-5 fs-4 fw-bold text-white" style="--color-chevron: var(--itu-vert); --color-hexa: #ffffff;">
+                                <li class="mb-4 d-flex align-items-center">
+                                    <svg width="32" height="32" class="me-3 flex-shrink-0"><use href="#icon-itu"></use></svg>
+                                    <span>Licence en Informatique</span>
+                                </li>
+                                <li class="mb-4 d-flex align-items-center">
+                                    <svg width="32" height="32" class="me-3 flex-shrink-0"><use href="#icon-itu"></use></svg>
+                                    <span>Master MBDS</span>
+                                </li>
+                                <li class="mb-4 d-flex align-items-center">
+                                    <svg width="32" height="32" class="me-3 flex-shrink-0"><use href="#icon-itu"></use></svg>
+                                    <span>Master BIHAR</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#contact" class="btn-itu btn-itu-vert">
+                            En Savoir Plus <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
         <section id="partenaires"></section>
         <section id="contact"></section>
         <section id="footer"></section>
