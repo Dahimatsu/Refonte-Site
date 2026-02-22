@@ -256,7 +256,7 @@ img {
 
 .itu-big-menu .nav-link {
     font-family: var(--font-title);
-    font-size: clamp(3rem, 6vw, 6rem); 
+    font-size: clamp(1rem, 4vw, 4rem); 
     font-weight: 700;
     color: var(--itu-bleu); 
     line-height: 1.1;
