@@ -412,7 +412,6 @@ img {
 /* =========================================
    BANNIÈRE CALL TO ACTION
    ========================================= */
-/* 1. Le conteneur principal */
 .itu-cta-banner {
     background-color: var(--itu-vert); 
     position: relative;
