@@ -80,7 +80,7 @@ $partenaires = [
             </h6>
             <h2 class="display-4 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Choisissez
                 votre<br />Option</h2>
-            <a href="detail-formation.html" class="btn-itu btn-itu-bleu"> Voir plus en détails <i
+            <a href="/formation" class="btn-itu btn-itu-bleu"> Voir plus en détails <i
                     class="bi bi-arrow-right ms-2"></i> </a>
         </div>
 
@@ -148,7 +148,7 @@ $partenaires = [
                     Rejoignez <strong>IT University</strong>
                 </p>
 
-                <a href="faq.html" class="btn-itu btn-itu-vert"> Comment s'inscrire ? </a>
+                <a href="/faq" class="btn-itu btn-itu-vert"> Comment s'inscrire ? </a>
             </div>
 
             <div class="col-lg-6 text-center">
