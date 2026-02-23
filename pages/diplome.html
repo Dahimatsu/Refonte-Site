@@ -30,18 +30,13 @@
         <script src="../assets/scripts/theme-toggle.js" defer></script>
         <script src="../assets/scripts/anime.min.js" defer></script>
         <script src="../assets/scripts/scripts.js" defer></script>
-        <script src="../assets/scripts/animation-home.js" defer></script>
+        <script src="../assets/scripts/animation-autre.js" defer></script>
         <script src="../assets/bootstrap/js/bootstrap.bundle.min.js" defer></script>
     </head>
 
     <body class="no-scroll">
-        <!-- PRELOADER -->
-        <div id="preloader" class="d-flex flex-column justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0 z-3">
-            <img src="../assets/images/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" />
-        </div>
-
         <!-- Header -->
-        <header class="fixed-top transition-header" id="main-header" style="opacity: 0">
+        <header class="fixed-top transition-header" id="main-header">
             <nav class="navbar navbar-expand-lg itu-navbar py-3">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#accueil">
@@ -112,169 +107,60 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
-                                Education is our <br />
-                                <span id="animated-foundation" class="d-inline-flex">foundation.</span>
+                                Vos diplômes <br />
+                                <span id="animated-foundation" class="d-inline-flex">reconnus.</span>
                             </h1>
-                            <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">Université specialisée en <span class="fw-bold">Informatique.</span></p>
-
-                            <div id="itu-hero-btn-wrapper" class="d-inline-block">
-                                <a href="#inscrire" class="btn-itu btn-itu-vert">
-                                    <span>Rejoignez-nous</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Banner Section -->
-            <section class="itu-cta-banner position-relative" data-section-theme="dark">
-                <div class="container py-5 position-relative z-1">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8">
-                            <h2 class="cta-title mb-3">Votre Avenir dans l'IT commence ici</h2>
-                            <p class="cta-text mb-0"><strong>Découvrez plus</strong> sur nos diplômes de <strong>Licence</strong> et <strong>Master.</strong></p>
-                        </div>
-
-                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                            <a href="#parcours" class="btn-itu btn-itu-bleu"> Voir les parcours </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Options section -->
-            <section id="options" class="min-vh-100 d-flex flex-column flex-lg-row" data-section-theme="dark">
-                <article class="w-100 position-relative d-flex flex-column justify-content-center px-4 px-lg-5 py-5" style="flex: 1; background-color: var(--itu-gris); min-height: 50vh">
-                    <div class="position-relative z-1">
-                        <h6 class="text-uppercase fw-bold mb-2" style="color: var(--itu-vert); letter-spacing: 2px">Nos formations</h6>
-                        <h2 class="display-4 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Choisissez votre<br />Option</h2>
-                        <a href="#details-parcours" class="btn-itu btn-itu-bleu"> Voir plus en détails <i class="bi bi-arrow-right ms-2"></i> </a>
-                    </div>
-
-                    <div class="position-absolute top-0 start-0 w-100 h-100 z-0 bg-dark">
-                        <img src="../assets/images/option-image.jpg" alt="Image d'illustration des options de formation" loading="lazy" class="w-100 h-100" style="object-fit: cover; opacity: 0.6" />
-                    </div>
-                </article>
-
-                <article class="w-100 d-flex flex-column p-0" style="flex: 1">
-                    <article class="itu-article itu-article-bleu w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0 text-white" style="background-color: var(--itu-bleu); flex: 1">
-                        <div class="w-100 mx-auto" style="max-width: 500px">
-                            <h3 class="fw-bold mb-4 text-white text-uppercase">INFORMATIQUE</h3>
-
-                            <ul class="list-unstyled mb-4 fs-5 itu-list itu-list-vert">
-                                <li>Développement</li>
-                                <li>Web & Design</li>
-                                <li>Réseaux & Base de données</li>
-                            </ul>
-
-                            <div class="mt-2">
-                                <span class="itu-badge itu-badge-vert py-2 px-3 fs-6 fw-bold text-uppercase">Série scientifique</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="itu-article itu-article-vert w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0">
-                        <div class="w-100 mx-auto" style="max-width: 500px">
-                            <h3 class="fw-bold mb-4 text-uppercase" style="color: var(--itu-bleu)">DESIGN</h3>
-
-                            <ul class="list-unstyled mb-4 fs-5 itu-list itu-list-bleu">
-                                <li>Design & Communication Digitale</li>
-                                <li>Content management & digital marketing</li>
-                            </ul>
-
-                            <div class="mt-2">
-                                <span class="itu-badge itu-badge-bleu py-2 px-3 fs-6 fw-bold text-uppercase">Toutes séries</span>
-                            </div>
-                        </div>
-                    </article>
-                </article>
-            </section>
-
-            <!-- Inscrire Section -->
-            <section id="inscrire" class="py-5 position-relative overflow-hidden" data-section-theme="light">
-                <div class="position-absolute top-0 start-0 w-100 h-100 z-0 pattern"></div>
-
-                <div class="container py-5 my-lg-5 position-relative z-1">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 mb-5 mb-lg-0">
-                            <div class="mb-3">
-                                <i class="bi bi-mortarboard-fill" style="font-size: 3rem; color: var(--itu-vert)"></i>
-                            </div>
-
-                            <h2 class="display-5 fw-bold mb-4" style="color: var(--itu-bleu)">Rentrée universitaire 2026</h2>
-
-                            <div class="itu-separator mb-4"></div>
-
-                            <p class="fs-4 mb-5" style="color: var(--text-color)">
-                                Rejoignez les <strong>meilleurs</strong>,<br />
-                                Rejoignez <strong>IT University</strong>
-                            </p>
-
-                            <a href="#contact" class="btn-itu btn-itu-vert"> Comment s'inscrire ? </a>
-                        </div>
-
-                        <div class="col-lg-6 text-center">
-                            <img src="../assets/images/illustration-rentree.png" alt="Illustration Rentrée ITU" loading="lazy" class="img-fluid floating-img" style="max-width: 90%" />
+                            <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">Diplômes habilités par l’Enseignement Supérieur – <span class="fw-bold">Système LMD.</span></p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Diplome Section -->
-            <section id="diplome" class="vh-100 position-relative overflow-hidden d-flex align-items-center" data-section-theme="dark">
+            <section id="diplome" class="min-vh-100 position-relative overflow-hidden d-flex align-items-center py-5" data-section-theme="dark">
                 <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
                     <img src="../assets/images/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100" loading="lazy" style="object-fit: cover; object-position: center" />
-
-                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.4) 100%)"></div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.8) 100%)"></div>
                 </div>
 
                 <div class="container position-relative z-1">
-                    <div class="row">
-                        <div class="col-lg-7 col-xl-6 text-white">
+                    <div class="row mb-5">
+                        <div class="col-lg-8 text-white">
                             <h6 class="text-uppercase fw-bold mb-3" style="color: var(--itu-vert); letter-spacing: 2px">L'aboutissement</h6>
-                            <h2 class="display-3 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Vos diplômes<br />reconnus</h2>
+                            <p class="lead opacity-75"></p>
+                        </div>
+                    </div>
 
-                            <article class="p-4 p-lg-5 mb-5">
-                                <p class="fs-4 mb-2 text-white opacity-75">L'université offre</p>
-                                <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert)">3 diplômes</span></h4>
-
-                                <ul class="itu-list itu-list-vert mt-5 fs-4 fw-bold text-white">
-                                    <li>Licence en Informatique</li>
-                                    <li>Master MBDS</li>
-                                    <li>Master BIHAR</li>
+                    <div class="row g-4 row-cols-1 row-cols-lg-2">
+                    
+                        <div class="col text-white">
+                            <article class="h-100 p-4 border border-white border-opacity-10" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                                <p class="fs-6 mb-2 text-white opacity-75 text-uppercase">IT University est un établissement d’enseignement supérieur privé spécialisé en informatique, créé en 2011, pour répondre aux  besoins du secteur professionnel en matière de nouvelles technologies.IT University adopte le système LMD et offre une formation de 3ans après le BAC, dans les modules suivants :</p>
+                                <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert)">Licence</span></h4>
+                                <ul class="itu-list itu-list-vert mt-4 fs-6 text-white list-unstyled">
+                                    <li class="mb-2">Développement d’applications (Programmation)</li>
+                                    <li class="mb-2">Base de données et Réseaux</li>
+                                    <li class="mb-2">Web Intégration et Web designer</li>
+                                    <li class="mb-2">Design et Communication Digital</li>
+                                    <li class="mb-2">Content Management et Digital Marketing</li>
                                 </ul>
                             </article>
+                        </div>
 
-                            <a href="diplome.html" class="btn-itu btn-itu-vert"> En Savoir Plus <i class="bi bi-arrow-right ms-2"></i> </a>
+                        <div class="col text-white">
+                            <article class="h-100 p-4 border border-white border-opacity-10" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                                <p class="fs-6 mb-2 text-white opacity-75 text-uppercase">Après ce programme , tous les sortants d’IT University seront tout de suite opérationnels, IT University met surtout en exergue la base mathématique dans son programme, afin de permettre aux étudiants d’avoir un bon niveau de raisonnement et de continuer leurs études en master et en doctorat.</p>
+                                <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert)">Master</span></h4>
+                                <ul class="itu-list itu-list-vert mt-4 fs-6 text-white list-unstyled">
+                                    <li class="mb-2">l'université Côte d'Azur -  <span style="color: var(--itu-bleu)">MBDS</span></li>
+                                    <li class="mb-2">l'ESTIA -  <span style="color: var(--itu-bleu)">BIHAR</span></li>
+                                </ul>
+                            </article>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Partenaires Section -->
-            <section id="partenaires" class="py-5" data-section-theme="light">
-                <div class="container py-4">
-                    <h2 class="text-center fw-bold mb-5 text-uppercase" style="color: var(--itu-bleu); letter-spacing: 1px">Nos Principaux partenaires</h2>
-
-                    <article class="partenaires-slider">
-                        <div class="partenaires-track">
-                            <img src="../assets/images/partenaires/yas.png" alt="Yas Madagascar" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/mef.png" alt="Ministère de l'Economie et des Finances" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/oracle.png" alt="Oracle" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/mbds.png" alt="MBDS" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/cote-dazur-university.png" alt="Université Côte d'Azur" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/microsoft-imagine-academy.png" alt="Microsoft Imagine Academy" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/estia.png" alt="ESTIA Institute of Technology" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/bihar.png" alt="BIHAR" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/fthm.png" alt="Groupe FTHM" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/bici.png" alt="BICI" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/bassan.svg" alt="Groupe BASSAN" class="partenaire-logo" loading="lazy" />
-                            <img src="../assets/images/partenaires/bred.png" alt="BRED Banque Populaire" class="partenaire-logo" loading="lazy" />
-                        </div>
-                    </article>
-                </div>
-            </section>
         </main>
         <!-- Footer -->
         <footer class="itu-footer text-white pt-5" data-section-theme="dark">
