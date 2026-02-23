@@ -66,7 +66,7 @@ $navlinks = [
         <header class="fixed-top transition-header" id="main-header" style="opacity: 0">
             <nav class="navbar navbar-expand-lg itu-navbar py-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#accueil">
+                    <a class="navbar-brand" href="/accueil">
                         <img src="/assets/images/logo/logo_semi-negatif.png" alt="IT University" height="40" id="navbar-logo" />
                     </a>
 
