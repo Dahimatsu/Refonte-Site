@@ -681,4 +681,117 @@ img {
         height: 45px;
     }
 }
+/* =========================================
+   FAQ / CTA BANNERS DYNAMIQUE
+   ========================================= */
 
+/* Zone cliquable commune */
+.cta-toggle-wrapper {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.cta-toggle-wrapper:hover {
+    transform: translateX(5px); /* Petit décalage au survol pour l'interactivité */
+}
+
+/* Icône + commun */
+.cta-icon {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+/* Rotation du + quand une section est ouverte */
+.cta-toggle-wrapper[aria-expanded="true"] .cta-icon {
+    transform: rotate(45deg);
+}
+
+/* --- Variantes de bordures de séparation --- */
+
+/* Séparation pour la bannière VERTE (bordure sombre) */
+[style*="var(--itu-vert)"] .border-top {
+    border-color: rgba(40, 58, 151, 0.15) !important; /* Bleu ITU très transparent */
+}
+
+/* Séparation pour la bannière BLEUE (bordure claire) */
+[style*="var(--itu-bleu)"] .border-top {
+    border-color: rgba(255, 255, 255, 0.15) !important; /* Blanc transparent */
+}
+
+/* --- Mise en forme des listes dans les blocs --- */
+.bg-white.bg-opacity-10, 
+.bg-white.bg-opacity-25 {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.bg-white.bg-opacity-10:hover, 
+.bg-white.bg-opacity-25:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+#collapseDossiers ul li, 
+#responseStudy ul li {
+    padding: 5px 0;
+    font-size: 1rem;
+}
+
+/* Style spécifique pour les titres de colonnes dans les dossiers */
+#collapseDossiers h5 {
+    color: var(--itu-bleu);
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+#responseStudy h5 {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+/* Style pour les bordures de calendrier */
+.border-success {
+    border-color: var(--itu-vert) !important;
+}
+
+/* Espacement entre les items FAQ sur fond blanc */
+.faq-item-white {
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Icônes de liste diplômes */
+.bi-mortarboard, .bi-calendar-check {
+    color: var(--itu-vert);
+}
+
+/* Effet sur la carte/infos pratiques */
+.display-6 {
+    color: var(--itu-bleu);
+    font-family: var(--font-title);
+}
+/* Style de base pour chaque article de la FAQ */
+.faq-wrapper article {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid transparent; /* Prépare la bordure */
+}
+
+/* Effet au survol (Hover) */
+.faq-wrapper article:hover {
+    background-color: #ffffff;
+    border-color: rgba(0, 255, 0, 0.1); /* Une touche de ton vert ITU */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Ombre légère */
+    transform: translateY(-4px); /* Soulèvement */
+    z-index: 2;
+    position: relative;
+}
+
+/* On ajuste l'icône au survol pour qu'elle attire l'oeil */
+.faq-wrapper article:hover .cta-icon {
+    color: var(--itu-vert) !important;
+}
