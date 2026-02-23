@@ -201,12 +201,12 @@ window.addEventListener('scroll', () => {
         header.classList.add('header-text-light');
         header.classList.remove('header-text-dark');
 
-        navbarLogo.src = 'assets/images/logo_semi-negatif.png';
+        navbarLogo.src = '../assets/images/logo_semi-negatif.png';
     } else {
         header.classList.add('header-text-dark');
         header.classList.remove('header-text-light');
 
-        navbarLogo.src = 'assets/images/logo_positif.png';
+        navbarLogo.src = '../assets/images/logo_positif.png';
     }
 });
 
