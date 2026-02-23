@@ -116,4 +116,9 @@
             </div>
         </div>
     </div>
+    <div class="mt-4">
+    <a href="/diplome" class="btn btn-outline-light rounded-0 px-4 py-2 opacity-75 hover-opacity-100 transition-all">
+        <i class="bi bi-arrow-left me-2"></i> Retour aux diplômes
+    </a>
+</div>
 </section>
