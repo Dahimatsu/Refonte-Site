@@ -208,6 +208,10 @@ $partenaires = [
                     <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>" alt="<?= formatText($partenaire['alt']) ?>"
                         class="partenaire-logo" loading="lazy" />
                 <?php } ?>
+                <?php foreach ($partenaires as $partenaire) { ?>
+                    <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>" alt="<?= formatText($partenaire['alt']) ?>"
+                        class="partenaire-logo" loading="lazy" />
+                <?php } ?>
             </div>
         </article>
     </div>

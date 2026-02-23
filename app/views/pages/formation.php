@@ -19,78 +19,71 @@
         <div class="row">
             <div class="col-lg-8">
                 <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
-                    Formations <br />
+                    Nos Formations <br />
                 </h1>
-                <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">Voici les questions les plus <span
-                        class="fw-bold"> posées.</span></p>
+                <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
+                    Découvrez les parcours qui feront de vous un <span class="fw-bold">expert.</span>
+                </p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- CTA Banner Section -->
-<section class="itu-faq-container py-5" data-section-theme="light" style="background-color: #ffffff !important">
-    <div class="container-fluid py-5">
-        <h2 class="display-4 fw-bold mb-5 text-center" style="color: var(--itu-bleu)">Parcours de formation</h2>
-    </div>
-</section>
-
 <section class="py-5" style="background-color: #ffffff !important">
-    <div class="container py-5">
-        <div class="row g-0">
-            <div class="col-lg-6">
-                <div class="card h-100 border-2 border-dark rounded-0 m-2 shadow-solid-blue">
-                    <div class="card-body p-4 p-lg-5">
-                        <div class="d-flex align-items-center mb-4 border-bottom border-2 pb-3">
-                            <i class="bi bi-terminal fs-1 me-3" style="color:var(--itu-bleu)"></i>
-                            <h3 class="fw-bold mb-0">INFORMATIQUE</h3>
-                        </div>
+    <div class="container py-5 text-center">
+        <h2 class="display-4 fw-bold mb-5" style="color: var(--itu-bleu)">Parcours de formation</h2>
 
-                        <div class="mb-4">
-                            <h5 class="fw-bold text-uppercase small" style="color: var(--itu-bleu)">Développement
-                                d'applications</h5>
-                            <p class="small">Conception et développement de projets d’entreprises en architecture
-                                N-tiers.</p>
-                        </div>
-
-                        <div class="mb-4">
-                            <h5 class="fw-bold text-uppercase small" style="color: var(--itu-bleu)">Web intégration et
-                                Web Designer</h5>
-                            <p class="small">Maîtrise des nouvelles techniques du Web 2.0 et du développement Front-end.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h5 class="fw-bold text-uppercase small" style="color: var(--itu-bleu)">Base de données et
-                                Réseaux</h5>
-                            <p class="small">Administration des BDD (relationnelles, objets, NoSQL) et des
-                                systèmes/réseaux.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 mb-4">
+                <h3 class="fw-bold text-uppercase border-bottom d-inline-block pb-2 mb-5" style="color: var(--itu-bleu); border-color: var(--itu-bleu) !important;">Informatique</h3>
+            </div>
+            
+            <div class="col-md-4 mb-5">
+                <div class="itu-icon-wrapper mb-3">
+                    <img src="assets/images/icons/code.png" alt="Icon Code" style="width: 60px;"> </div>
+                <h5 class="fw-bold">Développement d'applications</h5>
+                <p class="text-muted small px-3">Conception et développement de projets d’entreprises en architecture N-tiers.</p>
             </div>
 
-            <div class="col-lg-6">
-                <div class="card h-100 border-2 border-dark rounded-0 m-2 shadow-solid-green">
-                    <div class="card-body p-4 p-lg-5">
-                        <div class="d-flex align-items-center mb-4 border-bottom border-2 pb-3">
-                            <i class="bi bi-layers fs-1 me-3" style="color:var(--itu-vert)"></i>
-                            <h3 class="fw-bold mb-0" style="color:var(--itu-vert)">DESIGN</h3>
-                        </div>
-
-                        <div class="mb-4">
-                            <h5 class="fw-bold text-uppercase small" style="color: var(--itu-vert)">Design et
-                                Communication digital</h5>
-                            <p class="small">Maîtrise du design et de l’art graphique au service de projet digital.</p>
-                        </div>
-
-                        <div>
-                            <h5 class="fw-bold text-uppercase small" style="color: var(--itu-vert)">Content Management
-                                et Digital marketing</h5>
-                            <p class="small">Maîtrise du développement de contenu Web 2.0 et du digital marketing.</p>
-                        </div>
-                    </div>
+            <div class="col-md-4 mb-5">
+                <div class="itu-icon-wrapper mb-3">
+                    <img src="assets/images/icons/web.png" alt="Icon Web" style="width: 60px;">
                 </div>
+                <h5 class="fw-bold">Web intégration et Web Designer</h5>
+                <p class="text-muted small px-3">Maîtrise des nouvelles techniques du Web 2.0 et du développement Front-end.</p>
+            </div>
+
+            <div class="col-md-4 mb-5">
+                <div class="itu-icon-wrapper mb-3">
+                    <img src="assets/images/icons/network.png" alt="Icon Network" style="width: 60px;">
+                </div>
+                <h5 class="fw-bold">Base de données et Réseaux</h5>
+                <p class="text-muted small px-3">Administration des BDD (relationnelles, objets, NoSQL) et des systèmes/réseaux.</p>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-10">
+
+        <div class="row justify-content-center">
+            <div class="col-12 mb-4">
+                <h3 class="fw-bold text-uppercase border-bottom d-inline-block pb-2 mb-5" style="color: var(--itu-vert); border-color: var(--itu-vert) !important;">Design</h3>
+            </div>
+
+            <div class="col-md-5 mb-5">
+                <div class="itu-icon-wrapper mb-3">
+                    <img src="assets/images/icons/design.png" alt="Icon Design" style="width: 60px;">
+                </div>
+                <h5 class="fw-bold">Design et Communication digital</h5>
+                <p class="text-muted small px-3">Maîtrise du design et de l’art graphique au service de projet digital.</p>
+            </div>
+
+            <div class="col-md-5 mb-5">
+                <div class="itu-icon-wrapper mb-3">
+                    <img src="assets/images/icons/marketing.png" alt="Icon Marketing" style="width: 60px;">
+                </div>
+                <h5 class="fw-bold">Content Management et Digital marketing</h5>
+                <p class="text-muted small px-3">Maîtrise du développement de contenu Web 2.0 et du digital marketing.</p>
             </div>
         </div>
     </div>
