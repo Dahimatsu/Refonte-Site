@@ -91,10 +91,8 @@ window.addEventListener('load', () => {
                 );
             }
 
-            // Animation du mot "Foundation"
             const wordEl = document.getElementById('animated-foundation');
             if (wordEl) {
-                // (Ton code de découpage de texte reste le même ici)
                 const wordText = wordEl.innerText;
                 wordEl.innerHTML = '';
                 const charWrappers = [];
@@ -133,7 +131,6 @@ window.addEventListener('load', () => {
         }, delaiPreloader);
     };
 
-    // --- LOGIQUE DE DÉCISION ---
     if (hasVisited) {
         lancerAnimations(0);
     } else {

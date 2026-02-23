@@ -33,44 +33,5 @@ window.addEventListener('load', () => {
             heroBtnWrapper.style.opacity = '1';
         }, 1000);
 
-        const wordEl = document.getElementById('animated-foundation');
-        const wordText = wordEl.innerText;
-        wordEl.innerHTML = '';
-
-        const charWrappers = [];
-
-        wordText.split('').forEach((char) => {
-            const clipSpan = document.createElement('span');
-            clipSpan.className = 'char-clip';
-
-            const wrapperSpan = document.createElement('span');
-            wrapperSpan.className = 'char-wrapper';
-
-            const originalSpan = document.createElement('span');
-            originalSpan.innerText = char;
-
-            const cloneSpan = document.createElement('span');
-            cloneSpan.className = 'char-clone';
-            cloneSpan.innerText = char;
-
-            wrapperSpan.appendChild(originalSpan);
-            wrapperSpan.appendChild(cloneSpan);
-            clipSpan.appendChild(wrapperSpan);
-            wordEl.appendChild(clipSpan);
-
-            charWrappers.push(wrapperSpan);
-        });
-
-        setTimeout(() => {
-            anime.animate(charWrappers, {
-                translateY: ['0%', '-100%'],
-                duration: 750,
-                delay: anime.stagger(150, { from: 'center' }),
-                ease: 'inOutQuad',
-                alternate: true,
-                loop: true,
-                loopDelay: 3500,
-            });
-        }, 1500);
     }, 1);
 });
