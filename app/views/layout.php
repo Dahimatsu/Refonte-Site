@@ -126,7 +126,7 @@ $navlinks = [
                         <h2 class="display-4 fw-bold mb-4 text-uppercase footer-subtitle" style="font-family: var(--font-title); line-height: 1.1">Votre carrière<br />commence ici</h2>
 
                         <div class="d-flex flex-wrap gap-3 mb-5">
-                            <a href="faq.html" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
+                            <a href="/faq" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
                         </div>
 
                         <div class="d-flex gap-4 mb-4 fs-4">
