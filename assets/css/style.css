@@ -795,3 +795,33 @@ img {
 .faq-wrapper article:hover .cta-icon {
     color: var(--itu-vert) !important;
 }
+/* Suppression forcée de tous les arrondis */
+.card, .btn, .border, .rounded-0 {
+    border-radius: 0 !important;
+}
+
+/* Ombres pleines (Shadow Solid) */
+.shadow-solid-blue {
+    box-shadow: 10px 10px 0px var(--itu-bleu);
+}
+
+.shadow-solid-green {
+    box-shadow: 10px 10px 0px var(--itu-vert);
+}
+
+/* Animation au survol */
+.card {
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+}
+
+.card-info:hover {
+    box-shadow: 14px 14px 0px var(--itu-bleu);
+}
+
+.card-design:hover {
+    box-shadow: 14px 14px 0px var(--itu-vert);
+}
