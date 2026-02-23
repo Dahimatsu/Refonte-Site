@@ -1,3 +1,7 @@
+/* Masquer le preloader si déjà visité */
+.preloader-hidden {
+    display: none !important;
+}
 /* =========================================
    VARIABLES
    ========================================= */

@@ -60,12 +60,6 @@ $navlinks = [
             <div id="preloader" class="d-flex flex-column justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0 z-3">
                 <img src="/assets/images/logo/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" />
             </div>
-            <script nonce="<?= formatText($cspNonce) ?>">
-                if (sessionStorage.getItem('preloaderShown')) {
-                    document.getElementById('preloader').style.display = 'none';
-                    document.body.classList.remove('no-scroll');
-                }
-            </script>
         <?php } ?>
 
         <!-- Header -->
@@ -227,5 +221,21 @@ $navlinks = [
                 <div class="scroll-dot" id="scroll-dot"></div>
             </div>
         </div>
+        <script nonce="<?= formatText($cspNonce) ?>">
+            // Masquer immédiatement le preloader si déjà visité
+            (function() {
+                var preloader = document.getElementById('preloader');
+                if (localStorage.getItem('hasVisited')) {
+                    if (preloader) preloader.classList.add('preloader-hidden');
+                    document.body.classList.remove('no-scroll');
+                } else {
+                    window.addEventListener('load', function() {
+                        localStorage.setItem('hasVisited', '1');
+                        if (preloader) preloader.classList.add('preloader-hidden');
+                        document.body.classList.remove('no-scroll');
+                    });
+                }
+            })();
+        </script>
     </body>
 </html>

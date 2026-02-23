@@ -1,11 +1,12 @@
 const hasVisited = localStorage.getItem('hasVisited');
 const preloader = document.getElementById('preloader');
 
-
+// Si déjà visité, on le cache instantanément avant toute animation
 if (hasVisited && preloader) {
-    preloader.classList.add('d-none');
+    preloader.style.display = 'none';
     document.body.classList.remove('no-scroll');
 }
+
 // 2. DÉFINITION DE L'ANIMATION LOGO (Seulement si besoin)
 let logoPulse = null;
 if (!hasVisited) {
@@ -44,6 +45,8 @@ window.addEventListener('load', () => {
                 });
             }
 
+            // --- DÉBUT DES ANIMATIONS DE CONTENU ---
+            // On s'assure que tout est visible immédiatement si déjà visité
             const fastAnim = delaiPreloader === 0;
 
             setTimeout(
