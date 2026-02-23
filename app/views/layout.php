@@ -1,46 +1,73 @@
+<?php
+$page ??= 'accueil';
+$title ??= 'Université spécialisée en informatique';
+$description ??= 'IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011,qui a ppour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication.';
+
+$cspNonce = Flight::get('csp_nonce');
+
+$navlinks = [
+    ['label' => 'Accueil', 'href' => '/'],
+    ['label' => 'Parcours', 'href' => '/formation'],
+    ['label' => 'Diplômes', 'href' => '/diplome'],
+    ['label' => 'MBDS', 'href' => '/mbds'],
+    ['label' => 'FAQ', 'href' => '/faq'],
+    ['label' => 'Contact', 'href' => '/contact'],
+];
+?>
 <!doctype html>
 <html lang="fr" data-bs-theme="light">
     <head>
         <meta charset="UTF-8" />
         <!-- Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011,qui a ppour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication." />
+        <meta name="description" content="<?= $description ?>" />
         <meta name="author" content="Binary Beasts" />
         <meta name="keywords" content="université, informatique, design, Madagascar, Antananarivo, Andoharanofotsy, master, licence, développement web, technologie" />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="content-language" content="fr" />
         <!-- Property -->
-        <meta property="og:title" content="IT University - Université spécialisée en informatique" />
-        <meta property="og:description" content="Rejoignez l'élite de l'informatique et du design digital à Madagascar." />
-        <meta property="og:image" content="https://nom-de-domaine.mg/../assets/images/remise_diplome.jpg" />
+        <meta property="og:title" content="IT University - <?= $title ?>" />
+        <meta property="og:description" content="<?= $description ?>" />
+        <meta property="og:image" content="https://nom-de-domaine.mg/assets/images/remise_diplome.jpg" />
         <meta property="og:url" content="https://nom-de-domaine.mg" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
         <!-- Titre -->
-        <title>IT University - Université spécialisée en informatique</title>
+        <title>IT University - <?= $title ?></title>
         <!-- Link -->
-        <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../assets/bootstrap/font/bootstrap-icons.min.css" />
-        <link rel="stylesheet" href="../assets/css/typography.css" />
-        <link rel="stylesheet" href="../assets/css/style.css" />
-        <link rel="stylesheet" href="../assets/css/theme.css" />
-        <link rel="stylesheet" href="../assets/css/animate.min.css" />
+        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/bootstrap/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="/assets/css/typography.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/theme.css" />
+        <link rel="stylesheet" href="/assets/css/animate.min.css" />
         <!-- Scripts -->
-        <script src="../assets/scripts/theme-toggle.js" defer></script>
-        <script src="../assets/scripts/anime.min.js" defer></script>
-        <script src="../assets/scripts/scripts.js" defer></script>
-        <script src="../assets/scripts/animation-autre.js" defer></script>
-        <script src="../assets/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+        <script src="/assets/scripts/theme-toggle.js" defer nonce="<?= formatText($cspNonce) ?>"></script>
+        <script src="/assets/scripts/anime.min.js" defer nonce="<?= formatText($cspNonce) ?>"></script>
+        <script src="/assets/scripts/scripts.js" defer nonce="<?= formatText($cspNonce) ?>"></script>
+        <?php if ($page === 'accueil') { ?>
+            <script src="/assets/scripts/animation-home.js" defer nonce="<?= formatText($cspNonce) ?>"></script>
+        <?php } else { ?>
+            <script src="/assets/scripts/animation-page.js" defer nonce="<?= formatText($cspNonce) ?>"></script>
+        <?php } ?>
+        <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" defer nonce="<?= formatText($cspNonce) ?>"></script>
     </head>
 
     <body class="no-scroll">
+        <?php if($page === 'accueil') { ?>
+            <!-- PRELOADER -->
+            <div id="preloader" class="d-flex flex-column justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0 z-3">
+                <img src="/assets/images/logo/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" />
+            </div>
+        <?php } ?>
+
         <!-- Header -->
-        <header class="fixed-top transition-header" id="main-header">
+        <header class="fixed-top transition-header" id="main-header" style="opacity: 0">
             <nav class="navbar navbar-expand-lg itu-navbar py-3">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#accueil">
-                        <img src="../assets/images/logo_semi-negatif.png" alt="IT University" height="40" id="navbar-logo" />
+                        <img src="/assets/images/logo/logo_semi-negatif.png" alt="IT University" height="40" id="navbar-logo" />
                     </a>
 
                     <div class="d-flex align-items-center gap-2 gap-sm-3 ms-auto ms-lg-0">
@@ -67,11 +94,11 @@
 
             <div class="offcanvas-body d-flex flex-column justify-content-center px-4 px-lg-5">
                 <nav class="nav flex-column itu-big-menu">
-                    <a class="nav-link" href="#accueil" data-bs-dismiss="offcanvas">Accueil</a>
-                    <a class="nav-link" href="#parcours" data-bs-dismiss="offcanvas">Parcours</a>
-                    <a class="nav-link" href="#admission" data-bs-dismiss="offcanvas">Admission</a>
-                    <a class="nav-link" href="#campus" data-bs-dismiss="offcanvas">Campus</a>
-                    <a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">Contact</a>
+                    <?php foreach ($navlinks as $link) { ?>
+                        <a class="nav-link" href="<?= $link['href'] ?>">
+                            <?= $link['label'] ?>
+                        </a>
+                    <?php } ?>
                 </nav>
 
                 <div class="mt-auto pt-5 d-flex justify-content-between align-items-end text-muted">
@@ -88,93 +115,7 @@
 
         <!-- Main content -->
         <main>
-            <!-- Hero Section -->
-            <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
-                <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1" data-bs-ride="carousel" data-bs-pause="false">
-                    <div class="carousel-inner w-100 h-100">
-                        <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                            <img src="../assets/images/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus" loading="lazy" />
-                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-                        </div>
-                        <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                            <img src="../assets/images/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants" loading="lazy" />
-                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container position-relative z-1 px-4">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
-                                Formation <br />
-                                <span id="animated-foundation" class="d-inline-flex">DETAILS</span>
-                            </h1>
-                            <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">Voici les questions les plus <span class="fw-bold"> posées.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Banner Section -->
-            <section class="itu-faq-container py-5" data-section-theme="light" style="background-color: #ffffff !important">
-                <div class="container-fluid py-5">
-                    <h2 class="display-4 fw-bold mb-5 text-center" style="color: var(--itu-bleu)">Parcours de formation</h2>
-                </div>
-            </section>
-
-            <section class="py-5" style="background-color: #ffffff !important">
-                <div class="container py-5">
-                    <div class="row g-0">
-                        <div class="col-lg-6">
-                            <div class="card h-100 border-2 border-dark rounded-0 m-2 shadow-solid-blue">
-                                <div class="card-body p-4 p-lg-5">
-                                    <div class="d-flex align-items-center mb-4 border-bottom border-2 pb-3">
-                                        <i class="bi bi-terminal fs-1 me-3" style="color:var(--itu-bleu)"></i>
-                                        <h3 class="fw-bold mb-0">INFORMATIQUE</h3>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <h5 class="fw-bold text-uppercase small" style="color: var(--itu-bleu)">Développement d'applications</h5>
-                                        <p class="small">Conception et développement de projets d’entreprises en architecture N-tiers.</p>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <h5 class="fw-bold text-uppercase small" style="color: var(--itu-bleu)">Web intégration et Web Designer</h5>
-                                        <p class="small">Maîtrise des nouvelles techniques du Web 2.0 et du développement Front-end.</p>
-                                    </div>
-
-                                    <div>
-                                        <h5 class="fw-bold text-uppercase small" style="color: var(--itu-bleu)">Base de données et Réseaux</h5>
-                                        <p class="small">Administration des BDD (relationnelles, objets, NoSQL) et des systèmes/réseaux.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card h-100 border-2 border-dark rounded-0 m-2 shadow-solid-green">
-                                <div class="card-body p-4 p-lg-5">
-                                    <div class="d-flex align-items-center mb-4 border-bottom border-2 pb-3">
-                                        <i class="bi bi-layers fs-1 me-3" style="color:var(--itu-vert)"></i>
-                                        <h3 class="fw-bold mb-0" style="color:var(--itu-vert)">DESIGN</h3>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <h5 class="fw-bold text-uppercase small" style="color: var(--itu-vert)">Design et Communication digital</h5>
-                                        <p class="small">Maîtrise du design et de l’art graphique au service de projet digital.</p>
-                                    </div>
-
-                                    <div>
-                                        <h5 class="fw-bold text-uppercase small" style="color: var(--itu-vert)">Content Management et Digital marketing</h5>
-                                        <p class="small">Maîtrise du développement de contenu Web 2.0 et du digital marketing.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php require __DIR__ . '/pages/' . $page . '.php'; ?>
         </main>
         <!-- Footer -->
         <footer class="itu-footer text-white pt-5" data-section-theme="dark">
@@ -185,7 +126,7 @@
                         <h2 class="display-4 fw-bold mb-4 text-uppercase footer-subtitle" style="font-family: var(--font-title); line-height: 1.1">Votre carrière<br />commence ici</h2>
 
                         <div class="d-flex flex-wrap gap-3 mb-5">
-                            <a href="#inscrire" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
+                            <a href="faq.html" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
                         </div>
 
                         <div class="d-flex gap-4 mb-4 fs-4">

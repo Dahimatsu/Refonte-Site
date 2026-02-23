@@ -16,7 +16,6 @@
         const scrollWrapper = document.getElementById('scroll-indicator-wrapper');
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         const header = document.getElementById('main-header');
-        const wordEl = document.getElementById('animated-foundation');
 
         // 3. SEQUENCE DE DEMARRAGE (après 3s de preloader)
         setTimeout(() => {
@@ -70,41 +69,45 @@
                 }, 1000);
             }
 
-            if (wordEl) {
-                const wordText = wordEl.innerText;
-                wordEl.innerHTML = '';
-                const charWrappers = [];
+            const wordEl = document.getElementById('animated-foundation');
+            const wordText = wordEl.innerText;
+            wordEl.innerHTML = '';
 
-                wordText.split('').forEach((char) => {
-                    const clipSpan = document.createElement('span');
-                    clipSpan.className = 'char-clip';
-                    const wrapperSpan = document.createElement('span');
-                    wrapperSpan.className = 'char-wrapper';
-                    const originalSpan = document.createElement('span');
-                    originalSpan.innerText = char;
-                    const cloneSpan = document.createElement('span');
-                    cloneSpan.className = 'char-clone';
-                    cloneSpan.innerText = char;
+            const charWrappers = [];
 
-                    wrapperSpan.appendChild(originalSpan);
-                    wrapperSpan.appendChild(cloneSpan);
-                    clipSpan.appendChild(wrapperSpan);
-                    wordEl.appendChild(clipSpan);
-                    charWrappers.push(wrapperSpan);
+            wordText.split('').forEach((char) => {
+                const clipSpan = document.createElement('span');
+                clipSpan.className = 'char-clip';
+
+                const wrapperSpan = document.createElement('span');
+                wrapperSpan.className = 'char-wrapper';
+
+                const originalSpan = document.createElement('span');
+                originalSpan.innerText = char;
+
+                const cloneSpan = document.createElement('span');
+                cloneSpan.className = 'char-clone';
+                cloneSpan.innerText = char;
+
+                wrapperSpan.appendChild(originalSpan);
+                wrapperSpan.appendChild(cloneSpan);
+                clipSpan.appendChild(wrapperSpan);
+                wordEl.appendChild(clipSpan);
+
+                charWrappers.push(wrapperSpan);
+            });
+
+            setTimeout(() => {
+                anime.animate(charWrappers, {
+                    translateY: ['0%', '-100%'],
+                    duration: 750,
+                    delay: anime.stagger(150, { from: 'center' }),
+                    ease: 'inOutQuad',
+                    alternate: true,
+                    loop: true,
+                    loopDelay: 3500,
                 });
-
-                setTimeout(() => {
-                    anime.animate(charWrappers, {
-                        translateY: ['0%', '-100%'],
-                        duration: 750,
-                        delay: anime.stagger(150, { from: 'center' }),
-                        ease: 'inOutQuad',
-                        direction: 'alternate',
-                        loop: true,
-                        loopDelay: 3500,
-                    });
-                }, 1500);
-            }
+            }, 1500);
         }, 3000);
     });
 }
