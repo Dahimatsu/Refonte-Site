@@ -30,7 +30,7 @@
 </section>
 
 <!-- CTA Banner Section -->
-<section class="py-5" style="background-color: #ffffff !important">
+<section class="py-5" style="background-color: #ffffff !important" data-section-theme="light">
     <div class="container py-5 text-center">
         <h2 class="display-4 fw-bold mb-5" style="color: var(--itu-bleu)">Parcours de formation</h2>
 

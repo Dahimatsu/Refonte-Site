@@ -35,7 +35,7 @@ $navlinks = [
         <!-- Titre -->
         <title>IT University - <?= $title ?></title>
         <!-- Link -->
-        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/bootstrap/font/bootstrap-icons.min.css" />
         <link rel="stylesheet" href="/assets/css/typography.css" />
@@ -222,11 +222,10 @@ $navlinks = [
             </div>
         </div>
         <script nonce="<?= formatText($cspNonce) ?>">
-            // Masquer immédiatement le preloader si déjà visité
             (function() {
                 var preloader = document.getElementById('preloader');
                 if (localStorage.getItem('hasVisited')) {
-                    if (preloader) preloader.style.display = 'none';
+                    if (preloader) preloader.classList.add('d-none');
                     document.body.classList.remove('no-scroll');
                 }
             })();
