@@ -85,9 +85,15 @@ img {
     height: auto;
     display: block;
 }
+/* =========================================
+   LOGO
+   ========================================= */
+.itu-logo {
+    transition: all 0.3s ease;
+}
 
 /* =========================================
-   COMPOSANT MAÎTRE : LISTES AVEC PUCES SVG
+   LISTES AVEC PUCES SVG
    ========================================= */
 .itu-list {
     list-style: none;
@@ -406,7 +412,6 @@ img {
 /* =========================================
    BANNIÈRE CALL TO ACTION
    ========================================= */
-/* 1. Le conteneur principal */
 .itu-cta-banner {
     background-color: var(--itu-vert); 
     position: relative;
@@ -522,12 +527,12 @@ img {
     display: flex;
     align-items: center;
     width: max-content; 
-    animation: scrollPartenaires 25s linear infinite; 
+    animation: scrollPartenaires 35s linear infinite; 
 }
 
-.partenaires-slider:hover .partenaires-track {
+/* .partenaires-slider:hover .partenaires-track {
     animation-play-state: paused;
-}
+} */
 
 .partenaire-logo {
     height: 60px; 
@@ -828,4 +833,26 @@ img {
 
 .card-design:hover {
     box-shadow: 14px 14px 0px var(--itu-vert);
+}
+
+.itu-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: #f8f9fa; /* Fond gris très clair */
+    border-radius: 50%; /* Garde l'arrondi pour l'icône seulement si tu aimes, sinon mets 0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.itu-icon-wrapper:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.text-muted {
+    line-height: 1.6;
 }

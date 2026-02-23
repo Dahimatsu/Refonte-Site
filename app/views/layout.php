@@ -35,7 +35,7 @@ $navlinks = [
         <!-- Titre -->
         <title>IT University - <?= $title ?></title>
         <!-- Link -->
-        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/bootstrap/font/bootstrap-icons.min.css" />
         <link rel="stylesheet" href="/assets/css/typography.css" />
@@ -58,7 +58,7 @@ $navlinks = [
         <?php if($page === 'accueil') { ?>
             <!-- PRELOADER -->
             <div id="preloader" class="d-flex flex-column justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0 z-3">
-                <img src="/assets/images/logo/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" />
+                <img src="/assets/images/logo/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" class="itu-logo"/>
             </div>
         <?php } ?>
 
@@ -126,7 +126,7 @@ $navlinks = [
                         <h2 class="display-4 fw-bold mb-4 text-uppercase footer-subtitle" style="font-family: var(--font-title); line-height: 1.1">Votre carrière<br />commence ici</h2>
 
                         <div class="d-flex flex-wrap gap-3 mb-5">
-                            <a href="faq.html" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
+                            <a href="/faq" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
                         </div>
 
                         <div class="d-flex gap-4 mb-4 fs-4">
@@ -222,18 +222,11 @@ $navlinks = [
             </div>
         </div>
         <script nonce="<?= formatText($cspNonce) ?>">
-            // Masquer immédiatement le preloader si déjà visité
             (function() {
                 var preloader = document.getElementById('preloader');
                 if (localStorage.getItem('hasVisited')) {
-                    if (preloader) preloader.classList.add('preloader-hidden');
+                    if (preloader) preloader.classList.add('d-none');
                     document.body.classList.remove('no-scroll');
-                } else {
-                    window.addEventListener('load', function() {
-                        localStorage.setItem('hasVisited', '1');
-                        if (preloader) preloader.classList.add('preloader-hidden');
-                        document.body.classList.remove('no-scroll');
-                    });
                 }
             })();
         </script>

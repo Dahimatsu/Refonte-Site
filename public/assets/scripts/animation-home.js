@@ -3,7 +3,7 @@ const preloader = document.getElementById('preloader');
 
 // Si déjà visité, on le cache instantanément avant toute animation
 if (hasVisited && preloader) {
-    preloader.style.display = 'none';
+    preloader.classList.add('d-none');
     document.body.classList.remove('no-scroll');
 }
 
@@ -38,15 +38,13 @@ window.addEventListener('load', () => {
                     duration: 600,
                     ease: 'linear',
                     onComplete: function () {
-                        preloader.style.display = 'none';
+                        preloader.classList.add('d-none');
                         document.body.classList.remove('no-scroll');
                         if (logoPulse) logoPulse.pause();
                     },
                 });
             }
 
-            // --- DÉBUT DES ANIMATIONS DE CONTENU ---
-            // On s'assure que tout est visible immédiatement si déjà visité
             const fastAnim = delaiPreloader === 0;
 
             setTimeout(
