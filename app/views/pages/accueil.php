@@ -189,7 +189,7 @@ $partenaires = [
                     </ul>
                 </article>
 
-                <a href="diplome.html" class="btn-itu btn-itu-vert"> En Savoir Plus <i
+                <a href="/diplome" class="btn-itu btn-itu-vert"> En Savoir Plus <i
                         class="bi bi-arrow-right ms-2"></i> </a>
             </div>
         </div>
