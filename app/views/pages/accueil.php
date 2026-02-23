@@ -1,3 +1,21 @@
+<?php
+$partenaires = [
+    ['src' => 'republique.png', 'alt' => 'République de Madagascar'],
+    ['src' => 'mesupres.png', 'alt' => 'MESUPRES'],
+    ['src' => 'mndpt.png', 'alt' => 'MNDPT'],
+    ['src' => 'pamff.png', 'alt' => 'PAMFF'],
+    ['src' => 'axian.png', 'alt' => 'Groupe Axian'],
+    ['src' => 'bred.png', 'alt' => 'BRED Banque Populaire'],
+    ['src' => 'accessbanque.png', 'alt' => 'AccessBanque Madagascar'],
+    ['src' => 'bassan.png', 'alt' => 'Groupe Bassan'],
+    ['src' => 'qdata.png', 'alt' => 'Q-Data'],
+    ['src' => 'softwell.png', 'alt' => 'Softwell'],
+    ['src' => 'asisten.png', 'alt' => 'Asisten'],
+    ['src' => 'sioka.png', 'alt' => 'Sioka'],
+    ['src' => 'fthm.png', 'alt' => 'FTHM Consulting'],
+    ['src' => 'yas.png', 'alt' => 'Yas Madagascar']
+];
+?>
 <!-- Hero Section -->
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
     <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1"
@@ -186,27 +204,10 @@
 
         <article class="partenaires-slider">
             <div class="partenaires-track">
-                <img src="../assets/images/partenaires/yas.png" alt="Yas Madagascar" class="partenaire-logo"
-                    loading="lazy" />
-                <img src="../assets/images/partenaires/mef.png" alt="Ministère de l'Economie et des Finances"
-                    class="partenaire-logo" loading="lazy" />
-                <img src="../assets/images/partenaires/oracle.png" alt="Oracle" class="partenaire-logo"
-                    loading="lazy" />
-                <img src="../assets/images/partenaires/mbds.png" alt="MBDS" class="partenaire-logo" loading="lazy" />
-                <img src="../assets/images/partenaires/cote-dazur-university.png" alt="Université Côte d'Azur"
-                    class="partenaire-logo" loading="lazy" />
-                <img src="../assets/images/partenaires/microsoft-imagine-academy.png" alt="Microsoft Imagine Academy"
-                    class="partenaire-logo" loading="lazy" />
-                <img src="../assets/images/partenaires/estia.png" alt="ESTIA Institute of Technology"
-                    class="partenaire-logo" loading="lazy" />
-                <img src="../assets/images/partenaires/bihar.png" alt="BIHAR" class="partenaire-logo" loading="lazy" />
-                <img src="../assets/images/partenaires/fthm.png" alt="Groupe FTHM" class="partenaire-logo"
-                    loading="lazy" />
-                <img src="../assets/images/partenaires/bici.png" alt="BICI" class="partenaire-logo" loading="lazy" />
-                <img src="../assets/images/partenaires/bassan.svg" alt="Groupe BASSAN" class="partenaire-logo"
-                    loading="lazy" />
-                <img src="../assets/images/partenaires/bred.png" alt="BRED Banque Populaire" class="partenaire-logo"
-                    loading="lazy" />
+                <?php foreach ($partenaires as $partenaire) { ?>
+                    <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>" alt="<?= formatText($partenaire['alt']) ?>"
+                        class="partenaire-logo" loading="lazy" />
+                <?php } ?>
             </div>
         </article>
     </div>

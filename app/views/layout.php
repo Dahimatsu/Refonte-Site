@@ -60,6 +60,12 @@ $navlinks = [
             <div id="preloader" class="d-flex flex-column justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0 z-3">
                 <img src="/assets/images/logo/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" />
             </div>
+            <script nonce="<?= formatText($cspNonce) ?>">
+                if (sessionStorage.getItem('preloaderShown')) {
+                    document.getElementById('preloader').style.display = 'none';
+                    document.body.classList.remove('no-scroll');
+                }
+            </script>
         <?php } ?>
 
         <!-- Header -->
