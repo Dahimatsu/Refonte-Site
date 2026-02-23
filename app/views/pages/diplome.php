@@ -78,7 +78,7 @@
                     <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert)">Master</span></h4>
                     <ul class="itu-list itu-list-vert mt-4 fs-6 text-white list-unstyled">
                         <li class="mb-2">l'université Côte d'Azur - <span style="color: var(--itu-bleu)"> <a
-                                    href="mbds.html">MBDS</a></span></li>
+                                    href="/mbds">MBDS</a></span></li>
                         <li class="mb-2">l'ESTIA - <span style="color: var(--itu-bleu)">BIHAR</span></li>
                     </ul>
                 </article>

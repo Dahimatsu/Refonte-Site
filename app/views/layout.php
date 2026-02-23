@@ -58,21 +58,15 @@ $navlinks = [
         <?php if($page === 'accueil') { ?>
             <!-- PRELOADER -->
             <div id="preloader" class="d-flex flex-column justify-content-center align-items-center vh-100 w-100 position-fixed top-0 start-0 z-3">
-                <img src="/assets/images/logo/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" />
+                <img src="/assets/images/logo/logo_semi-negatif.png" alt="Logo IT University" id="preloader-logo" loading="lazy" class="itu-logo"/>
             </div>
-            <script nonce="<?= formatText($cspNonce) ?>">
-                if (sessionStorage.getItem('preloaderShown')) {
-                    document.getElementById('preloader').style.display = 'none';
-                    document.body.classList.remove('no-scroll');
-                }
-            </script>
         <?php } ?>
 
         <!-- Header -->
         <header class="fixed-top transition-header" id="main-header" style="opacity: 0">
             <nav class="navbar navbar-expand-lg itu-navbar py-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#accueil">
+                    <a class="navbar-brand" href="/accueil">
                         <img src="/assets/images/logo/logo_semi-negatif.png" alt="IT University" height="40" id="navbar-logo" />
                     </a>
 
@@ -227,5 +221,15 @@ $navlinks = [
                 <div class="scroll-dot" id="scroll-dot"></div>
             </div>
         </div>
+        <script nonce="<?= formatText($cspNonce) ?>">
+            // Masquer immédiatement le preloader si déjà visité
+            (function() {
+                var preloader = document.getElementById('preloader');
+                if (localStorage.getItem('hasVisited')) {
+                    if (preloader) preloader.style.display = 'none';
+                    document.body.classList.remove('no-scroll');
+                }
+            })();
+        </script>
     </body>
 </html>

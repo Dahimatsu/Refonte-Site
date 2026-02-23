@@ -189,7 +189,7 @@ $partenaires = [
                     </ul>
                 </article>
 
-                <a href="diplome.html" class="btn-itu btn-itu-vert"> En Savoir Plus <i
+                <a href="/diplome" class="btn-itu btn-itu-vert"> En Savoir Plus <i
                         class="bi bi-arrow-right ms-2"></i> </a>
             </div>
         </div>
@@ -204,6 +204,10 @@ $partenaires = [
 
         <article class="partenaires-slider">
             <div class="partenaires-track">
+                <?php foreach ($partenaires as $partenaire) { ?>
+                    <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>" alt="<?= formatText($partenaire['alt']) ?>"
+                        class="partenaire-logo" loading="lazy" />
+                <?php } ?>
                 <?php foreach ($partenaires as $partenaire) { ?>
                     <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>" alt="<?= formatText($partenaire['alt']) ?>"
                         class="partenaire-logo" loading="lazy" />

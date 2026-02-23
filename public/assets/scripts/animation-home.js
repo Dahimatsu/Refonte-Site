@@ -1,11 +1,12 @@
 const hasVisited = localStorage.getItem('hasVisited');
 const preloader = document.getElementById('preloader');
 
-
+// Si déjà visité, on le cache instantanément avant toute animation
 if (hasVisited && preloader) {
     preloader.classList.add('d-none');
     document.body.classList.remove('no-scroll');
 }
+
 // 2. DÉFINITION DE L'ANIMATION LOGO (Seulement si besoin)
 let logoPulse = null;
 if (!hasVisited) {
@@ -37,7 +38,7 @@ window.addEventListener('load', () => {
                     duration: 600,
                     ease: 'linear',
                     onComplete: function () {
-                        preloader.style.display = 'none';
+                        preloader.classList.add('d-none');
                         document.body.classList.remove('no-scroll');
                         if (logoPulse) logoPulse.pause();
                     },
@@ -88,10 +89,8 @@ window.addEventListener('load', () => {
                 );
             }
 
-            // Animation du mot "Foundation"
             const wordEl = document.getElementById('animated-foundation');
             if (wordEl) {
-                // (Ton code de découpage de texte reste le même ici)
                 const wordText = wordEl.innerText;
                 wordEl.innerHTML = '';
                 const charWrappers = [];
@@ -130,7 +129,6 @@ window.addEventListener('load', () => {
         }, delaiPreloader);
     };
 
-    // --- LOGIQUE DE DÉCISION ---
     if (hasVisited) {
         lancerAnimations(0);
     } else {

@@ -19,8 +19,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
-                    <br />
-                    <span id="animated-foundation" class="d-inline-flex">FAQ</span>
+                    Foire aux Questions<br />
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">Voici les questions les plus <span
                         class="fw-bold"> posées.</span></p>
