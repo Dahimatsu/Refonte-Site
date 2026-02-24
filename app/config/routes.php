@@ -10,6 +10,7 @@ use app\controllers\FaqController;
 use app\controllers\FormationController;
 use app\controllers\MbdsController;
 use app\controllers\BiharController;
+use app\controllers\ContactController;
 
 /** 
  * @var Router $router 
@@ -46,6 +47,9 @@ $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/bihar', function () use ($app) {
 		BiharController::showBihar($app);
+	});
+	$router->get('/contact', function () use ($app) {
+		ContactController::showContact($app);
 	});
 
 }, [ SecurityHeadersMiddleware::class ]);

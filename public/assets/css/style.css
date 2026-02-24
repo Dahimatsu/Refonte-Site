@@ -916,3 +916,9 @@ img {
         object-position: 30% center !important; 
     }
 }
+.form-control:focus {
+    background-color: #fff !important;
+    border-color: var(--itu-vert) !important;
+    box-shadow: none;
+    outline: 0;
+}
