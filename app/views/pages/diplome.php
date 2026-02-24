@@ -53,10 +53,10 @@
             <div class="col text-white">
                 <article class="h-100 p-4 border border-white border-opacity-10"
                     style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
-                    <p class="fs-6 mb-2 text-white opacity-75 text-uppercase">IT University est un établissement
+                    <p class="fs-6 mb-2 text-white opacity">IT University est un établissement
                         d’enseignement supérieur privé spécialisé en informatique, créé en 2011, pour répondre aux
-                        besoins du secteur professionnel en matière de nouvelles technologies.IT University adopte le
-                        système LMD et offre une formation de 3ans après le BAC, dans les modules suivants :</p>
+                        besoins du secteur professionnel en matière de nouvelles technologies. <br> IT University adopte le
+                        système LMD et offre une formation de 3 ans après le BAC, dans les modules suivants :</p>
                     <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert)">Licence</span></h4>
                     <ul class="itu-list itu-list-vert mt-4 fs-6 text-white list-unstyled">
                         <li class="mb-2">Développement d’applications (Programmation)</li>
@@ -71,15 +71,15 @@
             <div class="col text-white">
                 <article class="h-100 p-4 border border-white border-opacity-10"
                     style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
-                    <p class="fs-6 mb-2 text-white opacity-75 text-uppercase">Après ce programme , tous les sortants
-                        d’IT University seront tout de suite opérationnels, IT University met surtout en exergue la base
+                    <p class="fs-6 mb-2 text-white">Après ce programme , tous les sortants
+                        d’IT University seront tout de suite opérationnels. <br> IT University met surtout en exergue la base
                         mathématique dans son programme, afin de permettre aux étudiants d’avoir un bon niveau de
                         raisonnement et de continuer leurs études en master et en doctorat.</p>
                     <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert)">Master</span></h4>
                     <ul class="itu-list itu-list-vert mt-4 fs-6 text-white list-unstyled">
-                        <li class="mb-2">l'université Côte d'Azur - <span style="color: var(--itu-bleu)"> <a
+                        <li class="mb-2">L'université Côte d'Azur - <span style="color: var(--itu-bleu)"> <a
                                     href="/mbds">MBDS</a></span></li>
-                        <li class="mb-2">l'ESTIA - <span style="color: var(--itu-bleu)">BIHAR</span></li>
+                        <li class="mb-2">L'ESTIA - <span style="color: var(--itu-bleu)"> <a href="/bihar">BIHAR</a></span></li>
                     </ul>
                 </article>
             </div>

@@ -106,6 +106,7 @@ $design_resumes = [
     
     <div class="itu-cta-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
+<<<<<<< HEAD
     <div class="container position-relative z-1 text-white">
         <h2 class="itu-cta-title display-2 fw-bold text-uppercase mb-4">
             Plus d'informations ?
@@ -117,5 +118,30 @@ $design_resumes = [
         <a href="/contact" class="btn-itu btn-itu-vert rounded-0 fw-bold px-5 py-3 text-uppercase">
             Contactez-nous
         </a>
+=======
+        <hr class="my-5 opacity-10">
+
+        <div class="row justify-content-center">
+            <div class="col-12 mb-4">
+                <h3 class="fw-bold text-uppercase border-bottom d-inline-block pb-2 mb-5" style="color: var(--itu-vert); border-color: var(--itu-vert) !important;">Design</h3>
+            </div>
+
+            <div class="col-md-5 mb-5">
+                <div class="itu-icon-wrapper mb-3">
+                    <img src="assets/images/icons/design.png" alt="Icon Design" style="width: 60px;">
+                </div>
+                <h5 class="fw-bold" style="color: var(--itu-vert)">Design et Communication digital</h5>
+                <p class="text-muted small px-3">Maîtrise du design et de l’art graphique au service de projet digital.</p>
+            </div>
+
+            <div class="col-md-5 mb-5">
+                <div class="itu-icon-wrapper mb-3">
+                    <img src="assets/images/icons/marketing.png" alt="Icon Marketing" style="width: 60px;">
+                </div>
+                <h5 class="fw-bold" style="color: var(--itu-vert)">Content Management et Digital marketing</h5>
+                <p class="text-muted small px-3">Maîtrise du développement de contenu Web 2.0 et du digital marketing.</p>
+            </div>
+        </div>
+>>>>>>> 453ba60e14380aefbace9f7be96bf0ca87945a1f
     </div>
 </section>

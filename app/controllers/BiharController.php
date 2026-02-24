@@ -2,12 +2,12 @@
 
 namespace app\controllers;
 
-class MbdsController
+class BiharController
 {
-    public static function showMbds($app)
+    public static function showBihar($app)
     {
         $app->render('layout', [
-            'page' => 'mbds',
+            'page' => 'bihar',
             'title' => 'Master Big Data & Science des Données',
             'description' => 'IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011, qui a ppour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication.'
         ]);

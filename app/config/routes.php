@@ -9,6 +9,7 @@ use app\controllers\DiplomeController;
 use app\controllers\FaqController;
 use app\controllers\FormationController;
 use app\controllers\MbdsController;
+use app\controllers\BiharController;
 
 /** 
  * @var Router $router 
@@ -41,6 +42,10 @@ $router->group('', function(Router $router) use ($app) {
 	
 	$router->get('/mbds', function () use ($app) {
 		MbdsController::showMbds($app);
+	});
+
+	$router->get('/bihar', function () use ($app) {
+		BiharController::showBihar($app);
 	});
 
 }, [ SecurityHeadersMiddleware::class ]);
