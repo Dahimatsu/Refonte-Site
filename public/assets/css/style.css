@@ -291,7 +291,8 @@ img {
     border: none;
 }
 #theme-toggle:hover {
-    background-color: #e9ecef; 
+    background-color: #939ba3;
+    border-radius: 10px !important; 
     color: var(--text-color) !important; 
 }
 
@@ -433,6 +434,37 @@ img {
     opacity: 0.1;
     z-index: -1;
 }
+
+.itu-formation {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.itu-formation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05; 
+    z-index: -1;
+}
+
+.itu-formations-info::before {
+    background-image: var(--ascendant-pattern);
+    
+}
+
+.itu-formations-design::before {
+    background-image: var(--descendant-pattern);
+}
+
 
 .cta-title {
     font-family: var(--font-title);
@@ -855,4 +887,31 @@ img {
 
 .text-muted {
     line-height: 1.6;
+}
+
+/* ==========================================
+   SECTION CONTACT CTA
+   ========================================== */
+
+/* L'image de fond avec effet parallaxe */
+.itu-contact-cta {
+    background-image: url('/assets/images/background/contact-bg-1.jpg'); /* Modifie le chemin si besoin */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Effet parallaxe */
+}
+
+/* Le filtre sombre par-dessus l'image */
+.itu-cta-overlay {
+    background-color: rgba(0, 0, 10, 0.75);
+}
+
+.itu-cta-title {
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .bg-mobile-right {
+        object-position: 30% center !important; 
+    }
 }

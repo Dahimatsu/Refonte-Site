@@ -3,12 +3,12 @@
         data-bs-ride="carousel" data-bs-pause="false">
         <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
+                <img src="../assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
                     loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
             <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants"
+                <img src="../assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants"
                     loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
@@ -32,7 +32,7 @@
 <!-- Diplome Section -->
 <section id="diplome" class="min-vh-100 position-relative py-5" data-section-theme="dark">
     <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
-        <img src="../assets/images/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100 object-fit-cover" loading="lazy" />
+        <img src="../assets/images/background/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100 object-fit-cover" loading="lazy" />
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, rgba(10, 25, 47, 0.98) 30%, rgba(10, 25, 47, 0.7) 100%)"></div>
     </div>
 

@@ -221,14 +221,5 @@ $navlinks = [
                 <div class="scroll-dot" id="scroll-dot"></div>
             </div>
         </div>
-        <script nonce="<?= formatText($cspNonce) ?>">
-            (function() {
-                var preloader = document.getElementById('preloader');
-                if (localStorage.getItem('hasVisited')) {
-                    if (preloader) preloader.classList.add('d-none');
-                    document.body.classList.remove('no-scroll');
-                }
-            })();
-        </script>
     </body>
 </html>

@@ -22,12 +22,12 @@ $partenaires = [
         data-bs-ride="carousel" data-bs-pause="false">
         <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
+                <img src="/assets/images/background/itu-bg-1.jpeg" class="d-block w-100 h-100 object-fit-cover bg-mobile-right" alt="Campus"
                     loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
             <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants"
+                <img src="/assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover bg-mobile-right" alt="Étudiants"
                     loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
@@ -65,7 +65,7 @@ $partenaires = [
             </div>
 
             <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                <a href="#parcours" class="btn-itu btn-itu-bleu"> Voir les parcours </a>
+                <a href="/dipolome" class="btn-itu btn-itu-bleu"> Voir les diplomes </a>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@ $partenaires = [
         </div>
 
         <div class="position-absolute top-0 start-0 w-100 h-100 z-0 bg-dark">
-            <img src="../assets/images/option-image.jpg" alt="Image d'illustration des options de formation"
+            <img src="/assets/images/background/option-image.jpg" alt="Image d'illustration des options de formation"
                 loading="lazy" class="w-100 h-100" style="object-fit: cover; opacity: 0.6" />
         </div>
     </article>
@@ -152,7 +152,7 @@ $partenaires = [
             </div>
 
             <div class="col-lg-6 text-center">
-                <img src="../assets/images/illustration-rentree.png" alt="Illustration Rentrée ITU" loading="lazy"
+                <img src="/assets/images/background/illustration-rentree.png" alt="Illustration Rentrée ITU" loading="lazy"
                     class="img-fluid floating-img" style="max-width: 90%" />
             </div>
         </div>
@@ -163,7 +163,7 @@ $partenaires = [
 <section id="diplome" class="vh-100 position-relative overflow-hidden d-flex align-items-center"
     data-section-theme="dark">
     <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
-        <img src="../assets/images/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100" loading="lazy"
+        <img src="/assets/images/background/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100" loading="lazy"
             style="object-fit: cover; object-position: center" />
 
         <div class="position-absolute top-0 start-0 w-100 h-100"
