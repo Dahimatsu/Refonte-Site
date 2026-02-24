@@ -414,6 +414,7 @@ img {
    BANNIÈRE CALL TO ACTION
    ========================================= */
 .itu-cta-banner {
+    transition: all 0.3s ease;
     background-color: var(--itu-vert); 
     position: relative;
     overflow: hidden; 
