@@ -79,7 +79,7 @@
                     <ul class="itu-list itu-list-vert mt-4 fs-6 text-white list-unstyled">
                         <li class="mb-2">L'université Côte d'Azur - <span style="color: var(--itu-bleu)"> <a
                                     href="/mbds">MBDS</a></span></li>
-                        <li class="mb-2">l'ESTIA - <span style="color: var(--itu-bleu)"> <a href="/bihar">BIHAR</a></span></li>
+                        <li class="mb-2">L'ESTIA - <span style="color: var(--itu-bleu)"> <a href="/bihar">BIHAR</a></span></li>
                     </ul>
                 </article>
             </div>

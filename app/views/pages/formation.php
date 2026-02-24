@@ -74,7 +74,7 @@
                 <div class="itu-icon-wrapper mb-3">
                     <img src="assets/images/icons/design.png" alt="Icon Design" style="width: 60px;">
                 </div>
-                <h5 class="fw-bold">Design et Communication digital</h5>
+                <h5 class="fw-bold" style="color: var(--itu-vert)">Design et Communication digital</h5>
                 <p class="text-muted small px-3">Maîtrise du design et de l’art graphique au service de projet digital.</p>
             </div>
 
@@ -82,7 +82,7 @@
                 <div class="itu-icon-wrapper mb-3">
                     <img src="assets/images/icons/marketing.png" alt="Icon Marketing" style="width: 60px;">
                 </div>
-                <h5 class="fw-bold">Content Management et Digital marketing</h5>
+                <h5 class="fw-bold" style="color: var(--itu-vert)">Content Management et Digital marketing</h5>
                 <p class="text-muted small px-3">Maîtrise du développement de contenu Web 2.0 et du digital marketing.</p>
             </div>
         </div>
