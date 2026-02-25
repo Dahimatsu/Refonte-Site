@@ -79,20 +79,11 @@ $cursus_data = [
 ?>
 
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
-    <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1"
-        data-bs-ride="carousel" data-bs-pause="false">
-        <div class="carousel-inner w-100 h-100">
-            <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/bg-hero-design-1.jpg" class="d-block w-100 h-100 object-fit-cover"
-                    alt="Étudiants en design" loading="lazy" />
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-            </div>
-            <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/bg-hero-design-2.jpg" class="d-block w-100 h-100 object-fit-cover"
-                    alt="Création numérique" loading="lazy" />
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-            </div>
-        </div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
+        <img src="../assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
+            loading="lazy" />
+
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
     </div>
 
     <div class="container position-relative z-1 px-4">
@@ -102,8 +93,7 @@ $cursus_data = [
                     Parcours Design <br />
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
-                    Libérez votre créativité et maîtrisez l'art de la communication <span
-                        class="fw-bold">digitale.</span>
+                    Libérez votre créativité et maîtrisez l'art de la communication digitale.
                 </p>
             </div>
         </div>

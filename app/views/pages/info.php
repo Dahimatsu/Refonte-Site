@@ -95,20 +95,11 @@ $cursus_data = [
 ];
 ?>
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
-    <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1"
-        data-bs-ride="carousel" data-bs-pause="false">
-        <div class="carousel-inner w-100 h-100">
-            <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
-                    loading="lazy" />
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-            </div>
-            <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants"
-                    loading="lazy" />
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-            </div>
-        </div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
+        <img src="../assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
+            loading="lazy" />
+
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
     </div>
 
     <div class="container position-relative z-1 px-4">
@@ -118,7 +109,7 @@ $cursus_data = [
                     Parcours Informatique <br />
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
-                    Concevez, développez et administrez les solutions de <span class="fw-bold">demain.</span>
+                    Concevez, développez et administrez les solutions de demain.
                 </p>
             </div>
         </div>
@@ -128,13 +119,13 @@ $cursus_data = [
 <!-- Info Section -->
 <section class="itu-formation itu-formations-info container-fluid py-5" style="background-color: var(--itu-bleu);">
     <div class="container py-5 text-center">
-        
+
         <header class="mb-5">
             <h3 class="fw-bold text-uppercase d-inline-block pb-2" style="color: var(--itu-vert);">
                 Parcours
             </h3>
         </header>
-        
+
         <article class="row justify-content-center mb-5">
             <?php foreach ($info_resumes as $parcours) { ?>
                 <article class="col-md-4 mb-4">
@@ -152,7 +143,7 @@ $cursus_data = [
 
 <section class="py-5" style="background-color: var(--itu-gris);" data-section-theme="light">
     <div class="container py-5">
-        
+
         <header class="text-start mb-5 border-bottom border-dark border-3 pb-3">
             <h2 class="display-4 fw-black text-uppercase mb-0" style="letter-spacing: -2px; font-weight: 900;">
                 Programme Détaillé
@@ -160,7 +151,7 @@ $cursus_data = [
         </header>
 
         <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            
+
             <?php
             $index = 1;
             foreach ($cursus_data as $categorie):
@@ -213,9 +204,10 @@ $cursus_data = [
     <section class="py-4 py-md-5" style="background-color: var(--itu-bleu);">
         <div class="container">
             <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between">
-                
+
                 <div>
-                    <p class="text-white-50 text-uppercase mb-1 fw-bold" style="letter-spacing: 2px; font-size: 0.85rem;">
+                    <p class="text-white-50 text-uppercase mb-1 fw-bold"
+                        style="letter-spacing: 2px; font-size: 0.85rem;">
                         Vous avez une âme créative ?
                     </p>
                     <h3 class="display-6 fw-bold text-white mb-0 text-uppercase">

@@ -73,7 +73,8 @@
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <h4 class="fw-bold mb-3 text-uppercase fs-5" style="color: var(--itu-vert);">Toutes Séries
+                                <h4 class="fw-bold mb-3 text-uppercase fs-5" style="color: var(--itu-vert);">Toutes
+                                    Séries
                                 </h4>
                                 <ul class="list-unstyled mb-0">
                                     <li class="d-flex align-items-start mb-2"><span class="fw-bold me-2"
@@ -151,7 +152,9 @@
                     <div class="card-body p-4 p-lg-5 border-top border-dark font-monospace"
                         style="border-width: 2px !important;">
                         <p class="fs-5 text-dark">
-                            La date limite de dépôt est généralement fixée à la fin du mois de septembre, quelques jours après la publication des résultats du Bacc. Nous vous recommandons de suivre nos réseaux sociaux pour les annonces officielles.
+                            La date limite de dépôt est généralement fixée à la fin du mois de septembre, quelques jours
+                            après la publication des résultats du Bacc. Nous vous recommandons de suivre nos réseaux
+                            sociaux pour les annonces officielles.
                         </p>
                     </div>
                 </div>
@@ -172,7 +175,8 @@
                 <div id="qAdmis" class="collapse" data-bs-parent="#faqAccordion">
                     <div class="card-body p-4 p-lg-5 border-top border-dark" style="border-width: 2px !important;">
                         <p class="fs-5 text-dark">
-                            Disponible sur ce site et au campus (Andoharanofotsy). La date sera communiquée quelques jours après la clôture des dépôts alors suivez-nous.
+                            Disponible sur ce site et au campus (Andoharanofotsy). La date sera communiquée quelques
+                            jours après la clôture des dépôts alors suivez-nous.
                         </p>
                     </div>
                 </div>
@@ -241,9 +245,11 @@
                 <div id="qLocation" class="collapse" data-bs-parent="#faqAccordion">
                     <div class="card-body p-4 p-lg-5 border-top border-dark" style="border-width: 2px !important;">
                         <p class="fs-5 text-dark mb-4">
-                            L’IT University se situe à <strong>Andoharanofotsy</strong>, entre la banque BNI et la station GALANA.
+                            L’IT University se situe à <strong>Andoharanofotsy</strong>, entre la banque BNI et la
+                            station GALANA.
                         </p>
-                        <a href="https://maps.app.goo.gl/7LMyT1Mq9JZx8YYg7 Quels" target="_blank" rel="noopener noreferrer"
+                        <a href="https://maps.app.goo.gl/7LMyT1Mq9JZx8YYg7 Quels" target="_blank"
+                            rel="noopener noreferrer"
                             class="btn btn-itu-vert rounded-0 fw-bold px-4 py-3 text-uppercase font-monospace"
                             style="border: 2px solid #1a1a1a;">
                             <i class="bi bi-map-fill me-2"></i> >_ Ouvrir Google Maps
@@ -276,6 +282,57 @@
                 </div>
             </article>
 
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+                <div class="card-header bg-white border-0 p-0">
+                    <h3 class="mb-0">
+                        <button
+                            class="btn w-100 text-start p-4 fw-bold fs-4 d-flex justify-content-between align-items-center rounded-0 shadow-none text-dark text-uppercase collapsed"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#qPaiement" aria-expanded="false"
+                            style="letter-spacing: -1px;">
+                            <span>Comment puis-je régler mes frais de scolarité ?</span>
+                            <i class="bi bi-chevron-down fs-3" style="color: var(--itu-vert);" aria-hidden="true"></i>
+                        </button>
+                    </h3>
+                </div>
+                <div id="qPaiement" class="collapse" data-bs-parent="#faqAccordion">
+                    <div class="card-body p-4 p-lg-5 border-top border-dark" style="border-width: 2px !important;">
+                        <p class="fs-5 text-dark">
+                            Pour faciliter votre inscription, nous vous proposons deux options de règlement :
+                        </p>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-start mb-2"><span class="fw-bold me-2"
+                                        style="color: var(--itu-vert);">>_</span>Le paiement intégral : vous réglez la
+                                    totalité en une seule fois.</li>
+                                <li class="d-flex align-items-start"><span class="fw-bold me-2"
+                                        style="color: var(--itu-vert);">>_</span>Le paiement en 2 tranches : le premier
+                                    pendant l'inscription et le second avant la fin du semestre.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+                <div class="card-header bg-white border-0 p-0">
+                    <h3 class="mb-0">
+                        <button
+                            class="btn w-100 text-start p-4 fw-bold fs-4 d-flex justify-content-between align-items-center rounded-0 shadow-none text-dark text-uppercase collapsed"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#qParcours" aria-expanded="false"
+                            style="letter-spacing: -1px;">
+                            <span>Est-il possible de changer de parcours ?</span>
+                            <i class="bi bi-chevron-down fs-3" style="color: var(--itu-vert);" aria-hidden="true"></i>
+                        </button>
+                    </h3>
+                </div>
+                <div id="qParcours" class="collapse" data-bs-parent="#faqAccordion">
+                    <div class="card-body p-4 p-lg-5 border-top border-dark" style="border-width: 2px !important;">
+                        <p class="fs-5 text-dark">
+                            Oui il est possible de changer de parcours à la fin de la première année, après une évaluation académique et une discussion avec les conseillers pédagogiques. Nous encourageons les étudiants à explorer différentes disciplines avant de prendre cette décision.
+                        </p>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
 </section>

@@ -1,53 +1,83 @@
 <?php
 $merchs = [
     [
-        'id' => 'hoodie-blanc',
-        'nom' => 'Bold White Hoodie',
+        'id' => 'sweat-noir',
+        'nom' => 'Sweater Noir',
         'prix' => '65 000 Ar',
-        'categorie' => 'hoodies',
-        'image' => 'hoodie-white.jpg'
+        'categorie' => 'sweats',
+        'image_front' => 'sweat-noir-front.jpg',
+        'image_back' => 'sweat-noir-back.jpg'
     ],
     [
-        'id' => 'hoodie-noir',
-        'nom' => 'Black Hoodie',
+        'id' => 'sweat-blanc',
+        'nom' => 'Sweater Blanc',
         'prix' => '65 000 Ar',
-        'categorie' => 'hoodies',
-        'image' => 'hoodie-black.png'
+        'categorie' => 'sweats',
+        'image_front' => 'sweat-blanc-front.jpg',
+        'image_back' => 'sweat-blanc-back.jpg'
     ],
     [
-        'id' => 'chemise-textured',
-        'nom' => 'Textured Shirt',
-        'prix' => '45 000 Ar',
-        'categorie' => 'shirts',
-        'image' => 'shirt-white.png'
+        'id' => 'crewneck-blanc',
+        'nom' => 'Crewneck Blanc',
+        'prix' => '60 000 Ar',
+        'categorie' => 'sweats',
+        'image_front' => 'crewneck-blanc-front.jpg',
+        'image_back' => 'crewneck-blanc-back.jpg'
     ],
     [
         'id' => 'tshirt-noir',
-        'nom' => 'Relaxed Fit Shirt',
+        'nom' => 'T-Shirt Noir',
         'prix' => '35 000 Ar',
         'categorie' => 't-shirts',
-        'image' => 'tshirt-black.png'
-    ],
-    [
-        'id' => 'casquette-itu',
-        'nom' => 'Casquette ITU',
-        'prix' => '25 000 Ar',
-        'categorie' => 'hats',
-        'image' => 'hat-black.png'
+        'image_front' => 'tshirt-noir-front.jpg',
+        'image_back' => 'tshirt-noir-back.jpg'
     ],
     [
         'id' => 'tshirt-blanc',
-        'nom' => 'Classic White T-Shirt',
+        'nom' => 'T-Shirt Blanc',
         'prix' => '35 000 Ar',
         'categorie' => 't-shirts',
-        'image' => 'tshirt-white.png'
+        'image_front' => 'tshirt-blanc-front.jpg',
+        'image_back' => 'tshirt-blanc-back.jpg'
+    ],
+    [
+        'id' => 'pyjama-bleu',
+        'nom' => 'Pyjama Bleu',
+        'prix' => '45 000 Ar',
+        'categorie' => 'others',
+        'image_front' => 'pyjama_bleu_front.jpg',
+        'image_back' => 'pyjama_bleu_back.jpg'
+    ],
+    [
+        'id' => 'pyjama-rose',
+        'nom' => 'Pyjama Rose',
+        'prix' => '45 000 Ar',
+        'categorie' => 'others',
+        'image_front' => 'pyjama_rose_front.jpg',
+        'image_back' => 'pyjama_rose_back.jpg'
+    ],
+    [
+        'id' => 'mug-itu',
+        'nom' => 'Mug >_ Coder',
+        'prix' => '15 000 Ar',
+        'categorie' => 'accessoires',
+        'image_front' => 'mug.png',
+        'image_back' => null
+    ],
+    [
+        'id' => 'gourde-itu',
+        'nom' => 'Gourde Isotherme',
+        'prix' => '25 000 Ar',
+        'categorie' => 'accessoires',
+        'image_front' => 'gourde.png',
+        'image_back' => 'gourde-all-view.png'
     ]
 ];
 ?>
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
 
     <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
-        <img src="/assets/images/background/bg-hero-merch.jpg" class="d-block w-100 h-100 object-fit-cover"
+        <img src="/assets/images/background/merch-bg.png" class="d-block w-100 h-100 object-fit-cover"
             alt="ITU Boutique" loading="lazy" />
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
     </div>
@@ -56,8 +86,7 @@ $merchs = [
         <div class="row">
             <div class="col-lg-8">
                 <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
-                    Collection <br />
-                    <span class="d-inline-flex" style="color: var(--itu-bleu);">Officielle.</span>
+                    Collection Officielle.
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-4 fs-4 fw-light">
                     Portez fièrement les couleurs de l'élite de l'IT. Découvrez notre collection de vêtements et
@@ -76,11 +105,12 @@ $merchs = [
             <h2 class="display-6 fw-bold text-uppercase m-0" style="letter-spacing: -1px;">Find Your Fit</h2>
 
             <div class="d-flex flex-wrap gap-2" id="merch-filters">
-                <button class="filter-btn font-monospace active" data-filter="all">All</button>
-                <button class="filter-btn font-monospace" data-filter="t-shirts">T-Shirts</button>
-                <button class="filter-btn font-monospace" data-filter="shirts">Shirts</button>
-                <button class="filter-btn font-monospace" data-filter="hoodies">Hoodies</button>
-                <button class="filter-btn font-monospace" data-filter="hats">Hats</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="t-shirts">T-Shirts</button>
+                <button class="filter-btn" data-filter="sweats">Sweats & Hoodie</button>
+                <button class="filter-btn" data-filter="accessoires">Accessoires</button>
+                <button class="filter-btn" data-filter="hats">Hats</button>
+                <button class="filter-btn" data-filter="others">Others</button>
             </div>
         </div>
 
@@ -93,7 +123,14 @@ $merchs = [
                         class="card rounded-0 border-0 h-100 merch-card bg-transparent text-decoration-none d-block">
         
                         <div class="merch-img-container border border-dark border-2 w-100">
-                            <img src="/assets/images/merch/<?= $item['image'] ?>" alt="<?= $item['nom'] ?>">
+        
+                            <img src="/assets/images/merch/<?= $item['image_front'] ?>" class="img-front"
+                                alt="<?= $item['nom'] ?> - Face">
+        
+                            <?php if (!empty($item['image_back'])): ?>
+                                <img src="/assets/images/merch/<?= $item['image_back'] ?>" class="img-back"
+                                    alt="<?= $item['nom'] ?> - Dos">
+                            <?php endif; ?>
         
                             <div class="merch-overlay"></div>
         
