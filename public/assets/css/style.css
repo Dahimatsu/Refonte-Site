@@ -1050,15 +1050,19 @@ img {
     .merch-card:hover .merch-overlay {
         opacity: 1;
     }
+    
     .merch-card:hover .merch-img-container img {
         transform: scale(1.08); 
     }
+
     .merch-card:hover .merch-info {
         transform: translateY(0); 
     }
+
     .merch-card:hover .merch-title {
         color: #ffffff; 
     }
+
     .merch-card:hover .merch-price {
         color: var(--itu-vert);
     }
