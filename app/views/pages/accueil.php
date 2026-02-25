@@ -1,9 +1,4 @@
 <?php
-$hasResults = (
-    file_exists(__DIR__ . '/../../../public/assets/data/resultats_info.csv') ||
-    file_exists(__DIR__ . '/../../../public/assets/data/resultats_design.csv')
-);
-
 $partenaires = [
     ['src' => 'republique.png', 'alt' => 'République de Madagascar'],
     ['src' => 'mesupres.png', 'alt' => 'MESUPRES'],

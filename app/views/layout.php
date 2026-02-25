@@ -22,6 +22,11 @@ $navlinks = [
     ['label' => 'FAQ', 'href' => '/faq'],
     ['label' => 'Contact', 'href' => '/contact'],
 ];
+
+$hasResults = (
+    file_exists(__DIR__ . '/../../public/assets/data/resultats_info.csv') ||
+    file_exists(__DIR__ . '/../../public/assets/data/resultats_design.csv')
+);
 ?>
 <!doctype html>
 <html lang="fr" data-bs-theme="light">
@@ -112,7 +117,7 @@ $navlinks = [
                 <span class="fw-bold me-2"><i class="bi bi-arrow-right fs-5"></i></span>
             </button>
             <nav class="d-flex gap-2">
-                <?php if ($page !== 'resultats') { ?>
+                <?php if ($hasResults) { ?>
                     <a href="/resultats" class="btn-itu btn-itu-bleu">
                         <span>Voir les résultats</span>
                     </a>
