@@ -76,12 +76,8 @@ $partenaires = [
     <article class="w-100 position-relative d-flex flex-column justify-content-center px-4 px-lg-5 py-5"
         style="flex: 1; background-color: var(--itu-gris); min-height: 50vh">
         <div class="position-relative z-1">
-            <h6 class="text-uppercase fw-bold mb-2" style="color: var(--itu-vert); letter-spacing: 2px">Nos formations
-            </h6>
-            <h2 class="display-4 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Choisissez
-                votre<br />Option</h2>
-            <a href="/formation" class="btn-itu btn-itu-bleu"> Voir plus en détails <i
-                    class="bi bi-arrow-right ms-2"></i> </a>
+            <h6 class="text-uppercase fw-bold mb-2" style="color: var(--itu-vert); letter-spacing: 2px">Nos formations</h6>
+            <h2 class="display-4 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Choisissez votre<br />Option</h2>
         </div>
 
         <div class="position-absolute top-0 start-0 w-100 h-100 z-0 bg-dark">
@@ -91,40 +87,42 @@ $partenaires = [
     </article>
 
     <article class="w-100 d-flex flex-column p-0" style="flex: 1">
-        <article
-            class="itu-article itu-article-bleu w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0 text-white"
+        
+        <article class="itu-article itu-article-bleu w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0 text-white"
             style="background-color: var(--itu-bleu); flex: 1">
             <div class="w-100 mx-auto" style="max-width: 500px">
-                <h3 class="fw-bold mb-4 text-white text-uppercase">INFORMATIQUE</h3>
+                
+                <header class="w-100 d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold mb-0 text-white text-uppercase">INFORMATIQUE</h3>
+                </header>
 
-                <ul class="list-unstyled mb-4 fs-5 itu-list itu-list-vert">
-                    <li>Développement</li>
-                    <li>Web & Design</li>
-                    <li>Réseaux & Base de données</li>
+                <ul class="list-unstyled mb-5 fs-5 itu-list itu-list-vert">
+                    <li class="mb-2">Développement</li>
+                    <li class="mb-2">Web & Design</li>
+                    <li class="mb-2">Réseaux & Base de données</li>
                 </ul>
 
-                <div class="mt-2">
-                    <span class="itu-badge itu-badge-vert py-2 px-3 fs-6 fw-bold text-uppercase">Série
-                        scientifique</span>
-                </div>
+                <a href="/info" class="btn-itu btn-itu-vert"> En savoir plus <i class="bi bi-arrow-right ms-2"></i> </a>
             </div>
         </article>
 
-        <article
-            class="itu-article itu-article-vert w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0">
+        <article class="itu-article itu-article-vert w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0"
+            style="background-color: var(--itu-gris); flex: 1">
             <div class="w-100 mx-auto" style="max-width: 500px">
-                <h3 class="fw-bold mb-4 text-uppercase" style="color: var(--itu-bleu)">DESIGN</h3>
+                
+                <header class="w-100 d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold mb-0 text-uppercase" style="color: var(--itu-bleu)">DESIGN</h3>
+                </header>
 
-                <ul class="list-unstyled mb-4 fs-5 itu-list itu-list-bleu">
-                    <li>Design & Communication Digitale</li>
-                    <li>Content management & digital marketing</li>
+                <ul class="list-unstyled mb-5 fs-5 itu-list itu-list-bleu">
+                    <li class="mb-2">Design & Communication Digitale</li>
+                    <li class="mb-2">Content management & digital marketing</li>
                 </ul>
 
-                <div class="mt-2">
-                    <span class="itu-badge itu-badge-bleu py-2 px-3 fs-6 fw-bold text-uppercase">Toutes séries</span>
-                </div>
+                <a href="/design" class="btn-itu btn-itu-bleu"> En savoir plus <i class="bi bi-arrow-right ms-2"></i> </a>
             </div>
         </article>
+        
     </article>
 </section>
 

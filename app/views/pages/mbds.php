@@ -1,15 +1,62 @@
+<?php
+// Données du programme MBDS
+$mbds_modules = [
+    [
+        'titre' => 'Bases de données & Infostructures',
+        'icone' => 'bi-database-fill-gear',
+        'couleur' => 'var(--itu-bleu)',
+        'matieres' => [
+            'Big Data & Data Mining',
+            'Customer Relationship Management (CRM)',
+            'SQL3',
+            'Administration avancée'
+        ]
+    ],
+    [
+        'titre' => 'Serveurs d’applications',
+        'icone' => 'bi-server',
+        'couleur' => 'var(--itu-vert)',
+        'matieres' => [
+            'J2EE',
+            '.NET',
+            'Web 2.0 (Ajax)',
+            'XML & Services Web'
+        ]
+    ],
+    [
+        'titre' => 'Systèmes Mobiquitaires',
+        'icone' => 'bi-phone-fill',
+        'couleur' => 'var(--itu-bleu)',
+        'matieres' => [
+            'Android & iOS',
+            'NFC (Near Field Communication)',
+            'QR Code',
+            'Réalité augmentée'
+        ]
+    ]
+];
+
+$dossier_items = [
+    'CV & Photo CIN',
+    'Certificat de résidence',
+    'Copies des diplômes',
+    '3 Photos d\'identité',
+    'Chemise cartonnée rose'
+];
+?>
+
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
     <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1"
         data-bs-ride="carousel" data-bs-pause="false">
         <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
-                    loading="lazy" />
+                <img src="../assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover"
+                    alt="Campus" loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
             <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants"
-                    loading="lazy" />
+                <img src="../assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover"
+                    alt="Étudiants" loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
         </div>
@@ -19,106 +66,117 @@
         <div class="row">
             <div class="col-lg-8">
                 <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
-                    Vos diplômes <br />
-                    <span id="animated-foundation" class="d-inline-flex">reconnus.</span>
+                    MBDS Nice.
                 </h1>
-                <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">Diplômes habilités par
-                    l’Enseignement Supérieur – <span class="fw-bold">Système LMD.</span></p>
+                <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
+                    Mobiquité, Base de Données et intégrations de Systèmes.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Diplome Section -->
-<section id="diplome" class="min-vh-100 position-relative py-5" data-section-theme="dark">
-    <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
-        <img src="../assets/images/background/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100 object-fit-cover" loading="lazy" />
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, rgba(10, 25, 47, 0.98) 30%, rgba(10, 25, 47, 0.7) 100%)"></div>
-    </div>
-
-    <div class="container position-relative z-1 py-5">
-        <div class="row">
-            <div class="col-lg-8 col-xl-7 text-white">
-                <h6 class="text-uppercase fw-bold mb-3" style="color: var(--itu-vert); letter-spacing: 2px">L'aboutissement</h6>
-                <h2 class="display-4 fw-bold mb-4" style="font-family: var(--font-title)">Master MBDS Nice</h2>
-                
-                <p class="lead opacity-75 mb-5">
-                    IT University offre en partenariat avec l’Université de Nice à Sophia Antipolis (France), 
-                    le Master MBDS (Mobiquité, Base de Données et intégrations de Systèmes).
+<section class="py-5 " data-section-theme="light">
+    <div class="container py-4">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-7">
+                <h2 class="display-5 fw-black text-uppercase mb-3"
+                    style="color: var(--itu-bleu); letter-spacing: -1px;">
+                    Le Master International
+                </h2>
+                <p class="lead text-muted" style="line-height: 1.8;">
+                    IT University offre en partenariat avec l’Université de Nice à Sophia Antipolis (France), le Master
+                    MBDS. Une formation de pointe pour maîtriser les technologies de demain.
                 </p>
+            </div>
+        </div>
 
-                <div class="row g-4 mb-5">
-                    <div class="col-md-6">
-                        <div class="p-4 border border-white border-opacity-10 h-100" style="background: rgba(255,255,255,0.03);">
-                            <h5 class="text-vert mb-3"><i class="bi bi-calendar-check me-2"></i>Dates à retenir</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-2 small"><strong>Clôture :</strong> Septembre</li>
-                                <li class="small"><strong>Rentrée :</strong> Octobre</li>
-                            </ul>
-                        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card"
+                    style="border: 2px solid #1a1a1a; background-color: #f8fcfb;">
+                    <div class="d-flex align-items-center mb-4 pb-3 border-bottom border-dark border-2">
+                        <i class="bi bi-calendar-check fs-2 me-3" style="color: var(--itu-vert);"></i>
+                        <h4 class="fw-bold mb-0 text-uppercase fs-4" style="color: #1a1a1a;">Dates à retenir</h4>
                     </div>
-                    <div class="col-md-6">
-                        <div class="p-4 border border-white border-opacity-10 h-100" style="background: rgba(255,255,255,0.03);">
-                            <h5 class="text-vert mb-3"><i class="bi bi-mortarboard me-2"></i>Admission</h5>
-                            <p class="small mb-0">Ouvert aux Bac+4 en Informatique ou équivalent après examen du dossier.</p>
-                        </div>
-                    </div>
-                </div>
+                    <ul class="list-unstyled mb-0 fs-5 font-monospace">
+                        <li class="mb-3 d-flex align-items-center"><span class="fw-bold me-3"
+                                style="color: var(--itu-bleu);">>_</span> <strong>Clôture :</strong> <span
+                                class="ms-2">Septembre</span></li>
+                        <li class="d-flex align-items-center"><span class="fw-bold me-3"
+                                style="color: var(--itu-bleu);">>_</span> <strong>Rentrée :</strong> <span
+                                class="ms-2">Octobre</span></li>
+                    </ul>
+                </article>
+            </div>
 
-                <div class="accordion accordion-flush itu-accordion mb-5" id="accordionMBDS">
-                    
-                    <div class="accordion-item bg-transparent border-white border-opacity-10">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDossier">
-                                Dossier à fournir
-                            </button>
-                        </h2>
-                        <div id="collapseDossier" class="accordion-collapse collapse" data-bs-parent="#accordionMBDS">
-                            <div class="accordion-body text-white opacity-75">
-                                <ul class="row row-cols-md-2 g-2 list-unstyled mb-0">
-                                    <li><i class="bi bi-check2 text-vert me-2"></i>CV & Photo CIN</li>
-                                    <li><i class="bi bi-check2 text-vert me-2"></i>Certificat de résidence</li>
-                                    <li><i class="bi bi-check2 text-vert me-2"></i>Copies des diplômes</li>
-                                    <li><i class="bi bi-check2 text-vert me-2"></i>3 Photos d'identité</li>
-                                    <li><i class="bi bi-check2 text-vert me-2"></i>Chemise cartonnée rose</li>
-                                </ul>
-                                <a href="#" class="btn btn-link text-vert p-0 mt-3 text-decoration-none">
-                                    <i class="bi bi-download me-2"></i>Télécharger le formulaire
-                                </a>
-                            </div>
-                        </div>
+            <div class="col-md-6">
+                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card"
+                    style="border: 2px solid #1a1a1a; background-color: #f8fcfb;">
+                    <div class="d-flex align-items-center mb-4 pb-3 border-bottom border-dark border-2">
+                        <i class="bi bi-person-check fs-2 me-3" style="color: var(--itu-vert);"></i>
+                        <h4 class="fw-bold mb-0 text-uppercase fs-4" style="color: #1a1a1a;">Admission</h4>
                     </div>
-
-                    <div class="accordion-item bg-transparent border-white border-opacity-10">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProgramme">
-                                Contenu de la formation (Modules)
-                            </button>
-                        </h2>
-                        <div id="collapseProgramme" class="accordion-collapse collapse" data-bs-parent="#accordionMBDS">
-                            <div class="accordion-body text-white opacity-75">
-                                <div class="mb-3">
-                                    <h6 class="text-vert">Bases de données & Infostructures</h6>
-                                    <p class="small">Big Data, Data Mining, CRM, SQL3, Administration avancée.</p>
-                                </div>
-                                <div class="mb-3">
-                                    <h6 class="text-vert">Serveurs d’applications</h6>
-                                    <p class="small">J2EE, .NET, Web 2.0 (Ajax), XML, Services Web.</p>
-                                </div>
-                                <div>
-                                    <h6 class="text-vert">Systèmes Mobiquitaires</h6>
-                                    <p class="small">Android, iOS, NFC, QR Code, Réalité augmentée.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <p class="fs-5 mb-0 fw-medium" style="color: #1a1a1a; line-height: 1.6;">
+                        Ouvert aux étudiants niveau <span class="fw-bold" style="color: var(--itu-bleu);">Bac+4 en
+                            Informatique</span> ou équivalent, après un examen rigoureux du dossier.
+                    </p>
+                </article>
             </div>
         </div>
     </div>
-    <div class="mt-4">
-    <a href="/diplome" class="btn btn-outline-light rounded-0 px-4 py-2 opacity-75 hover-opacity-100 transition-all">
-        <i class="bi bi-arrow-left me-2"></i> Retour aux diplômes
-    </a>
-</div>
+</section>
+
+<section class="py-5" style="background-color: var(--itu-gris);" data-section-theme="light">
+    <div class="container py-5">
+
+        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3">
+            <h2 class="display-4 fw-black text-uppercase mb-0" style="letter-spacing: -2px; font-weight: 900;">
+                Détails
+            </h2>
+        </header>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <?php
+            $index = 1;
+            foreach ($mbds_modules as $module):
+                $num = str_pad($index, 2, '0', STR_PAD_LEFT);
+                ?>
+                <div class="col">
+                    <article class="card h-100 rounded-0 itu-brutalist-card position-relative overflow-hidden"
+                        style="border: 2px solid #1a1a1a; background-color: #ffffff;">
+
+                        <div class="position-absolute"
+                            style="top: -20px; right: -10px; font-size: 10rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 2px <?= $module['couleur'] ?>; opacity: 0.2; z-index: 0; pointer-events: none; user-select: none;">
+                            <?= $num ?>
+                        </div>
+
+                        <div class="card-body p-4 p-lg-5 position-relative z-1 d-flex flex-column">
+                            <div class="mb-4 pb-3 border-bottom border-dark border-2">
+                                <h4 class="fw-bold mb-0 text-uppercase fs-4 d-flex align-items-end"
+                                    style="letter-spacing: -1px; color: #1a1a1a; min-height: 3.5rem;">
+                                    <?= $module['titre'] ?>
+                                </h4>
+                            </div>
+
+                            <ul class="list-unstyled mb-0">
+                                <?php foreach ($module['matieres'] as $matiere): ?>
+                                    <li class="d-flex align-items-start mb-3 font-monospace"
+                                        style="font-size: 0.85rem; color: #1a1a1a;">
+                                        <span class="me-3 fw-bold fs-6" style="color: <?= $module['couleur'] ?>;">>_</span>
+                                        <span class="fw-medium">
+                                            <?= $matiere ?>
+                                        </span>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <?php
+                $index++;
+            endforeach;
+            ?>
+        </div>
+    </div>
 </section>

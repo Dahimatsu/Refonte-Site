@@ -37,10 +37,14 @@ $router->group('', function(Router $router) use ($app) {
 		FaqController::showFaq($app);
 	});
 	
-	$router->get('/formation', function () use ($app) {
-		FormationController::showFormation($app);
+	$router->get('/informatique', function () use ($app) {
+		FormationController::showInfo($app);
 	});
 	
+	$router->get('/design', function () use ($app) {
+		FormationController::showDesign($app);
+	});
+
 	$router->get('/mbds', function () use ($app) {
 		MbdsController::showMbds($app);
 	});

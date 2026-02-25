@@ -85,6 +85,10 @@ img {
     height: auto;
     display: block;
 }
+
+.font-monospace {
+    font-family: 'JetBrains Mono', monospace !important;
+}
 /* =========================================
    LOGO
    ========================================= */
@@ -356,6 +360,52 @@ img {
 .itu-big-menu .nav-link:focus {
     color: var(--itu-vert);
     transform: translateX(30px);
+}
+
+.itu-nav-dropdown {
+    position: relative;
+    overflow: hidden;
+}
+
+.itu-dropdown-arrow {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.itu-sub-menu {
+    max-height: 0;
+    opacity: 0;
+    padding-left: 1.5rem; 
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.itu-sub-menu .sub-nav-link {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Effet hover sur les sous-liens individuels */
+.itu-sub-menu .sub-nav-link:hover {
+    color: var(--itu-vert);
+    padding-left: 0.5rem; /* Petit décalage très tech au survol */
+}
+
+/* ==========================================
+   LES ACTIONS QUAND ON SURVOLE LE PARENT (.itu-nav-dropdown)
+   ========================================== */
+
+/* 1. Le sous-menu apparaît en glissant vers le bas */
+.itu-nav-dropdown:hover .itu-sub-menu {
+    max-height: 200px; /* Assez grand pour contenir les liens */
+    opacity: 1;
+    margin-bottom: 1rem; /* Ajoute un peu d'espace en bas quand c'est ouvert */
+}
+
+/* 2. La flèche tourne à 180 degrés */
+.itu-nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+    color: var(--itu-vert);
 }
 
 /* =========================================
@@ -745,7 +795,6 @@ img {
     display: inline-block;
 }
 
-/* Rotation du + quand une section est ouverte */
 .cta-toggle-wrapper[aria-expanded="true"] .cta-icon {
     transform: rotate(45deg);
 }
@@ -890,27 +939,6 @@ img {
     line-height: 1.6;
 }
 
-/* ==========================================
-   SECTION CONTACT CTA
-   ========================================== */
-
-/* L'image de fond avec effet parallaxe */
-.itu-contact-cta {
-    background-image: url('/assets/images/background/contact-bg-1.jpg'); /* Modifie le chemin si besoin */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Effet parallaxe */
-}
-
-/* Le filtre sombre par-dessus l'image */
-.itu-cta-overlay {
-    background-color: rgba(0, 0, 10, 0.75);
-}
-
-.itu-cta-title {
-    letter-spacing: 2px;
-}
-
 @media (max-width: 768px) {
     .bg-mobile-right {
         object-position: 30% center !important; 
@@ -921,4 +949,86 @@ img {
     border-color: var(--itu-vert) !important;
     box-shadow: none;
     outline: 0;
+}
+
+.cursus-card {
+    transition: all 0.3s ease;
+}
+
+.cursus-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.itu-cta-design section {
+    position: relative;
+    transition: background-color 0.4s ease;
+    z-index: 1;
+}
+
+.itu-cta-design section::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background-image: var(--stroke-pattern);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0.15;
+    
+    pointer-events: none; 
+}
+
+/* 3. On s'assure que le texte passe bien par-dessus l'image */
+.itu-cta-design section .container {
+    position: relative;
+}
+
+.itu-cta-design .itu-banner-arrow {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.itu-cta-design:hover section {
+    background-color: var(--itu-vert) !important;
+}
+
+.itu-cta-design:hover .itu-banner-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.itu-brutalist-card {
+    box-shadow: 6px 6px 0px #1a1a1a;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.itu-brutalist-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #1a1a1a;
+}
+
+.form-control {
+    background-color: transparent !important;
+    border: 2px solid #1a1a1a !important;
+    color: #000000 !important;
+    transition: all 0.3s ease;
+}
+
+.itu-brutalist-form .form-control:focus {
+    border: 2px solid #1a1a1a !important;
+    box-shadow: 4px 4px 0px #1a1a1a !important;
+    outline: none;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--itu-vert);
+    border-color: var(--itu-vert) !important;
+    color: white;
 }
