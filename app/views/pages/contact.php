@@ -3,12 +3,12 @@
         data-bs-ride="carousel" data-bs-pause="false">
         <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="/assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover"
+                <img src="/assets/images/background/contact-bg-1.jpg" class="d-block w-100 h-100 object-fit-cover"
                     alt="Étudiants en design" loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
             <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="/assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover"
+                <img src="/assets/images/background/itu-bg-2.jpeg" class="d-block w-100 h-100 object-fit-cover"
                     alt="Création numérique" loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
