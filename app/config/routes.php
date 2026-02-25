@@ -23,11 +23,7 @@ use app\controllers\MerchController;
 $app = Flight::app();
 
 $router->group('', function(Router $router) use ($app) {
-	$router->get('/', function () {
-		Flight::redirect('/accueil');
-	});
-
-	$router->get('/accueil', function () use ($app) {
+	$router->get('/', function () use ($app) {
 		AccueilController::showAccueil($app);
 	});
 	

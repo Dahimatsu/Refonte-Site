@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /app/
+Disallow: /vendor/
+Disallow: /tests/
+Disallow: /runway
+Disallow: /Vagrantfile
+Disallow: /index-simple.php
+Disallow: /README.md
+Disallow: /LICENSE
+Allow: /public/
+Allow: /assets/
+
+Sitemap: /sitemap.xml
