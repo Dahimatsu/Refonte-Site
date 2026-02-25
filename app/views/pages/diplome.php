@@ -48,79 +48,104 @@
     </div>
 
     <div class="container position-relative z-1 py-5">
+        
         <div class="row mb-5 text-center text-lg-start">
             <div class="col-12 text-white">
-                <h6 class="text-uppercase fw-bold mb-3" style="color: var(--itu-vert); letter-spacing: 2px">Nos Diplômes</h6>
-                <h2 class="display-5 fw-bold text-uppercase">L'aboutissement de votre parcours</h2>
+                <h6 class="text-uppercase fw-bold mb-3 font-monospace" style="color: var(--itu-vert); letter-spacing: 2px">
+                    >_ L'aboutissement
+                </h6>
             </div>
         </div>
 
-        <div class="row g-4 justify-content-center">
+        <div class="row g-5 justify-content-center">
 
-            <div class="col-lg-6 col-xl-5 text-white">
-                <article class="h-100 p-4 p-md-5 border rounded-0" style="background: rgba(0, 0, 0, 0.6); border-color: rgba(255,255,255,0.15) !important;">
-                    <div class="d-flex align-items-center mb-4 border-bottom border-secondary pb-3">
-                        <i class="bi bi-mortarboard fs-1 me-3" style="color: var(--itu-vert);"></i>
-                        <h3 class="display-6 fw-bold mb-0">Licence</h3>
+            <div class="col-lg-6 col-xl-5">
+                <article class="h-100 p-4 p-lg-5 rounded-0 itu-brutalist-card position-relative overflow-hidden d-flex flex-column"
+                         style="border: 2px solid #1a1a1a; background-color: #ffffff; box-shadow: 10px 10px 0px #1a1a1a;">
+
+                    <div class="position-absolute" style="top: -15px; right: -15px; font-size: 8rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--itu-vert); opacity: 0.15; z-index: 0; pointer-events: none; user-select: none;">
+                        L3
                     </div>
-                    <p class="text-white-50 mb-4 small text-uppercase" style="letter-spacing: 1px;">Formation de 3 ans après le BAC</p>
 
-                    <ul class="list-unstyled mt-4 fs-6">
+                    <div class="position-relative z-1 mb-4 pb-4 border-bottom border-dark border-2">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-mortarboard-fill display-5 me-3" style="color: var(--itu-vert);"></i>
+                            <h3 class="display-5 fw-black text-uppercase mb-0" style="color: #1a1a1a; letter-spacing: -2px;">Licence</h3>
+                        </div>
+                        <span class="badge rounded-0 fs-6 px-3 py-2 text-uppercase font-monospace" style="background-color: var(--itu-vert); color: #fff; border: 2px solid #1a1a1a;">
+                            3 ans après le BAC
+                        </span>
+                    </div>
+
+                    <ul class="list-unstyled mt-2 mb-0 font-monospace position-relative z-1 flex-grow-1" style="font-size: 0.95rem; color: #1a1a1a;">
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-check-square-fill me-3 mt-1" style="color: var(--itu-vert);"></i>
-                            <span>Développement d’applications (Programmation)</span>
+                            <span class="fw-bold me-3 fs-5" style="color: var(--itu-vert);">>_</span>
+                            <span class="fw-medium mt-1">Développement d’applications</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-check-square-fill me-3 mt-1" style="color: var(--itu-vert);"></i>
-                            <span>Base de données et Réseaux</span>
+                            <span class="fw-bold me-3 fs-5" style="color: var(--itu-vert);">>_</span>
+                            <span class="fw-medium mt-1">Base de données et Réseaux</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-check-square-fill me-3 mt-1" style="color: var(--itu-vert);"></i>
-                            <span>Web Intégration et Web designer</span>
+                            <span class="fw-bold me-3 fs-5" style="color: var(--itu-vert);">>_</span>
+                            <span class="fw-medium mt-1">Web Intégration et Web designer</span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-check-square-fill me-3 mt-1" style="color: var(--itu-vert);"></i>
-                            <span>Design et Communication Digital</span>
+                            <span class="fw-bold me-3 fs-5" style="color: var(--itu-vert);">>_</span>
+                            <span class="fw-medium mt-1">Design et Communication Digitale</span>
                         </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="bi bi-check-square-fill me-3 mt-1" style="color: var(--itu-vert);"></i>
-                            <span>Content Management et Digital Marketing</span>
+                        <li class="d-flex align-items-start">
+                            <span class="fw-bold me-3 fs-5" style="color: var(--itu-vert);">>_</span>
+                            <span class="fw-medium mt-1">Content Management / Web Marketing</span>
                         </li>
                     </ul>
                 </article>
             </div>
 
-            <div class="col-lg-6 col-xl-5 text-white">
-                <article class="h-100 p-4 p-md-5 border rounded-0" style="background: rgba(0, 0, 0, 0.6); border-color: rgba(255,255,255,0.15) !important;">
-                    <div class="d-flex align-items-center mb-4 border-bottom border-secondary pb-3">
-                        <i class="bi bi-award fs-1 me-3" style="color: var(--itu-bleu);"></i>
-                        <h3 class="display-6 fw-bold mb-0">Master</h3>
-                    </div>
-                    <p class="text-white-50 mb-4 small text-uppercase" style="letter-spacing: 1px;">Spécialisations internationales</p>
+            <div class="col-lg-6 col-xl-5">
+                <article class="h-100 p-4 p-lg-5 rounded-0 itu-brutalist-card position-relative overflow-hidden d-flex flex-column"
+                         style="border: 2px solid #1a1a1a; background-color: #ffffff; box-shadow: 10px 10px 0px #1a1a1a;">
 
-                    <ul class="list-unstyled mt-4 fs-6">
-                        <li class="mb-4 p-3 border border-secondary" style="background: rgba(255,255,255,0.05);">
+                    <div class="position-absolute" style="top: -15px; right: -15px; font-size: 8rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--itu-bleu); opacity: 0.15; z-index: 0; pointer-events: none; user-select: none;">
+                        M2
+                    </div>
+
+                    <div class="position-relative z-1 mb-4 pb-4 border-bottom border-dark border-2">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-award-fill display-5 me-3" style="color: var(--itu-bleu);"></i>
+                            <h3 class="display-5 fw-black text-uppercase mb-0" style="color: #1a1a1a; letter-spacing: -2px;">Master</h3>
+                        </div>
+                        <span class="badge rounded-0 fs-6 px-3 py-2 text-uppercase font-monospace" style="background-color: var(--itu-bleu); color: #fff; border: 2px solid #1a1a1a;">
+                            Spécialisations Internationales
+                        </span>
+                    </div>
+
+                    <ul class="list-unstyled mt-2 mb-0 position-relative z-1 flex-grow-1">
+                        
+                        <li class="mb-4 p-3 border border-dark border-2" style="background-color: #f8fcfb;">
                             <div class="d-flex align-items-center">
-                                <i class="bi bi-building me-3 fs-3" style="color: var(--itu-bleu);"></i>
+                                <i class="bi bi-building-fill fs-1 me-3" style="color: var(--itu-bleu);"></i>
                                 <div>
-                                    <span class="d-block fw-bold fs-5 mb-1">L'université Côte d'Azur</span>
-                                    <a href="/mbds" class="text-decoration-none text-uppercase small fw-bold" style="color: var(--itu-vert);">
-                                        Programme MBDS <i class="bi bi-arrow-right ms-1"></i>
+                                    <span class="d-block fw-black text-uppercase mb-1 fs-5" style="color: #1a1a1a; letter-spacing: -0.5px;">Université Côte d'Azur</span>
+                                    <a href="/mbds" class="text-decoration-none text-uppercase small fw-bold font-monospace" style="color: var(--itu-vert);">
+                                        >_ Programme MBDS <i class="bi bi-arrow-right ms-1"></i>
                                     </a>
                                 </div>
                             </div>
                         </li>
-                        <li class="mb-4 p-3 border border-secondary" style="background: rgba(255,255,255,0.05);">
+                        
+                        <li class="p-3 border border-dark border-2" style="background-color: #f8fcfb;">
                             <div class="d-flex align-items-center">
-                                <i class="bi bi-building me-3 fs-3" style="color: var(--itu-bleu);"></i>
+                                <i class="bi bi-globe-americas fs-1 me-3" style="color: var(--itu-bleu);"></i>
                                 <div>
-                                    <span class="d-block fw-bold fs-5 mb-1">L'ESTIA</span>
-                                    <a href="/bihar" class="text-decoration-none text-uppercase small fw-bold" style="color: var(--itu-vert);">
-                                        Programme BIHAR <i class="bi bi-arrow-right ms-1"></i>
+                                    <span class="d-block fw-black text-uppercase mb-1 fs-5" style="color: #1a1a1a; letter-spacing: -0.5px;">ESTIA</span>
+                                    <a href="/bihar" class="text-decoration-none text-uppercase small fw-bold font-monospace" style="color: var(--itu-vert);">
+                                        >_ Programme BIHAR <i class="bi bi-arrow-right ms-1"></i>
                                     </a>
                                 </div>
                             </div>
                         </li>
+
                     </ul>
                 </article>
             </div>

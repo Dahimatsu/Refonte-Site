@@ -45,7 +45,7 @@ $partenaires = [
                         class="fw-bold">Informatique.</span></p>
 
                 <div id="itu-hero-btn-wrapper" class="d-inline-block">
-                    <a href="#inscrire" class="btn-itu btn-itu-vert">
+                    <a href="/inscription" class="btn-itu btn-itu-vert">
                         <span>Rejoignez-nous</span>
                     </a>
                 </div>
@@ -65,7 +65,7 @@ $partenaires = [
             </div>
 
             <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                <a href="/dipolome" class="btn-itu btn-itu-bleu"> Voir les diplomes </a>
+                <a href="/diplome" class="btn-itu btn-itu-bleu"> Voir les diplomes </a>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@ $partenaires = [
                     <li class="mb-2">Réseaux & Base de données</li>
                 </ul>
 
-                <a href="/info" class="btn-itu btn-itu-vert"> En savoir plus <i class="bi bi-arrow-right ms-2"></i> </a>
+                <a href="/formations/informatique" class="btn-itu btn-itu-vert"> En savoir plus <i class="bi bi-arrow-right ms-2"></i> </a>
             </div>
         </article>
 
@@ -119,7 +119,7 @@ $partenaires = [
                     <li class="mb-2">Content management & digital marketing</li>
                 </ul>
 
-                <a href="/design" class="btn-itu btn-itu-bleu"> En savoir plus <i class="bi bi-arrow-right ms-2"></i> </a>
+                <a href="/formations/design" class="btn-itu btn-itu-bleu"> En savoir plus <i class="bi bi-arrow-right ms-2"></i> </a>
             </div>
         </article>
         

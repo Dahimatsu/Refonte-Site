@@ -95,8 +95,7 @@ $bihar_projets = [
         <div class="row">
             <div class="col-lg-8">
                 <h1 id="itu-hero-title" class="itu-hero-title text-white text-uppercase mb-3">
-                    L'aboutissement <br />
-                    <span id="animated-foundation" class="d-inline-flex">MSc BIHAR.</span>
+                    BIHAR
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
                     Big Data Intelligence for Human Augmented <span class="fw-bold">Reality.</span>
@@ -106,7 +105,7 @@ $bihar_projets = [
     </div>
 </section>
 
-<section class="py-5 " data-section-theme="light" style="background-color: var(--itu-vert);">
+<section class="py-5 " data-section-theme="dark" style="background-color: var(--itu-vert);">
     <div class="container py-4">
         <div class="row align-items-center mb-5">
             <div class="col-lg-7">

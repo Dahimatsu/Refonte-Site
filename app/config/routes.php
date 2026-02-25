@@ -11,6 +11,7 @@ use app\controllers\FormationController;
 use app\controllers\MbdsController;
 use app\controllers\BiharController;
 use app\controllers\ContactController;
+use app\controllers\InscriptionController;
 
 /** 
  * @var Router $router 
@@ -37,12 +38,18 @@ $router->group('', function(Router $router) use ($app) {
 		FaqController::showFaq($app);
 	});
 	
-	$router->get('/informatique', function () use ($app) {
-		FormationController::showInfo($app);
-	});
-	
-	$router->get('/design', function () use ($app) {
-		FormationController::showDesign($app);
+	$router->group('/formations', function(Router $router) use ($app) {
+		$router->get('', function () use ($app) {
+			$app->redirect('/formations/informatique');
+		});
+
+		$router->get('/informatique', function () use ($app) {
+			FormationController::showInfo($app);
+		});
+		
+		$router->get('/design', function () use ($app) {
+			FormationController::showDesign($app);
+		});
 	});
 
 	$router->get('/mbds', function () use ($app) {
@@ -52,8 +59,14 @@ $router->group('', function(Router $router) use ($app) {
 	$router->get('/bihar', function () use ($app) {
 		BiharController::showBihar($app);
 	});
+
 	$router->get('/contact', function () use ($app) {
 		ContactController::showContact($app);
 	});
+
+	$router->get('/inscription', function () use ($app) {
+		InscriptionController::showInscription($app);
+	});
+	
 
 }, [ SecurityHeadersMiddleware::class ]);

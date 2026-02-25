@@ -29,7 +29,7 @@
     </div>
 </section>
 
-<section class="py-5 vh-100 contact-section" data-section-theme="light">
+<section class="py-5 min-vh-100" data-section-theme="light">
     <div class="container py-4 py-md-5">
         <div class="row g-5">
 
@@ -140,8 +140,7 @@
         </div>
     </div>
 </section>
-
-<section class="w-100" style="height: 450px;">
+<section class="w-100" style="height: 450px;" data-section-theme="light">
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2667.7562120075854!2d47.53325332967746!3d-18.98545272551033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07bf95431f83d%3A0x7edb4de9ebd72707!2sIT%20University!5e0!3m2!1sfr!2smg!4v1772011413923!5m2!1sfr!2smg"
         width="100%" height="100%" style="border:0; filter: grayscale(20%);" allowfullscreen="" loading="lazy"

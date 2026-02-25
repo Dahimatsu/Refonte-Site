@@ -9,10 +9,10 @@ $navlinks = [
     ['label' => 'Accueil', 'href' => '/'],
     [
         'label' => 'Parcours',
-        'href' => '#', 
+        'href' => '#',
         'sublinks' => [
-            ['label' => 'Informatique', 'href' => '/informatique'],
-            ['label' => 'Design', 'href' => '/design']
+            ['label' => 'Informatique', 'href' => '/formations/informatique'],
+            ['label' => 'Design', 'href' => '/formations/design']
         ]
     ],
     ['label' => 'Diplômes', 'href' => '/diplome'],
@@ -105,11 +105,14 @@ $navlinks = [
     <!-- Off-canvas -->
     <div class="offcanvas offcanvas-end itu-offcanvas" tabindex="-1" id="ituOffcanvas"
         aria-labelledby="ituOffcanvasLabel">
-        <div class="offcanvas-header p-4 p-lg-5">
+        <div class="offcanvas-header p-4 p-lg-5 d-flex justify-content-between align-items-center">
             <button type="button" class="btn border-0 d-flex align-items-center p-0" data-bs-dismiss="offcanvas"
                 aria-label="Fermer">
                 <span class="fw-bold me-2"><i class="bi bi-arrow-right fs-5"></i></span>
             </button>
+            <a href="/inscription" class="btn-itu btn-itu-vert">
+                <span>Rejoignez-nous</span>
+            </a>
         </div>
 
         <div class="offcanvas-body d-flex flex-column justify-content-center px-4 px-lg-5">
@@ -174,7 +177,7 @@ $navlinks = [
                         style="font-family: var(--font-title); line-height: 1.1">Votre carrière<br />commence ici</h2>
 
                     <div class="d-flex flex-wrap gap-3 mb-5">
-                        <a href="/faq" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
+                        <a href="/inscription" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
                     </div>
 
                     <div class="d-flex gap-4 mb-4 fs-4">

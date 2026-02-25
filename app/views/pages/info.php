@@ -209,7 +209,7 @@ $cursus_data = [
     </div>
 </section>
 
-<a href="/design" class="text-decoration-none d-block w-100 itu-cta-design">
+<a href="/formations/design" class="text-decoration-none d-block w-100 itu-cta-design">
     <section class="py-4 py-md-5" style="background-color: var(--itu-bleu);">
         <div class="container">
             <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between">
