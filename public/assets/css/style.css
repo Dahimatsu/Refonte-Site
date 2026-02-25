@@ -331,6 +331,9 @@ img {
    ========================================= */
 .itu-offcanvas {
     background-color: var(--bg-color);
+    background-image: var(--ascendant-pattern); 
+    background-position: bottom right;        
+    background-repeat: no-repeat;             
     color: var(--text-color);
     border: none;
 }
@@ -549,6 +552,11 @@ img {
 .itu-badge-bleu {
     color: var(--itu-vert);
     background-color: var(--itu-bleu);
+}
+
+.itu-badge-jaune {
+    color: var(--itu-bleu);
+    background-color: #ffc107;
 }
 
 .itu-article {
@@ -808,8 +816,8 @@ img {
 .itu-icon-wrapper {
     width: 100px;
     height: 100px;
-    background-color: #f8f9fa; /* Fond gris très clair */
-    border-radius: 50%; /* Garde l'arrondi pour l'icône seulement si tu aimes, sinon mets 0 */
+    background-color: #f8f9fa; 
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -869,7 +877,6 @@ img {
     pointer-events: none; 
 }
 
-/* 3. On s'assure que le texte passe bien par-dessus l'image */
 .itu-cta-design section .container {
     position: relative;
 }
@@ -919,4 +926,14 @@ img {
     background-color: var(--itu-vert);
     border-color: var(--itu-vert) !important;
     color: white;
+}
+
+.resultats-article {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+.btn-group {
+    border-radius: 0px !important;
 }

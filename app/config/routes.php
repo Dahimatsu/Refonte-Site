@@ -12,6 +12,7 @@ use app\controllers\MbdsController;
 use app\controllers\BiharController;
 use app\controllers\ContactController;
 use app\controllers\InscriptionController;
+use app\controllers\ResultatsController;
 
 /** 
  * @var Router $router 
@@ -20,7 +21,6 @@ use app\controllers\InscriptionController;
 
 $app = Flight::app();
 
-// This wraps all routes in the group with the SecurityHeadersMiddleware
 $router->group('', function(Router $router) use ($app) {
 	$router->get('/', function () {
 		Flight::redirect('/accueil');
@@ -66,6 +66,10 @@ $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/inscription', function () use ($app) {
 		InscriptionController::showInscription($app);
+	});
+
+	$router->get('/resultats', function () use ($app) {
+		ResultatsController::showResultats($app);
 	});
 	
 

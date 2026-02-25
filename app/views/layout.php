@@ -110,9 +110,16 @@ $navlinks = [
                 aria-label="Fermer">
                 <span class="fw-bold me-2"><i class="bi bi-arrow-right fs-5"></i></span>
             </button>
-            <a href="/inscription" class="btn-itu btn-itu-vert">
-                <span>Rejoignez-nous</span>
-            </a>
+            <nav class="d-flex gap-2">
+                <a href="/inscription" class="btn-itu btn-itu-vert">
+                    <span>Rejoignez-nous</span>
+                </a>
+                <?php if ($page !== 'resultats') { ?>
+                    <a href="/resultats" class="btn-itu btn-itu-bleu">
+                        <span>Résultats</span>
+                    </a>
+                <?php } ?>
+            </nav>
         </div>
 
         <div class="offcanvas-body d-flex flex-column justify-content-center px-4 px-lg-5">
@@ -218,14 +225,10 @@ $navlinks = [
                 <nav class="col-lg-3 mt-lg-5 pt-lg-4" aria-label="Liens rapides du pied de page">
                     <h5 class="fw-bold mb-4 fs-4" style="color: var(--itu-vert)">Découvrir</h5>
                     <ul class="list-unstyled footer-links">
-                        <li class="mb-3"><a href="#">Vos Diplômes</a></li>
-                        <li class="mb-3"><a href="#">Étudier avec nous</a></li>
-                        <li class="mb-3"><a href="#">Votre carrière</a></li>
-                        <li class="mb-3"><a href="#">Admissions</a></li>
-                        <li class="mb-3"><a href="#">Portes Ouvertes</a></li>
-                        <li class="mb-3"><a href="#">Campus</a></li>
-                        <li class="mb-3"><a href="#">À propos de nous</a></li>
-                        <li class="mb-3"><a href="#">Espace Étudiant</a></li>
+                        <li class="mb-3"><a href="/diplomes">Vos Diplômes</a></li>
+                        <li class="mb-3"><a href="/formations">Étudier avec nous</a></li>
+                        <li class="mb-3"><a href="/faq">FAQ</a></li>
+                        <li class="mb-3"><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
 

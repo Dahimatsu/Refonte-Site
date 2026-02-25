@@ -117,7 +117,7 @@ $dossiers_data = [
                         </div>
 
                         <div
-                            class="card-header bg-white border-bottom border-dark border-2 p-4 position-relative z-1 d-flex justify-content-between align-items-center">
+                            class="card-header border-bottom border-dark border-2 p-4 position-relative z-1 d-flex justify-content-between align-items-center">
                             <h3 class="fw-black text-uppercase mb-0 fs-3" style="color: #1a1a1a;">
                                 <?= $data['niveau'] ?>
                             </h3>
@@ -176,7 +176,7 @@ $dossiers_data = [
                             </ul>
                         </div>
 
-                        <div class="card-footer bg-white border-top border-dark border-2 p-0 position-relative z-1">
+                        <div class="card-footer border-top border-dark border-2 p-0 position-relative z-1">
                             <a href="<?= $data['fichier'] ?>" download
                                 class="btn w-100 rounded-0 fw-bold py-3 text-uppercase d-flex justify-content-center align-items-center shadow-none itu-download-btn"
                                 style="background-color: <?= $data['couleur'] ?>; color: <?= ($data['badge'] == 'M1') ? '#1a1a1a' : '#ffffff' ?>; border: none; transition: all 0.3s ease;">
@@ -188,7 +188,6 @@ $dossiers_data = [
                     </article>
                 </div>
             <?php endforeach; ?>
-
         </div>
     </div>
 </section>
