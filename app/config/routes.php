@@ -13,6 +13,7 @@ use app\controllers\BiharController;
 use app\controllers\ContactController;
 use app\controllers\InscriptionController;
 use app\controllers\ResultatsController;
+use app\controllers\MerchController;
 
 /** 
  * @var Router $router 
@@ -72,5 +73,8 @@ $router->group('', function(Router $router) use ($app) {
 		ResultatsController::showResultats($app);
 	});
 	
+	$router->get('/merch', function () use ($app) {
+		MerchController::showMerch($app);
+	});
 
 }, [ SecurityHeadersMiddleware::class ]);

@@ -18,6 +18,7 @@ $navlinks = [
     ['label' => 'Diplômes', 'href' => '/diplome'],
     ['label' => 'MBDS', 'href' => '/mbds'],
     ['label' => 'BIHAR', 'href' => '/bihar'],
+    ['label' => 'Merch', 'href' => '/merch'],
     ['label' => 'FAQ', 'href' => '/faq'],
     ['label' => 'Contact', 'href' => '/contact'],
 ];
@@ -111,12 +112,13 @@ $navlinks = [
                 <span class="fw-bold me-2"><i class="bi bi-arrow-right fs-5"></i></span>
             </button>
             <nav class="d-flex gap-2">
-                <a href="/inscription" class="btn-itu btn-itu-vert">
-                    <span>Rejoignez-nous</span>
-                </a>
                 <?php if ($page !== 'resultats') { ?>
                     <a href="/resultats" class="btn-itu btn-itu-bleu">
-                        <span>Résultats</span>
+                        <span>Voir les résultats</span>
+                    </a>
+                <?php } else { ?>
+                    <a href="/inscription" class="btn-itu btn-itu-vert">
+                        <span>Rejoignez-nous</span>
                     </a>
                 <?php } ?>
             </nav>

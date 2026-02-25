@@ -7,7 +7,7 @@ let isDragging = false;
 
 const updateScrollUI = () => {
     if (!scrollFill || !scrollDot) return;
-    
+
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('header-scrolled');
     }
-    
+
     if (!isDragging) {
         updateScrollUI();
     }
@@ -30,21 +30,21 @@ window.addEventListener('scroll', () => {
 
 const updateScrollFromEvent = (e) => {
     if (!scrollTrack) return;
-    
+
     const trackRect = scrollTrack.getBoundingClientRect();
     const clientY = e.clientY || (e.touches && e.touches[0].clientY);
-    
+
     let percent = (clientY - trackRect.top) / trackRect.height;
-    
+
     percent = Math.max(0, Math.min(1, percent));
 
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    
+
     window.scrollTo({
         top: percent * docHeight,
-        behavior: 'auto'
+        behavior: 'auto',
     });
-    
+
     if (scrollFill && scrollDot) {
         scrollFill.style.height = `${percent * 100}%`;
         scrollDot.style.top = `${percent * 100}%`;
@@ -117,20 +117,56 @@ document.getElementById('current-year').textContent = currentYear;
 // =========================================
 // SCROLL TO TOP
 // =========================================
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-        scrollToTopBtn.classList.add("show");
+        scrollToTopBtn.classList.add('show');
     } else {
-        scrollToTopBtn.classList.remove("show");
+        scrollToTopBtn.classList.remove('show');
     }
 });
 
-
-scrollToTopBtn.addEventListener("click", () => {
+scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: 'smooth',
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const merchItems = document.querySelectorAll('.merch-item');
+    const noProductsMsg = document.getElementById('no-products-msg');
+
+    filterBtns.forEach((btn) => {
+        btn.addEventListener('click', function () {
+            // 1. Gérer la classe active sur les boutons
+            filterBtns.forEach((b) => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // 2. Récupérer la catégorie cliquée
+            const selectedCategory = this.getAttribute('data-filter');
+            let visibleCount = 0;
+
+            // 3. Afficher/Cacher les produits
+            merchItems.forEach((item) => {
+                const itemCategory = item.getAttribute('data-category');
+
+                if (selectedCategory === 'all' || selectedCategory === itemCategory) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // 4. Afficher un message si la catégorie est vide
+            if (visibleCount === 0) {
+                noProductsMsg.classList.remove('d-none');
+            } else {
+                noProductsMsg.classList.add('d-none');
+            }
+        });
     });
 });

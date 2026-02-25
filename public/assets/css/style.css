@@ -8,18 +8,18 @@
 :root {
     /* Couleurs ITU */
     --itu-bleu: #283a97;
-    --itu-vert: #b2d235;    
-    --itu-violet : #536ae4;
+    --itu-vert: #b2d235;
+    --itu-violet: #536ae4;
     --itu-rose: #a46a91;
     --itu-rouge: #fd3022;
     --itu-gris: #d0dce7;
     --itu-black: #333333;
-    
+
     /* Thème Clair par défaut */
     --bg-color: #ffffff;
     --text-color: #333333;
     --heading-color: var(--itu-bleu);
-    
+
     /* Typographie */
     --font-title: 'Fractul', sans-serif;
     --font-text: 'Aktiv Grotesk', sans-serif;
@@ -39,7 +39,9 @@
 /* =========================================
    RESET & BASE
    ========================================= */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -55,14 +57,21 @@ body {
     background-color: var(--bg-color) !important;
     color: var(--text-color) !important;
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 body.no-scroll {
     overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-title);
     color: var(--heading-color);
     margin-bottom: 1rem;
@@ -107,10 +116,10 @@ img {
 
 .itu-list li {
     position: relative;
-    padding-left: 45px; 
+    padding-left: 45px;
     margin-bottom: 1.5rem;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .itu-list li::before {
@@ -118,7 +127,7 @@ img {
     position: absolute;
     left: 0;
     width: 32px;
-    height: 32px; 
+    height: 32px;
     background-image: var(--active-puce, var(--puce-itu-global));
     background-size: contain;
     background-repeat: no-repeat;
@@ -142,7 +151,7 @@ img {
    ========================================= */
 #preloader {
     background-color: var(--itu-bleu);
-    z-index: 9999; 
+    z-index: 9999;
 }
 
 #preloader img {
@@ -151,9 +160,9 @@ img {
 
 .itu-hero-title {
     font-family: var(--font-title);
-    font-weight: 900; 
+    font-weight: 900;
     font-style: italic;
-    font-size: clamp(3rem, 6vw, 5.5rem); 
+    font-size: clamp(3rem, 6vw, 5.5rem);
     line-height: 1.1;
     letter-spacing: -1px;
 }
@@ -188,7 +197,7 @@ img {
 
 .char-clone {
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     color: var(--itu-bleu);
 }
@@ -213,19 +222,19 @@ img {
 
 .btn-itu:hover {
     background-color: var(--bg-color);
-    color: var(--btn-theme) !important; 
+    color: var(--btn-theme) !important;
     box-shadow: 6px 6px 0px var(--btn-theme);
     transform: translate(-4px, -4px);
 }
 
 .btn-itu:active {
     box-shadow: 0px 0px 0px var(--btn-theme);
-    transform: translate(2px, 2px); 
+    transform: translate(2px, 2px);
 }
 
 .btn-itu-vert {
     --btn-theme: var(--itu-vert);
-    --btn-text: var(--itu-bleu); 
+    --btn-text: var(--itu-bleu);
 }
 
 .btn-itu-bleu {
@@ -242,7 +251,9 @@ img {
 }
 
 .itu-navbar {
-    transition: background-color 0.3s ease, padding 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        padding 0.3s ease;
 }
 
 .itu-navbar .nav-link {
@@ -250,14 +261,16 @@ img {
     font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--itu-bleu) !important; 
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: var(--itu-bleu) !important;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .itu-navbar .nav-link:hover,
 .itu-navbar .nav-link.active {
-    color: var(--itu-vert) !important; 
-    transform: translateY(-2px); 
+    color: var(--itu-vert) !important;
+    transform: translateY(-2px);
 }
 
 /* Header de base */
@@ -271,12 +284,12 @@ img {
 
 /* Header quand on scrolle */
 .header-scrolled {
-    top: 15px; 
+    top: 15px;
     left: 15px;
     right: 15px;
-    width: auto !important; 
-    border-radius:10px;
-    background: rgba(255, 255, 255, 0) !important; 
+    width: auto !important;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     backdrop-filter: blur(16px) saturate(180%);
     border-bottom: #ffffff38 0.1px solid;
@@ -296,8 +309,8 @@ img {
 }
 #theme-toggle:hover {
     background-color: #939ba3;
-    border-radius: 10px !important; 
-    color: var(--text-color) !important; 
+    border-radius: 10px !important;
+    color: var(--text-color) !important;
 }
 
 /* =========================================
@@ -309,7 +322,7 @@ img {
     color: #ffffff !important;
 }
 .header-text-light i {
-    color: #ffffff !important; 
+    color: #ffffff !important;
 }
 
 .header-text-dark .nav-link,
@@ -318,7 +331,7 @@ img {
     color: var(--itu-bleu) !important;
 }
 .header-text-dark i {
-    color: var(--itu-bleu) !important; 
+    color: var(--itu-bleu) !important;
 }
 
 .transition-header .nav-link:hover,
@@ -331,9 +344,9 @@ img {
    ========================================= */
 .itu-offcanvas {
     background-color: var(--bg-color);
-    background-image: var(--ascendant-pattern); 
-    background-position: bottom right;        
-    background-repeat: no-repeat;             
+    background-image: var(--ascendant-pattern);
+    background-position: bottom right;
+    background-repeat: no-repeat;
     color: var(--text-color);
     border: none;
 }
@@ -351,12 +364,14 @@ img {
 
 .itu-big-menu .nav-link {
     font-family: var(--font-title);
-    font-size: clamp(2rem, 5vw, 3rem); 
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--itu-bleu); 
+    color: var(--itu-bleu);
     line-height: 1.1;
     padding: 0.2rem 0;
-    transition: color 0.3s ease, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition:
+        color 0.3s ease,
+        transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .itu-big-menu .nav-link:hover,
@@ -377,15 +392,19 @@ img {
 .itu-sub-menu {
     max-height: 0;
     opacity: 0;
-    padding-left: 1.5rem; 
-    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    padding-left: 1.5rem;
+    transition:
+        max-height 0.4s ease-in-out,
+        opacity 0.3s ease-in-out;
 }
 
 .itu-sub-menu .sub-nav-link {
     font-size: 1.2rem;
     padding: 0.5rem 0;
     color: var(--text-color);
-    transition: color 0.2s ease, padding-left 0.2s ease;
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
 }
 
 /* Effet hover sur les sous-liens individuels */
@@ -419,13 +438,13 @@ img {
     right: 40px;
     top: 50%;
     transform: translateY(-50%);
-    height: 40vh; 
-    z-index: 3; 
+    height: 40vh;
+    z-index: 3;
 }
 
 .scroll-track {
     position: relative;
-    width: 2px; 
+    width: 2px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.15);
 }
@@ -434,8 +453,8 @@ img {
     position: absolute;
     width: 8px;
     height: 2px;
-    background-color: rgba(0, 0, 0, 0.2); 
-    left: 0; 
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0;
 }
 
 .scroll-fill {
@@ -444,14 +463,14 @@ img {
     left: 0;
     width: 100%;
     height: 0%;
-    background-color: var(--itu-vert); 
+    background-color: var(--itu-vert);
 }
 
 .scroll-dot {
     cursor: grab;
     position: absolute;
-    left: 1px; 
-    top: 0%; 
+    left: 1px;
+    top: 0%;
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
@@ -468,10 +487,10 @@ img {
    ========================================= */
 .itu-cta-banner {
     transition: all 0.3s ease;
-    background-color: var(--itu-vert); 
+    background-color: var(--itu-vert);
     position: relative;
-    overflow: hidden; 
-    z-index: 1; 
+    overflow: hidden;
+    z-index: 1;
 }
 
 .itu-cta-banner::before {
@@ -482,7 +501,7 @@ img {
     width: 100%;
     height: 100%;
     background-image: var(--stroke-pattern);
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.1;
@@ -503,22 +522,20 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.05; 
+    opacity: 0.05;
     z-index: -1;
 }
 
 .itu-formations-info::before {
     background-image: var(--ascendant-pattern);
-    
 }
 
 .itu-formations-design::before {
     background-image: var(--descendant-pattern);
 }
-
 
 .cta-title {
     font-family: var(--font-title);
@@ -584,7 +601,7 @@ img {
 
 .pattern {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .pattern::before {
@@ -598,7 +615,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.05; 
+    opacity: 0.05;
     z-index: -1;
 }
 /* =========================================
@@ -609,16 +626,15 @@ img {
     overflow: hidden;
     position: relative;
     padding: 20px 0;
-    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
 }
-
 
 .partenaires-track {
     display: flex;
     align-items: center;
-    width: max-content; 
-    animation: scrollPartenaires 35s linear infinite; 
+    width: max-content;
+    animation: scrollPartenaires 35s linear infinite;
 }
 
 /* .partenaires-slider:hover .partenaires-track {
@@ -626,9 +642,9 @@ img {
 } */
 
 .partenaire-logo {
-    height: 60px; 
+    height: 60px;
     width: auto;
-    margin: 0 40px; 
+    margin: 0 40px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -655,18 +671,22 @@ img {
 .footer-links a {
     color: #cccccc;
     text-decoration: none;
-    transition: color 0.3s ease, padding-left 0.3s ease;
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
     display: inline-block;
 }
 
 .footer-links a:hover {
     color: var(--itu-vert);
-    padding-left: 5px; 
+    padding-left: 5px;
 }
 
 .social-link {
     color: #ffffff;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
     display: inline-block;
 }
 
@@ -685,7 +705,7 @@ img {
 }
 
 .contact-link:hover i {
-    transform: scale(1.2); 
+    transform: scale(1.2);
     transition: transform 0.3s ease;
 }
 
@@ -705,7 +725,6 @@ img {
     color: rgba(255, 255, 255, 0.4);
 }
 
-
 .newsletter-form .btn-itu-vert {
     background-color: var(--itu-vert);
     border: 1px solid var(--itu-vert);
@@ -721,7 +740,7 @@ img {
 .newsletter-form .form-check-input {
     accent-color: var(--itu-vert);
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: none;
 }
@@ -741,10 +760,10 @@ img {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    z-index: 999; 
+    z-index: 999;
     width: 50px;
     height: 50px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background-color: var(--itu-vert);
     color: var(--itu-bleu);
     border: none;
@@ -783,7 +802,10 @@ img {
 }
 
 /* Suppression forcée de tous les arrondis */
-.card, .btn, .border, .rounded-0 {
+.card,
+.btn,
+.border,
+.rounded-0 {
     border-radius: 0 !important;
 }
 
@@ -816,7 +838,7 @@ img {
 .itu-icon-wrapper {
     width: 100px;
     height: 100px;
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -828,7 +850,7 @@ img {
 .itu-icon-wrapper:hover {
     transform: scale(1.1);
     background-color: #ffffff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .text-muted {
@@ -837,7 +859,7 @@ img {
 
 @media (max-width: 768px) {
     .bg-mobile-right {
-        object-position: 30% center !important; 
+        object-position: 30% center !important;
     }
 }
 .form-control:focus {
@@ -856,7 +878,6 @@ img {
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-
 .itu-cta-design section {
     position: relative;
     transition: background-color 0.4s ease;
@@ -864,17 +885,17 @@ img {
 }
 
 .itu-cta-design section::before {
-    content: "";
+    content: '';
     position: absolute;
-    inset: 0; 
+    inset: 0;
     background-image: var(--stroke-pattern);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
     opacity: 0.15;
-    
-    pointer-events: none; 
+
+    pointer-events: none;
 }
 
 .itu-cta-design section .container {
@@ -886,7 +907,6 @@ img {
     transform: translateX(-40px);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 
 .itu-cta-design:hover section {
     background-color: var(--itu-vert) !important;
@@ -937,3 +957,89 @@ img {
 .btn-group {
     border-radius: 0px !important;
 }
+
+.filter-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid transparent;
+    color: #6c757d;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.filter-btn.active {
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+}
+.filter-btn:hover {
+    color: #1a1a1a;
+}
+
+.merch-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    
+    /* Effet Brutaliste au survol de la carte entière */
+    .merch-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 8px 8px 0px #1a1a1a; 
+    }
+
+    .merch-img-container {
+        aspect-ratio: 3 / 4;
+        position: relative;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .merch-img-container img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        z-index: 1;
+    }
+
+    /* Le dégradé bleu caché par défaut */
+    .merch-overlay {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        height: 60%; /* Ne prend que le bas de l'image */
+        background: linear-gradient(to top, var(--itu-bleu) 10%, transparent 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+    }
+
+    .merch-info {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        padding: 1.5rem;
+        z-index: 3;
+        transition: transform 0.3s ease;
+        transform: translateY(10px); 
+    }
+
+    .merch-title, .merch-price {
+        color: #1a1a1a;
+        transition: color 0.3s ease;
+    }
+
+    .merch-card:hover .merch-overlay {
+        opacity: 1;
+    }
+    .merch-card:hover .merch-img-container img {
+        transform: scale(1.08); 
+    }
+    .merch-card:hover .merch-info {
+        transform: translateY(0); 
+    }
+    .merch-card:hover .merch-title {
+        color: #ffffff; 
+    }
+    .merch-card:hover .merch-price {
+        color: var(--itu-vert);
+    }
