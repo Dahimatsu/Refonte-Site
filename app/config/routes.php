@@ -16,6 +16,7 @@ use app\controllers\ResultatsController;
 use app\controllers\MerchController;
 use app\controllers\ActualiteController;
 use app\controllers\NewsletterController;
+use app\controllers\AProposController;
 
 /** 
  * @var Router $router 
@@ -81,6 +82,10 @@ $router->group('', function(Router $router) use ($app) {
 
 	$router->post('/subscribe', function () use ($app) {
 		NewsletterController::subscribe($app);
+	});
+
+	$router->get('/apropos', function () use ($app) {
+		AProposController::showAPropos($app);
 	});
 
 }, [ SecurityHeadersMiddleware::class ]);

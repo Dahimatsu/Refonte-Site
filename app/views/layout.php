@@ -19,6 +19,7 @@ $offcanvas_links = [
     ['label' => 'MBDS', 'href' => '/mbds'],
     ['label' => 'BIHAR', 'href' => '/bihar'],
     ['label' => 'Merch', 'href' => '/merch'],
+    ['label' => 'À propos', 'href' => '/apropos'],
     ['label' => 'Actualités', 'href' => '/actualites'],
     ['label' => 'FAQ', 'href' => '/faq'],
     ['label' => 'Contact', 'href' => '/contact'],
@@ -29,6 +30,7 @@ $footer_links = [
     ['label' => 'Étudier avec nous', 'href' => '/formations'],
     ['label' => 'ITUnited - Espace Etudiant', 'href' => '#'],
     ['label' => 'Merch', 'href' => '/merch'],
+    ['label' => 'À propos', 'href' => '/apropos'],
     ['label' => 'Actualités', 'href' => '/actualites'],
     ['label' => 'FAQ', 'href' => '/faq'],
     ['label' => 'Contact', 'href' => '/contact'],
@@ -96,8 +98,11 @@ $hasResults = (
 
 <body class="no-scroll">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNLN5D9S" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNLN5D9S" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <?php if ($page === 'accueil') { ?>
         <!-- PRELOADER -->
@@ -137,9 +142,9 @@ $hasResults = (
     </header>
 
     <!-- Off-canvas -->
-    <div class="offcanvas offcanvas-end itu-offcanvas" tabindex="-1" id="ituOffcanvas"
+    <section class="offcanvas offcanvas-end itu-offcanvas" tabindex="-1" id="ituOffcanvas"
         aria-labelledby="ituOffcanvasLabel">
-        <div class="offcanvas-header p-4 p-lg-5 d-flex justify-content-between align-items-center">
+        <header class="offcanvas-header p-4 p-lg-5 d-flex justify-content-between align-items-center">
             <button type="button" class="btn border-0 d-flex align-items-center p-0" data-bs-dismiss="offcanvas"
                 aria-label="Fermer">
                 <span class="fw-bold me-2"><i class="bi bi-arrow-right fs-5"></i></span>
@@ -155,9 +160,9 @@ $hasResults = (
                     </a>
                 <?php } ?>
             </nav>
-        </div>
+        </header>
 
-        <div class="offcanvas-body d-flex flex-column justify-content-center px-4 px-lg-5">
+        <main class="offcanvas-body d-flex flex-column justify-content-start px-4 px-lg-5">
             <nav class="nav flex-column itu-big-menu">
                 <?php foreach ($offcanvas_links as $link) { ?>
 
@@ -188,20 +193,18 @@ $hasResults = (
 
                 <?php } ?>
             </nav>
-
-            <div class="mt-auto pt-5 d-flex justify-content-between align-items-end text-muted">
-                <div>
-                    <span class="d-block text-uppercase small mb-1">IT University</span>
-                    <a href="mailto:ituniversity@moov.mg"
-                        class="text-decoration-none text-uppercase">ituniversity@moov.mg</a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/company/it-university-mg" target="_blank"
-                        rel="noopener noreferrer" class="text-decoration-none text-uppercase small">LINKEDIN</a>
-                </div>
+        </main>
+        <footer class="p-4 p-lg-5 d-flex justify-content-between align-items-end text-muted">
+            <div>
+                <a href="mailto:ituniversity@moov.mg"
+                    class="text-decoration-none text-uppercase">ituniversity@moov.mg</a>
             </div>
-        </div>
-    </div>
+            <div>
+                <a href="https://www.linkedin.com/company/it-university-mg" target="_blank"
+                    rel="noopener noreferrer" class="text-decoration-none text-uppercase small">LINKEDIN</a>
+            </div>
+        </footer>
+    </section>
 
     <!-- Main content -->
     <main>

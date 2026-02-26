@@ -13,7 +13,7 @@
                     CONTACTEZ NOUS <br />
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
-                    Une question sur nos parcours ? Notre équipe est là pour vous <span class="fw-bold">guider.</span>
+                    Une question sur nos parcours ? Notre équipe est là pour vous guider.</span>
                 </p>
             </div>
         </div>

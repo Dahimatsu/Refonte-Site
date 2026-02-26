@@ -75,20 +75,11 @@ $bihar_projets = [
 ?>
 
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
-    <div id="heroBackground" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-n1"
-        data-bs-ride="carousel" data-bs-pause="false">
-        <div class="carousel-inner w-100 h-100">
-            <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="/assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
-                    loading="lazy" />
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-            </div>
-            <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="/assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Étudiants"
-                    loading="lazy" />
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
-            </div>
-        </div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
+        <img src="/assets/images/background/estia-bg.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
+            loading="lazy" />
+
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
     </div>
 
     <div class="container position-relative z-1 px-4">
@@ -98,14 +89,14 @@ $bihar_projets = [
                     BIHAR
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
-                    Big Data Intelligence for Human Augmented <span class="fw-bold">Reality.</span>
+                    Big Data Intelligence for Human Augmented Reality.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-5 " data-section-theme="dark" style="background-color: var(--itu-vert);">
+<section class="py-5 position relative itu-bg-pattern" data-section-theme="dark" style="background-color: var(--itu-vert);">
     <div class="container py-4">
         <div class="row align-items-center mb-5">
             <div class="col-lg-7">

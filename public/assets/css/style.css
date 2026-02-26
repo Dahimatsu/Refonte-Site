@@ -344,11 +344,24 @@ img {
    ========================================= */
 .itu-offcanvas {
     background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+}
+
+/* 2. Le calque avec le motif (Pattern) */
+.itu-offcanvas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: var(--ascendant-pattern);
     background-position: bottom right;
     background-repeat: no-repeat;
-    color: var(--text-color);
-    border: none;
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
 }
 
 @media (min-width: 992px) {
@@ -364,7 +377,7 @@ img {
 
 .itu-big-menu .nav-link {
     font-family: var(--font-title);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--itu-bleu);
     line-height: 1.1;
@@ -1007,24 +1020,21 @@ img {
         opacity 0.4s ease;
 }
 
-
 .img-front {
     z-index: 1;
     opacity: 1;
 }
-
 
 .img-back {
     z-index: 2;
     opacity: 0;
 }
 
-
 .merch-card:hover .img-back {
     opacity: 1;
 }
 .merch-card:hover .merch-img-container img {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .merch-overlay {
@@ -1032,7 +1042,7 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60%; 
+    height: 60%;
     background: linear-gradient(to top, var(--itu-bleu) 10%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1142,9 +1152,9 @@ img {
 /* État de départ : L'élément est caché et poussé BEAUCOUP plus bas (150px) */
 .reveal {
     opacity: 0;
-    transform: translateY(150px); 
-    
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    transform: translateY(150px);
+
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .reveal.active {
@@ -1152,6 +1162,36 @@ img {
     transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.15s; }
-.delay-2 { transition-delay: 0.30s; }
-.delay-3 { transition-delay: 0.45s; }
+.delay-1 {
+    transition-delay: 0.15s;
+}
+.delay-2 {
+    transition-delay: 0.3s;
+}
+.delay-3 {
+    transition-delay: 0.45s;
+}
+
+.itu-bg-pattern {
+    position: relative;
+}
+
+.itu-bg-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--stroke-pattern);
+    background-repeat: repeat;
+    background-position: center;
+    opacity: var(--itu-pattern-opacity, 0.1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.itu-bg-pattern > .container {
+    position: relative;
+    z-index: 1;
+}
