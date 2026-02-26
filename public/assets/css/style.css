@@ -1138,3 +1138,20 @@ img {
     z-index: -1;
     pointer-events: none;
 }
+
+/* État de départ : L'élément est caché et poussé BEAUCOUP plus bas (150px) */
+.reveal {
+    opacity: 0;
+    transform: translateY(150px); 
+    
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.30s; }
+.delay-3 { transition-delay: 0.45s; }

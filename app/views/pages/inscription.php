@@ -95,7 +95,7 @@ $dossiers_data = [
 <section id="dossiers" class="py-5" style="background-color: var(--itu-gris);" data-section-theme="light">
     <div class="container py-5">
 
-        <header class="text-center mb-5">
+        <header class="text-center mb-5 reveal">
             <h2 class="display-4 fw-black text-uppercase mb-3"
                 style="letter-spacing: -2px; font-weight: 900; color: #1a1a1a;">
                 Dossiers à fournir
@@ -106,7 +106,7 @@ $dossiers_data = [
         <div class="row g-4 justify-content-center">
 
             <?php foreach ($dossiers_data as $data): ?>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <article
                         class="card h-100 rounded-0 itu-brutalist-card d-flex flex-column position-relative overflow-hidden"
                         style="border: 2px solid #1a1a1a; background-color: #ffffff;">

@@ -80,11 +80,11 @@ $dossier_items = [
     <div class="container py-4">
         <div class="row align-items-center mb-5">
             <div class="col-lg-7">
-                <h2 class="display-5 fw-black text-uppercase mb-3"
+                <h2 class="display-5 fw-black text-uppercase mb-3 reveal"
                     style="color: var(--itu-bleu); letter-spacing: -1px;">
                     Le Master International
                 </h2>
-                <p class="lead text-muted" style="line-height: 1.8;">
+                <p class="lead text-muted reveal delay-1" style="line-height: 1.8;">
                     IT University offre en partenariat avec l’Université de Nice à Sophia Antipolis (France), le Master
                     MBDS. Une formation de pointe pour maîtriser les technologies de demain.
                 </p>
@@ -93,7 +93,7 @@ $dossier_items = [
 
         <div class="row g-4">
             <div class="col-md-6">
-                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card"
+                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card reveal delay-1"
                     style="border: 2px solid #1a1a1a; background-color: #f8fcfb;">
                     <div class="d-flex align-items-center mb-4 pb-3 border-bottom border-dark border-2">
                         <i class="bi bi-calendar-check fs-2 me-3" style="color: var(--itu-vert);"></i>
@@ -111,7 +111,7 @@ $dossier_items = [
             </div>
 
             <div class="col-md-6">
-                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card"
+                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card reveal delay-1"
                     style="border: 2px solid #1a1a1a; background-color: #f8fcfb;">
                     <div class="d-flex align-items-center mb-4 pb-3 border-bottom border-dark border-2">
                         <i class="bi bi-person-check fs-2 me-3" style="color: var(--itu-vert);"></i>
@@ -130,7 +130,7 @@ $dossier_items = [
 <section class="py-5" style="background-color: var(--itu-gris);" data-section-theme="light">
     <div class="container py-5">
 
-        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3">
+        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3 reveal">
             <h2 class="display-4 fw-black text-uppercase mb-0" style="letter-spacing: -2px; font-weight: 900;">
                 Détails
             </h2>
@@ -142,7 +142,7 @@ $dossier_items = [
             foreach ($mbds_modules as $module):
                 $num = str_pad($index, 2, '0', STR_PAD_LEFT);
                 ?>
-                <div class="col">
+                <div class="col reveal">
                     <article class="card h-100 rounded-0 itu-brutalist-card position-relative overflow-hidden"
                         style="border: 2px solid #1a1a1a; background-color: #ffffff;">
 

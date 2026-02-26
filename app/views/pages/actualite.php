@@ -4,7 +4,7 @@
 
         <h1 class="display-3 fw-black text-uppercase text-white mt-2 mb-3">
             Dernières <br>
-            <span style="color: #1a1a1a;">Actualités.</span>
+            <span>Actualités.</span>
         </h1>
 
         <p class="lead fw-light col-lg-6">

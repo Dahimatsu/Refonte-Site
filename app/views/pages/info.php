@@ -120,13 +120,13 @@ $cursus_data = [
 <section class="itu-formation itu-formations-info container-fluid py-5" style="background-color: var(--itu-bleu);">
     <div class="container py-5 text-center">
 
-        <header class="mb-5">
+        <header class="mb-5 reveal">
             <h3 class="fw-bold text-uppercase d-inline-block pb-2" style="color: var(--itu-vert);">
                 Parcours
             </h3>
         </header>
 
-        <article class="row justify-content-center mb-5">
+        <article class="row justify-content-center mb-5 reveal">
             <?php foreach ($info_resumes as $parcours) { ?>
                 <article class="col-md-4 mb-4">
                     <h5 class="fw-bold text-white">
@@ -144,7 +144,7 @@ $cursus_data = [
 <section class="py-5" style="background-color: var(--itu-gris);" data-section-theme="light">
     <div class="container py-5">
 
-        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3">
+        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3 reveal">
             <h2 class="display-4 fw-black text-uppercase mb-0" style="letter-spacing: -2px; font-weight: 900;">
                 Programme Détaillé
             </h2>
@@ -157,7 +157,7 @@ $cursus_data = [
             foreach ($cursus_data as $categorie):
                 $num = str_pad($index, 2, '0', STR_PAD_LEFT);
                 ?>
-                <div class="col">
+                <div class="col reveal">
                     <article class="card h-100 rounded-0 itu-brutalist-card position-relative overflow-hidden"
                         style="border: 2px solid #1a1a1a; background-color: #ffffff;">
 
@@ -203,9 +203,9 @@ $cursus_data = [
 <a href="/formations/design" class="text-decoration-none d-block w-100 itu-cta-design">
     <section class="py-4 py-md-5" style="background-color: var(--itu-bleu);">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between ">
 
-                <div>
+                <div class="reveal">
                     <p class="text-white-50 text-uppercase mb-1 fw-bold"
                         style="letter-spacing: 2px; font-size: 0.85rem;">
                         Vous avez une âme créative ?
@@ -215,7 +215,7 @@ $cursus_data = [
                     </h3>
                 </div>
 
-                <div class="mt-3 mt-md-0 d-flex align-items-center overflow-hidden">
+                <div class="mt-3 mt-md-0 d-flex align-items-center overflow-hidden reveal delay-1">
                     <span class="text-white fw-bold text-uppercase me-3 fs-5 d-md-none d-lg-block">Explorer</span>
                     <i class="bi bi-arrow-right text-white display-5 mb-0 itu-banner-arrow"></i>
                 </div>

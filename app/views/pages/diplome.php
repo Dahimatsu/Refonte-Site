@@ -30,8 +30,8 @@
 </section>
 <section class="itu-cta-banner position-relative py-5" style="background-color: var(--bg-color);" data-section-theme="light">
     <div class="container text-center py-4">
-        <h2 class="fw-bold mb-4" style="color: var(--itu-bleu);">L'Excellence Académique</h2>
-        <p class="lead mx-auto text-muted" style="max-width: 900px; line-height: 1.8;">
+        <h2 class="fw-bold mb-4 reveal" style="color: var(--itu-bleu);">L'Excellence Académique</h2>
+        <p class="lead mx-auto text-muted reveal delay-1" style="max-width: 900px; line-height: 1.8;">
             Créée en 2011, IT University est un établissement d'enseignement supérieur privé spécialisé en informatique. 
             Nous répondons aux besoins du secteur professionnel en formant des profils <strong>directement opérationnels</strong> grâce au système LMD. 
             Notre pédagogie met un point d'honneur sur les bases mathématiques, garantissant à nos étudiants un excellent niveau de raisonnement pour exceller de la <strong>Licence</strong> jusqu'au <strong>Master</strong> et au Doctorat.
@@ -49,7 +49,7 @@
 
     <div class="container position-relative z-1 py-5">
         
-        <div class="row mb-5 text-center text-lg-start">
+        <div class="row mb-5 text-center text-lg-start reveal">
             <div class="col-12 text-white">
                 <h6 class="text-uppercase fw-bold mb-3 font-monospace" style="color: var(--itu-vert); letter-spacing: 2px">
                     >_ L'aboutissement
@@ -60,7 +60,7 @@
         <div class="row g-5 justify-content-center">
 
             <div class="col-lg-6 col-xl-5">
-                <article class="h-100 p-4 p-lg-5 rounded-0 itu-brutalist-card position-relative overflow-hidden d-flex flex-column"
+                <article class="h-100 p-4 p-lg-5 rounded-0 itu-brutalist-card position-relative overflow-hidden d-flex flex-column reveal"
                          style="border: 2px solid #1a1a1a; background-color: #ffffff; box-shadow: 10px 10px 0px #1a1a1a;">
 
                     <div class="position-absolute" style="top: -15px; right: -15px; font-size: 8rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--itu-vert); opacity: 0.15; z-index: 0; pointer-events: none; user-select: none;">
@@ -103,7 +103,7 @@
             </div>
 
             <div class="col-lg-6 col-xl-5">
-                <article class="h-100 p-4 p-lg-5 rounded-0 itu-brutalist-card position-relative overflow-hidden d-flex flex-column"
+                <article class="h-100 p-4 p-lg-5 rounded-0 itu-brutalist-card position-relative overflow-hidden d-flex flex-column reveal delay-1"
                          style="border: 2px solid #1a1a1a; background-color: #ffffff; box-shadow: 10px 10px 0px #1a1a1a;">
 
                     <div class="position-absolute" style="top: -15px; right: -15px; font-size: 8rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--itu-bleu); opacity: 0.15; z-index: 0; pointer-events: none; user-select: none;">

@@ -3,12 +3,12 @@
         data-bs-ride="carousel" data-bs-pause="false">
         <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/itu-bg-1.jpeg" class="d-block w-100 h-100 object-fit-cover"
+                <img src="/assets/images/background/itu-bg-1.jpeg" class="d-block w-100 h-100 object-fit-cover"
                     alt="Campus" loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
             <div class="carousel-item w-100 h-100" data-bs-interval="4000">
-                <img src="../assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover"
+                <img src="/assets/images/background/bg-hero-1.jpg" class="d-block w-100 h-100 object-fit-cover"
                     alt="Étudiants" loading="lazy" />
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
             </div>
@@ -22,7 +22,7 @@
                     Foire aux Questions<br />
                 </h1>
                 <p id="itu-hero-subtitle" class="lead text-white mb-3 fs-4 fw-light">
-                    Voici les questions les plus <span class="fw-bold">posées.</span>
+                    Voici les questions les plus posées.
                 </p>
             </div>
         </div>
@@ -32,7 +32,7 @@
 <section class="py-5" style="background-color: var(--itu-gris);" data-section-theme="light">
     <div class="container py-5">
 
-        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3">
+        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3 reveal">
             <h2 class="display-4 fw-black text-uppercase mb-0"
                 style="letter-spacing: -2px; font-weight: 900; color: var(--itu-bleu);">
                 Informations Pratiques
@@ -41,7 +41,7 @@
 
         <div class="accordion" id="faqAccordion">
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -88,7 +88,7 @@
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -136,7 +136,7 @@
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -149,7 +149,7 @@
                     </h3>
                 </div>
                 <div id="qDates" class="collapse" data-bs-parent="#faqAccordion">
-                    <div class="card-body p-4 p-lg-5 border-top border-dark font-monospace"
+                    <div class="card-body p-4 p-lg-5 border-top border-dark"
                         style="border-width: 2px !important;">
                         <p class="fs-5 text-dark">
                             La date limite de dépôt est généralement fixée à la fin du mois de septembre, quelques jours
@@ -160,7 +160,7 @@
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -182,7 +182,7 @@
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -230,7 +230,7 @@
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -248,17 +248,17 @@
                             L’IT University se situe à <strong>Andoharanofotsy</strong>, entre la banque BNI et la
                             station GALANA.
                         </p>
-                        <a href="https://maps.app.goo.gl/7LMyT1Mq9JZx8YYg7 Quels" target="_blank"
+                        <a href="https://maps.app.goo.gl/fGMETScnw1PnuHzv7" target="_blank"
                             rel="noopener noreferrer"
                             class="btn btn-itu-vert rounded-0 fw-bold px-4 py-3 text-uppercase font-monospace"
                             style="border: 2px solid #1a1a1a;">
-                            <i class="bi bi-map-fill me-2"></i> >_ Ouvrir Google Maps
+                            <i class="bi bi-map-fill me-2"></i> Ouvrir Google Maps
                         </a>
                     </div>
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -282,7 +282,7 @@
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -313,7 +313,7 @@
                 </div>
             </article>
 
-            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card" style="border: 2px solid #1a1a1a;">
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
                 <div class="card-header bg-white border-0 p-0">
                     <h3 class="mb-0">
                         <button
@@ -333,22 +333,43 @@
                     </div>
                 </div>
             </article>
+
+            <article class="card rounded-0 mb-4 bg-white itu-brutalist-card reveal" style="border: 2px solid #1a1a1a;">
+                <div class="card-header bg-white border-0 p-0">
+                    <h3 class="mb-0">
+                        <button
+                            class="btn w-100 text-start p-4 fw-bold fs-4 d-flex justify-content-between align-items-center rounded-0 shadow-none text-dark text-uppercase collapsed"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#qFraisScolarite" aria-expanded="false"
+                            style="letter-spacing: -1px;">
+                            <span>Combien coûte le frais de scolarité ?</span>
+                            <i class="bi bi-chevron-down fs-3" style="color: var(--itu-vert);" aria-hidden="true"></i>
+                        </button>
+                    </h3>
+                </div>
+                <div id="qFraisScolarite" class="collapse" data-bs-parent="#faqAccordion">
+                    <div class="card-body p-4 p-lg-5 border-top border-dark" style="border-width: 2px !important;">
+                        <p class="fs-5 text-dark">
+                            Le frais de scolarité annuel est de <strong>3 800 000 Ar</strong> payable via MVola, virement bancaire ou dans nos locaux. Nous proposons des facilités de paiement pour rendre l’éducation accessible à tous.
+                        </p>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
 </section>
 
 <section class="py-5" style="background-color: var(--itu-bleu);">
     <div class="container py-5 text-center position-relative z-1">
-        <h2 class="display-5 fw-black text-white text-uppercase mb-4" style="letter-spacing: -1px;">
+        <h2 class="display-5 fw-black text-white text-uppercase mb-4 reveal" style="letter-spacing: -1px;">
             Vous n'avez pas trouvé ce que vous cherchez ?
         </h2>
-        <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">
+        <p class="lead text-white-50 mb-5 mx-auto reveal delay-1" style="max-width: 600px;">
             N'hésitez pas à nous envoyer un message directement ou à nous appeler. Notre équipe est là pour vous
             répondre !
         </p>
-        <a href="/contact" class="btn-itu btn-itu-vert rounded-0 fw-bold px-5 py-3 text-uppercase fs-5"
+        <a href="/contact" class="btn-itu btn-itu-vert rounded-0 fw-bold px-5 py-3 text-uppercase fs-5 reveal delay-1"
             style="border: 2px solid #1a1a1a; box-shadow: 6px 6px 0px #1a1a1a;">
-            <i class="bi bi-send-fill me-2"></i> Contactez-nous
+            Contactez-nous
         </a>
     </div>
 </section>

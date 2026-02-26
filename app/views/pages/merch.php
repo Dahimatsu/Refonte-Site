@@ -111,22 +111,22 @@ $categories = array_unique(array_column($merchs, 'categorie'));
 <section class="py-5 mb-5" data-section-theme="light">
     <div class="container">
 
-        <div
-            class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end mb-5 gap-3 border-bottom border-dark border-3 pb-3">
+        <header
+            class="reveal d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end mb-5 gap-3 border-bottom border-dark border-3 pb-3">
             <h2 class="display-6 fw-bold text-uppercase m-0" style="letter-spacing: -1px;">Find Your Fit</h2>
 
             <div class="d-flex flex-wrap gap-2" id="merch-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="tous">Tous</button>
                 <?php foreach ($categories as $categorie) { ?>
                     <button class="filter-btn" data-filter="<?= $categorie ?>"><?= ucfirst($categorie) ?></button>
                 <?php } ?>
             </div>
-        </div>
+        </header>
 
-        <div class="row g-4" id="merch-grid">
+        <section class="row g-4" id="merch-grid">
 
             <?php foreach ($merchs as $item): ?>
-                <div class="col-12 col-sm-6 col-lg-4 merch-item" data-category="<?= $item['categorie'] ?>">
+                <article class="col-12 col-sm-6 col-lg-4 merch-item reveal" data-category="<?= $item['categorie'] ?>">
 
                     <a href="#produit-<?= $item['id'] ?>"
                         class="card rounded-0 border-0 h-100 merch-card bg-transparent text-decoration-none d-block">
@@ -155,10 +155,10 @@ $categories = array_unique(array_column($merchs, 'categorie'));
 
                     </a>
 
-                </div>
+                </article>
             <?php endforeach; ?>
 
-        </div>
+        </section>
 
         <div id="no-products-msg" class="text-center py-5 d-none">
             <i class="bi bi-box-seam fs-1 text-muted d-block mb-3"></i>

@@ -19,6 +19,7 @@ $offcanvas_links = [
     ['label' => 'MBDS', 'href' => '/mbds'],
     ['label' => 'BIHAR', 'href' => '/bihar'],
     ['label' => 'Merch', 'href' => '/merch'],
+    ['label' => 'Actualités', 'href' => '/actualites'],
     ['label' => 'FAQ', 'href' => '/faq'],
     ['label' => 'Contact', 'href' => '/contact'],
 ];
@@ -44,7 +45,7 @@ $hasResults = (
 <head>
     <meta charset="UTF-8" />
     <!-- Google Tag Manager -->
-    <script once="<?= formatText($cspNonce) ?>">
+    <script nonce="<?= formatText($cspNonce) ?>">
         (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -212,17 +213,17 @@ $hasResults = (
         <section class="container py-5">
             <div class="row gy-5">
                 <section class="col-lg-6 pe-lg-5">
-                    <h4 class="text-uppercase mb-2"
+                    <h4 class="text-uppercase mb-2 "
                         style="color: var(--itu-vert); font-family: var(--font-title); font-style: italic">
                         Rejoignez-nous</h4>
-                    <h2 class="display-4 fw-bold mb-4 text-uppercase footer-subtitle"
+                    <h2 class="display-4 fw-bold mb-4 text-uppercase footer-subtitle "
                         style="font-family: var(--font-title); line-height: 1.1">Votre carrière<br />commence ici</h2>
 
-                    <div class="d-flex flex-wrap gap-3 mb-5">
+                    <div class="d-flex flex-wrap gap-3 mb-5 ">
                         <a href="/inscription" class="btn-itu btn-itu-vert py-2 px-4 fs-6">S'inscrire</a>
                     </div>
 
-                    <div class="d-flex gap-4 mb-4 fs-4">
+                    <article class="d-flex gap-4 mb-4 fs-4 ">
                         <a href="https://www.facebook.com/profile.php?id=100064841042452" target="_blank"
                             rel="noopener noreferrer" class="social-link" title="Facebook"
                             aria-label="Visitez notre page Facebook"><i class="bi bi-facebook"></i>
@@ -235,9 +236,9 @@ $hasResults = (
                             rel="noopener noreferrer" class="social-link" title="Discord"
                             aria-label="Visitez notre serveur Discord"><i class="bi bi-discord"></i>
                         </a>
-                    </div>
+                    </article>
 
-                    <article class="mt-4">
+                    <article class="mt-4 ">
                         <div class="d-flex align-items-start mb-3">
                             <i class="bi bi-telephone fs-5 me-3 mt-1" style="color: var(--itu-vert)"></i>
 

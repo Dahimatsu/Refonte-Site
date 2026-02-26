@@ -24,7 +24,7 @@
     <div class="container py-4 py-md-5">
         <div class="row g-5">
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 reveal">
                 <form action="#" method="POST" class="itu-brutalist-form">
 
                     <div class="mb-4">
@@ -64,7 +64,7 @@
                 </form>
             </div>
 
-            <div class="col-lg-5 offset-lg-1 d-flex flex-column justify-content-center">
+            <div class="col-lg-5 offset-lg-1 d-flex flex-column justify-content-center reveal">
 
                 <h2 class="display-5 fw-black text-uppercase mb-5"
                     style="color: var(--itu-bleu); letter-spacing: -1px;">Get In Touch</h2>
@@ -131,7 +131,7 @@
         </div>
     </div>
 </section>
-<section class="w-100" style="height: 450px;" data-section-theme="light">
+<section class="w-100 reveal" style="height: 450px;" data-section-theme="light">
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2667.7562120075854!2d47.53325332967746!3d-18.98545272551033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07bf95431f83d%3A0x7edb4de9ebd72707!2sIT%20University!5e0!3m2!1sfr!2smg!4v1772011413923!5m2!1sfr!2smg"
         width="100%" height="100%" style="border:0; filter: grayscale(20%);" allowfullscreen="" loading="lazy"

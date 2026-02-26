@@ -109,11 +109,11 @@ $bihar_projets = [
     <div class="container py-4">
         <div class="row align-items-center mb-5">
             <div class="col-lg-7">
-                <h2 class="display-5 fw-black text-uppercase mb-3"
+                <h2 class="display-5 fw-black text-uppercase mb-3 reveal"
                     style="color: var(--itu-bleu); letter-spacing: -1px;">
                     Master of Science BIHAR
                 </h2>
-                <p class="lead text-muted" style="line-height: 1.8;">
+                <p class="lead text-muted reveal delay-1" style="line-height: 1.8;">
                     Une formation d'excellence accréditée par la Conférence des Grandes Écoles, en partenariat avec
                     l'ESTIA.
                 </p>
@@ -122,7 +122,7 @@ $bihar_projets = [
 
         <div class="row g-4 justify-content-center">
             <div class="col-md-10 col-lg-8">
-                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card"
+                <article class="p-4 p-lg-5 h-100 rounded-0 itu-brutalist-card reveal delay-1"
                     style="border: 2px solid #1a1a1a; background-color: #f8fcfb;">
                     <div class="d-flex align-items-center mb-4 pb-3 border-bottom border-dark border-2">
                         <i class="bi bi-crosshair fs-2 me-3" style="color: var(--itu-vert);"></i>
@@ -156,7 +156,7 @@ $bihar_projets = [
 <section class="py-5" style="background-color: var(--itu-gris);" data-section-theme="light">
     <div class="container py-5">
 
-        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3">
+        <header class="text-start mb-5 border-bottom border-dark border-3 pb-3 reveal">
             <h2 class="display-4 fw-black text-uppercase mb-0" style="letter-spacing: -2px; font-weight: 900;">
                 Programme Détaillé
             </h2>
@@ -168,7 +168,7 @@ $bihar_projets = [
             foreach ($bihar_modules as $module):
                 $num = str_pad($index, 2, '0', STR_PAD_LEFT);
                 ?>
-                <div class="col">
+                <div class="col reveal">
                     <article class="card h-100 rounded-0 itu-brutalist-card position-relative overflow-hidden"
                         style="border: 2px solid #1a1a1a; background-color: #ffffff;">
 
@@ -210,17 +210,17 @@ $bihar_projets = [
 <section class="py-5" data-section-theme="light">
     <div class="container py-5">
         <header class="text-center mb-5">
-            <h2 class="display-5 fw-black text-uppercase mb-3" style="color: var(--itu-bleu); letter-spacing: -1px;">
+            <h2 class="display-5 fw-black text-uppercase mb-3 reveal" style="color: var(--itu-bleu); letter-spacing: -1px;">
                 Projets d'innovation R&D
             </h2>
-            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+            <p class="lead text-muted mx-auto reveal delay-1" style="max-width: 700px;">
                 Mettez en pratique vos compétences sur des projets réels et ambitieux.
             </p>
         </header>
 
         <div class="row g-4 justify-content-center">
             <?php foreach ($bihar_projets as $projet): ?>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <article class="p-4 h-100 rounded-0 itu-brutalist-card d-flex flex-column"
                         style="border: 2px solid #1a1a1a; background-color: var(--itu-gris);">
 

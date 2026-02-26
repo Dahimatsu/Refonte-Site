@@ -1,19 +1,19 @@
 <?php
 $partenaires = [
-    ['src' => 'republique.png', 'alt' => 'République de Madagascar'],
-    ['src' => 'mesupres.png', 'alt' => 'MESUPRES'],
-    ['src' => 'mndpt.png', 'alt' => 'MNDPT'],
-    ['src' => 'pamff.png', 'alt' => 'PAMFF'],
-    ['src' => 'axian.png', 'alt' => 'Groupe Axian'],
-    ['src' => 'bred.png', 'alt' => 'BRED Banque Populaire'],
-    ['src' => 'accessbanque.png', 'alt' => 'AccessBanque Madagascar'],
-    ['src' => 'bassan.png', 'alt' => 'Groupe Bassan'],
-    ['src' => 'qdata.png', 'alt' => 'Q-Data'],
-    ['src' => 'softwell.png', 'alt' => 'Softwell'],
-    ['src' => 'asisten.png', 'alt' => 'Asisten'],
-    ['src' => 'sioka.png', 'alt' => 'Sioka'],
-    ['src' => 'fthm.png', 'alt' => 'FTHM Consulting'],
-    ['src' => 'yas.png', 'alt' => 'Yas Madagascar']
+    ['src' => 'republique.png', 'alt' => 'République de Madagascar', 'link' => 'https://www.presidence.gov.mg/'],
+    ['src' => 'mesupres.png', 'alt' => 'MESUPRES', 'link' => 'https://www.mesupres.gov.mg/'],
+    ['src' => 'mndpt.png', 'alt' => 'MNDPT', 'link' => 'https://www.mndpt.gov.mg/'],
+    ['src' => 'pamf.png', 'alt' => 'PAMF', 'link' => 'https://www.pamf.mg/'],
+    ['src' => 'axian.png', 'alt' => 'Groupe Axian', 'link' => 'https://www.axian-group.com/'],
+    ['src' => 'bred.png', 'alt' => 'BRED Banque Populaire', 'link' => 'https://www.bred.mg/'],
+    ['src' => 'accesbanque.png', 'alt' => 'AccèsBanque Madagascar', 'link' => 'https://www.accesbanque.mg/'],
+    ['src' => 'bassan.png', 'alt' => 'Groupe Bassan', 'link' => 'https://www.bassan.mg/'],
+    ['src' => 'qdata.png', 'alt' => 'Q-Data', 'link' => 'https://www.facebook.com/qdatamadagascar/'],
+    ['src' => 'softwell.png', 'alt' => 'Softwell', 'link' => 'https://www.softwell.mg/'],
+    ['src' => 'asisten.png', 'alt' => 'Asisten', 'link' => 'https://asisten-travel.com/'],
+    ['src' => 'sioka.png', 'alt' => 'Sioka', 'link' => 'https://www.sioka.org/'],
+    ['src' => 'fthm.png', 'alt' => 'FTHM Consulting', 'link' => 'https://fthmconsulting.com/'],
+    ['src' => 'yas.png', 'alt' => 'Yas Madagascar', 'link' => 'https://www.yas.mg/'],
 ];
 ?>
 <!-- Hero Section -->
@@ -77,8 +77,8 @@ $partenaires = [
 <!-- CTA Banner Section -->
 <section class="itu-cta-banner position-relative" data-section-theme="dark">
     <div class="container py-5 position-relative z-1">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
+        <div class="row align-items-center reveal">
+            <div class="col-lg-8 reveal delay-1">
                 <h2 class="cta-title mb-3">Votre Avenir dans l'IT commence ici</h2>
                 <p class="cta-text mb-0"><strong>Découvrez plus</strong> sur nos diplômes de <strong>Licence</strong> et
                     <strong>Master.</strong>
@@ -96,7 +96,7 @@ $partenaires = [
 <section id="options" class="min-vh-100 d-flex flex-column flex-lg-row" data-section-theme="dark">
     <article class="w-100 position-relative d-flex flex-column justify-content-center px-4 px-lg-5 py-5"
         style="flex: 1; background-color: var(--itu-gris); min-height: 50vh">
-        <div class="position-relative z-1">
+        <div class="position-relative z-1 reveal">
             <h6 class="text-uppercase fw-bold mb-2" style="color: var(--itu-vert); letter-spacing: 2px">Nos formations
             </h6>
             <h2 class="display-4 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Choisissez
@@ -109,14 +109,14 @@ $partenaires = [
         </div>
     </article>
 
-    <article class="w-100 d-flex flex-column p-0" style="flex: 1">
+    <section class="w-100 d-flex flex-column p-0" style="flex: 1">
 
         <article
-            class="itu-article itu-article-bleu w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0 text-white"
+            class="itu-article itu-article-bleu w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0 text-white "
             style="background-color: var(--itu-bleu); flex: 1">
-            <div class="w-100 mx-auto" style="max-width: 500px">
+            <div class="w-100 mx-auto reveal" style="max-width: 500px">
 
-                <header class="w-100 d-flex justify-content-between align-items-center mb-4">
+                <header class="w-100 d-flex justify-content-between align-items-center mb-4 ">
                     <h3 class="fw-bold mb-0 text-white text-uppercase">INFORMATIQUE</h3>
                 </header>
 
@@ -134,7 +134,7 @@ $partenaires = [
         <article
             class="itu-article itu-article-vert w-100 d-flex flex-column justify-content-center p-4 p-lg-5 border-0"
             style="background-color: var(--itu-gris); flex: 1">
-            <div class="w-100 mx-auto" style="max-width: 500px">
+            <div class="w-100 mx-auto reveal" style="max-width: 500px">
 
                 <header class="w-100 d-flex justify-content-between align-items-center mb-4">
                     <h3 class="fw-bold mb-0 text-uppercase" style="color: var(--itu-bleu)">DESIGN</h3>
@@ -150,7 +150,7 @@ $partenaires = [
             </div>
         </article>
 
-    </article>
+    </section>
 </section>
 
 <!-- Inscrire Section -->
@@ -159,7 +159,7 @@ $partenaires = [
 
     <div class="container py-5 my-lg-5 position-relative z-1">
         <div class="row align-items-center">
-            <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="col-lg-6 mb-5 mb-lg-0 reveal delay-1">
                 <div class="mb-3">
                     <i class="bi bi-mortarboard-fill" style="font-size: 3rem; color: var(--itu-vert)"></i>
                 </div>
@@ -177,7 +177,7 @@ $partenaires = [
                 <a href="/faq" class="btn-itu btn-itu-vert"> Comment s'inscrire ? </a>
             </div>
 
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6 text-center reveal">
                 <img src="/assets/images/background/illustration-rentree.png" alt="Illustration Rentrée ITU"
                     loading="lazy" class="img-fluid floating-img" style="max-width: 90%" />
             </div>
@@ -188,7 +188,7 @@ $partenaires = [
 <!-- Diplome Section -->
 <section id="diplome" class="vh-100 position-relative overflow-hidden d-flex align-items-center"
     data-section-theme="dark">
-    <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-0 reveal">
         <img src="/assets/images/background/remise_diplome.jpg" alt="Remise de diplôme ITU" class="w-100 h-100"
             loading="lazy" style="object-fit: cover; object-position: center" />
 
@@ -199,12 +199,10 @@ $partenaires = [
     <div class="container position-relative z-1">
         <div class="row">
             <div class="col-lg-7 col-xl-6 text-white">
-                <h6 class="text-uppercase fw-bold mb-3" style="color: var(--itu-vert); letter-spacing: 2px">
-                    L'aboutissement</h6>
-                <h2 class="display-3 fw-bold mb-5 text-white" style="font-family: var(--font-title)">Vos
+                <h2 class="display-3 fw-bold mb-5 text-white reveal delay-1" style="font-family: var(--font-title)">Vos
                     diplômes<br />reconnus</h2>
 
-                <article class="p-4 p-lg-5 mb-5">
+                <article class="p-4 p-lg-5 mb-5 reveal">
                     <p class="fs-4 mb-2 text-white opacity-75">L'université offre</p>
                     <h4 class="display-6 fw-bold mb-4"><span style="color: var(--itu-vert)">3 diplômes</span></h4>
 
@@ -215,7 +213,7 @@ $partenaires = [
                     </ul>
                 </article>
 
-                <a href="/diplome" class="btn-itu btn-itu-vert"> En Savoir Plus <i class="bi bi-arrow-right ms-2"></i>
+                <a href="/diplome" class="btn-itu btn-itu-vert reveal"> En Savoir Plus <i class="bi bi-arrow-right ms-2"></i>
                 </a>
             </div>
         </div>
@@ -225,18 +223,22 @@ $partenaires = [
 <!-- Partenaires Section -->
 <section id="partenaires" class="py-5" data-section-theme="light">
     <div class="container py-4">
-        <h2 class="text-center fw-bold mb-5 text-uppercase" style="color: var(--itu-bleu); letter-spacing: 1px">Nos
+        <h2 class="text-center fw-bold mb-5 text-uppercase reveal" style="color: var(--itu-bleu); letter-spacing: 1px">Nos
             Principaux partenaires</h2>
 
-        <article class="partenaires-slider">
+        <article class="partenaires-slider reveal delay-1">
             <div class="partenaires-track">
                 <?php foreach ($partenaires as $partenaire) { ?>
-                    <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>"
-                        alt="<?= formatText($partenaire['alt']) ?>" class="partenaire-logo" loading="lazy" />
+                    <a href="<?= $partenaire['link'] ?>" target="_blank">
+                        <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>"
+                            alt="<?= formatText($partenaire['alt']) ?>" class="partenaire-logo" loading="lazy" />
+                    </a>
                 <?php } ?>
                 <?php foreach ($partenaires as $partenaire) { ?>
-                    <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>"
-                        alt="<?= formatText($partenaire['alt']) ?>" class="partenaire-logo" loading="lazy" />
+                    <a href="<?= $partenaire['link'] ?>" target="_blank">
+                        <img src="/assets/images/partenaires/<?= formatText($partenaire['src']) ?>"
+                            alt="<?= formatText($partenaire['alt']) ?>" class="partenaire-logo" loading="lazy" />
+                    </a>
                 <?php } ?>
             </div>
         </article>
