@@ -14,6 +14,7 @@ use app\controllers\ContactController;
 use app\controllers\InscriptionController;
 use app\controllers\ResultatsController;
 use app\controllers\MerchController;
+use app\controllers\ActualiteController;
 
 /** 
  * @var Router $router 
@@ -71,6 +72,10 @@ $router->group('', function(Router $router) use ($app) {
 	
 	$router->get('/merch', function () use ($app) {
 		MerchController::showMerch($app);
+	});
+
+	$router->get('/actualites', function () use ($app) {
+		ActualiteController::showActualite($app);
 	});
 
 }, [ SecurityHeadersMiddleware::class ]);
