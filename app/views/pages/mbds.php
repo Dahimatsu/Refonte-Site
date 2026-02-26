@@ -47,7 +47,7 @@ $dossier_items = [
 
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
     <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
-        <img src="../assets/images/background/bg-hero-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
+        <img src="/assets/images/background/remise_diplome_4.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Campus"
             loading="lazy" />
 
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>

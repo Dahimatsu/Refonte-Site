@@ -1,6 +1,15 @@
 <?php
 $merchs = [
     [
+        'id' => 'polo',
+        'nom' => 'Polo ITU',
+        'prix' => '35 000 Ar',
+        'categorie' => 'Vêtements',
+        'text_color' => '#ffffff',
+        'image_front' => 'polo.jpg',
+        'image_back' => null
+    ],
+    [
         'id' => 'sweat-noir',
         'nom' => 'Sweater Noir',
         'prix' => '65 000 Ar',
@@ -47,12 +56,12 @@ $merchs = [
     ],
     [
         'id' => 'mug-itu',
-        'nom' => 'Mug >_ Coder',
+        'nom' => 'Mug',
         'prix' => '15 000 Ar',
         'categorie' => 'Objets',
         'text_color' => '#000000',
         'image_front' => 'mug.png',
-        'image_back' => null
+        'image_back' => 'mug_metal.png'
     ],
     [
         'id' => 'gourde-itu',
@@ -80,6 +89,51 @@ $merchs = [
         'text_color' => '#000000',
         'image_front' => 'pyjama_rose_front.jpg',
         'image_back' => 'pyjama_rose_back.jpg'
+    ],
+    [
+        'id' => 'teddy',
+        'nom' => 'Teddy ITU',
+        'prix' => '45 000 Ar',
+        'categorie' => 'Vêtements',
+        'text_color' => '#000000',
+        'image_front' => 'teddy_front.png',
+        'image_back' => 'teddy_back.png'
+    ],
+    [
+        'id' => 'sticker',
+        'nom' => 'Sticker',
+        'prix' => '15 000 Ar',
+        'categorie' => 'Accessoires',
+        'text_color' => '#000000',
+        'image_front' => 'stickers.jpg',
+        'image_back' => null
+    ],
+    [
+        'id' => 'totebag',
+        'nom' => 'Totebag',
+        'prix' => '25 000 Ar',
+        'categorie' => 'Accessoires',
+        'text_color' => '#000000',
+        'image_front' => 'totebag.jpg',
+        'image_back' => null
+    ],
+    [
+        'id' => 'casquette',
+        'nom' => 'Casquette ITU',
+        'prix' => '30 000 Ar',
+        'categorie' => 'Accessoires',
+        'text_color' => '#000000',
+        'image_front' => 'casquette_1.jpg',
+        'image_back' => 'casquette_2.jpg'
+    ],
+    [
+        'id' => 'jogger',
+        'nom' => 'Jogger',
+        'prix' => '40 000 Ar',
+        'categorie' => 'Vêtements',
+        'text_color' => '#ffffff',
+        'image_front' => 'jogger_fotsy.jpg',
+        'image_back' => 'jogger_mainty.jpg'
     ]
 ];
 
@@ -116,7 +170,7 @@ $categories = array_unique(array_column($merchs, 'categorie'));
             <h2 class="display-6 fw-bold text-uppercase m-0" style="letter-spacing: -1px;">Find Your Fit</h2>
 
             <div class="d-flex flex-wrap gap-2" id="merch-filters">
-                <button class="filter-btn active" data-filter="tous">Tous</button>
+                <button class="filter-btn active" data-filter="all">Tous</button>
                 <?php foreach ($categories as $categorie) { ?>
                     <button class="filter-btn" data-filter="<?= $categorie ?>"><?= ucfirst($categorie) ?></button>
                 <?php } ?>
@@ -147,9 +201,9 @@ $categories = array_unique(array_column($merchs, 'categorie'));
                                 <h5 class="fw-black mb-1 text-uppercase fs-4 merch-title" style="letter-spacing: -1px; color: <?= $item['text_color'] ?>">
                                     <?= $item['nom'] ?>
                                 </h5>
-                                <p class="mb-0 font-monospace fw-bold merch-price fs-5" style="color: <?= $item['text_color'] ?>">
+                                <!-- <p class="mb-0 font-monospace fw-bold merch-price fs-5" style="color: <?= $item['text_color'] ?>">
                                     >_ <?= $item['prix'] ?>
-                                </p>
+                                </p> -->
                             </div>
                         </div>
 
