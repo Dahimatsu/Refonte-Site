@@ -1,9 +1,5 @@
-/* Masquer le preloader si déjà visité */
-.preloader-hidden {
-    display: none !important;
-}
 /* =========================================
-   VARIABLES
+   1. VARIABLES (:root)
    ========================================= */
 :root {
     /* Couleurs ITU */
@@ -36,8 +32,9 @@
     --stroke-pattern: url('../patterns/stroke.svg');
 }
 
+
 /* =========================================
-   RESET & BASE
+   2. RESET, BASE & TYPOGRAPHIE
    ========================================= */
 *,
 *::before,
@@ -57,21 +54,14 @@ body {
     background-color: var(--bg-color) !important;
     color: var(--text-color) !important;
     line-height: 1.6;
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.no-scroll {
     overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title);
     color: var(--heading-color);
     margin-bottom: 1rem;
@@ -95,59 +85,50 @@ img {
     display: block;
 }
 
+
+/* =========================================
+   3. UTILITAIRES & PATTERNS
+   ========================================= */
 .font-monospace {
     font-family: 'JetBrains Mono', monospace !important;
 }
-/* =========================================
-   LOGO
-   ========================================= */
-.itu-logo {
-    transition: all 0.3s ease;
+
+.text-muted {
+    line-height: 1.6;
 }
 
-/* =========================================
-   LISTES AVEC PUCES SVG
-   ========================================= */
-.itu-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-}
-
-.itu-list li {
+/* Background Patterns globaux */
+.itu-bg-pattern {
     position: relative;
-    padding-left: 45px;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
 }
 
-.itu-list li::before {
+.itu-bg-pattern::before {
     content: '';
     position: absolute;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    background-image: var(--active-puce, var(--puce-itu-global));
-    background-size: contain;
-    background-repeat: no-repeat;
+    inset: 0;
+    background-image: var(--stroke-pattern);
+    background-repeat: repeat;
     background-position: center;
+    opacity: var(--itu-pattern-opacity, 0.1);
+    z-index: 0;
+    pointer-events: none;
 }
 
-.itu-list-global {
-    --active-puce: var(--puce-itu-global);
+.itu-bg-pattern > .container {
+    position: relative;
+    z-index: 1;
 }
 
-.itu-list-vert {
-    --active-puce: var(--puce-itu-vert);
+/* Utilitaires spécifiques mobile */
+@media (max-width: 768px) {
+    .bg-mobile-right {
+        object-position: 30% center !important;
+    }
 }
 
-.itu-list-bleu {
-    --active-puce: var(--puce-itu-bleu);
-}
 
 /* =========================================
-   PRELOADER & HERO
+   4. PRELOADER
    ========================================= */
 #preloader {
     background-color: var(--itu-bleu);
@@ -158,53 +139,15 @@ img {
     width: 350px;
 }
 
-.itu-hero-title {
-    font-family: var(--font-title);
-    font-weight: 900;
-    font-style: italic;
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    line-height: 1.1;
-    letter-spacing: -1px;
+.preloader-hidden {
+    display: none !important; /* Masquer le preloader si déjà visité */
 }
 
-.itu-text-green {
-    color: var(--itu-vert);
-}
-
-#itu-hero-title,
-#itu-hero-subtitle,
-#itu-hero-btn-wrapper {
-    opacity: 0;
-}
 
 /* =========================================
-   ANIMATION HERO
+   5. COMPOSANTS BRUTALISTES & UI (Boutons, Cards, Forms)
    ========================================= */
-.char-clip {
-    overflow: hidden;
-    padding-right: 0.1rem;
-    padding-left: 0.1rem;
-    display: inline-block;
-    position: relative;
-    vertical-align: bottom;
-}
-
-.char-wrapper {
-    display: inline-block;
-    position: relative;
-    color: var(--itu-vert);
-}
-
-.char-clone {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    color: var(--itu-bleu);
-}
-
-/* =========================================
-   BOUTONS 
-   ========================================= */
+/* Boutons de base */
 .btn-itu {
     display: inline-block;
     padding: 15px 40px;
@@ -242,18 +185,170 @@ img {
     --btn-text: #ffffff;
 }
 
+.btn-outline-dark:hover {
+    background-color: var(--itu-vert);
+    border-color: var(--itu-vert) !important;
+    color: white;
+}
+
+.btn-group {
+    border-radius: 0px !important;
+}
+
+/* Formulaires */
+.form-control {
+    background-color: transparent !important;
+    border: 2px solid #1a1a1a !important;
+    color: #000000 !important;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #fff !important;
+    border-color: var(--itu-vert) !important;
+    box-shadow: none;
+    outline: 0;
+}
+
+.itu-brutalist-form .form-control:focus {
+    border: 2px solid #1a1a1a !important;
+    box-shadow: 4px 4px 0px #1a1a1a !important;
+}
+
+#searchInput {
+    border: none !important;
+    border-left: 2px solid #1a1a1a !important;
+}
+
+/* Suppression forcée de tous les arrondis (Design Brutaliste) */
+.card,
+.btn,
+.border,
+.rounded-0 {
+    border-radius: 0 !important;
+}
+
+/* Cartes (Cards) */
+.card {
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+}
+
+.card-info:hover { box-shadow: 14px 14px 0px var(--itu-bleu); }
+.card-design:hover { box-shadow: 14px 14px 0px var(--itu-vert); }
+
+.itu-brutalist-card {
+    box-shadow: 6px 6px 0px #1a1a1a;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--bg-color);
+    color: #000000;
+}
+
+.itu-brutalist-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #1a1a1a;
+}
+
+.cursus-card {
+    transition: all 0.3s ease;
+}
+
+.cursus-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.resultats-article {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+/* Badges & Icônes */
+.itu-badge {
+    font-family: var(--font-title);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.itu-badge-vert { color: var(--itu-bleu); background-color: var(--itu-vert); }
+.itu-badge-bleu { color: var(--itu-vert); background-color: var(--itu-bleu); }
+.itu-badge-jaune { color: var(--itu-bleu); background-color: #ffc107; }
+
+.itu-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.itu-icon-wrapper:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Ombres pleines (Shadow Solid) */
+.shadow-solid-blue { box-shadow: 10px 10px 0px var(--itu-bleu); }
+.shadow-solid-green { box-shadow: 10px 10px 0px var(--itu-vert); }
+
+
 /* =========================================
-   NAVBAR
+   6. LISTES AVEC PUCES SVG
    ========================================= */
+.itu-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.itu-list li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.itu-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-image: var(--active-puce, var(--puce-itu-global));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.itu-list-global { --active-puce: var(--puce-itu-global); }
+.itu-list-vert { --active-puce: var(--puce-itu-vert); }
+.itu-list-bleu { --active-puce: var(--puce-itu-bleu); }
+
+
+/* =========================================
+   7. NAVBAR & MENU OFFCANVAS
+   ========================================= */
+/* Logo & Header */
+.itu-logo { transition: all 0.3s ease; }
 .navbar-brand img {
     width: 150px;
     transition: transform 0.3s ease;
 }
 
 .itu-navbar {
-    transition:
-        background-color 0.3s ease,
-        padding 0.3s ease;
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .itu-navbar .nav-link {
@@ -262,9 +357,7 @@ img {
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--itu-bleu) !important;
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .itu-navbar .nav-link:hover,
@@ -273,7 +366,7 @@ img {
     transform: translateY(-2px);
 }
 
-/* Header de base */
+/* Header transition au scroll */
 .transition-header {
     transition: all 0.4s ease-in-out;
     background-color: transparent !important;
@@ -282,7 +375,6 @@ img {
     right: 0;
 }
 
-/* Header quand on scrolle */
 .header-scrolled {
     top: 15px;
     left: 15px;
@@ -302,7 +394,26 @@ img {
     padding-bottom: 0.5rem !important;
 }
 
-/* Bouton Thème Hover Mode Clair */
+/* Thème dynamique du Header */
+.header-text-light .nav-link,
+.header-text-light .navbar-brand,
+.header-text-light .btn,
+.header-text-light i {
+    color: #ffffff !important;
+}
+
+.header-text-dark .nav-link,
+.header-text-dark .navbar-brand,
+.header-text-dark .btn,
+.header-text-dark i {
+    color: var(--itu-bleu) !important;
+}
+
+.transition-header .nav-link:hover,
+.transition-header .btn:hover {
+    color: var(--itu-vert) !important;
+}
+
 #theme-toggle {
     transition: all 0.3s ease;
     border: none;
@@ -313,49 +424,17 @@ img {
     color: var(--text-color) !important;
 }
 
-/* =========================================
-   COULEURS DYNAMIQUES DU HEADER
-   ========================================= */
-.header-text-light .nav-link,
-.header-text-light .navbar-brand,
-.header-text-light .btn {
-    color: #ffffff !important;
-}
-.header-text-light i {
-    color: #ffffff !important;
-}
-
-.header-text-dark .nav-link,
-.header-text-dark .navbar-brand,
-.header-text-dark .btn {
-    color: var(--itu-bleu) !important;
-}
-.header-text-dark i {
-    color: var(--itu-bleu) !important;
-}
-
-.transition-header .nav-link:hover,
-.transition-header .btn:hover {
-    color: var(--itu-vert) !important;
-}
-
-/* =========================================
-    MENU OFFCANVAS
-   ========================================= */
+/* Menu Offcanvas (Burger) */
 .itu-offcanvas {
     background-color: var(--bg-color);
     color: var(--text-color);
     border: none;
 }
 
-/* 2. Le calque avec le motif (Pattern) */
 .itu-offcanvas::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image: var(--ascendant-pattern);
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -364,16 +443,8 @@ img {
     pointer-events: none;
 }
 
-@media (min-width: 992px) {
-    .itu-offcanvas {
-        width: 50vw !important;
-    }
-}
-@media (max-width: 991.98px) {
-    .itu-offcanvas {
-        width: 100vw !important;
-    }
-}
+@media (min-width: 992px) { .itu-offcanvas { width: 50vw !important; } }
+@media (max-width: 991.98px) { .itu-offcanvas { width: 100vw !important; } }
 
 .itu-big-menu .nav-link {
     font-family: var(--font-title);
@@ -382,9 +453,7 @@ img {
     color: var(--itu-bleu);
     line-height: 1.1;
     padding: 0.2rem 0;
-    transition:
-        color 0.3s ease,
-        transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: color 0.3s ease, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .itu-big-menu .nav-link:hover,
@@ -406,45 +475,307 @@ img {
     max-height: 0;
     opacity: 0;
     padding-left: 1.5rem;
-    transition:
-        max-height 0.4s ease-in-out,
-        opacity 0.3s ease-in-out;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .itu-sub-menu .sub-nav-link {
     font-size: 1.2rem;
     padding: 0.5rem 0;
     color: var(--text-color);
-    transition:
-        color 0.2s ease,
-        padding-left 0.2s ease;
+    transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
-/* Effet hover sur les sous-liens individuels */
 .itu-sub-menu .sub-nav-link:hover {
     color: var(--itu-vert);
-    padding-left: 0.5rem; /* Petit décalage très tech au survol */
+    padding-left: 0.5rem;
 }
 
-/* ==========================================
-   LES ACTIONS QUAND ON SURVOLE LE PARENT (.itu-nav-dropdown)
-   ========================================== */
-
-/* 1. Le sous-menu apparaît en glissant vers le bas */
 .itu-nav-dropdown:hover .itu-sub-menu {
-    max-height: 200px; /* Assez grand pour contenir les liens */
+    max-height: 200px;
     opacity: 1;
-    margin-bottom: 1rem; /* Ajoute un peu d'espace en bas quand c'est ouvert */
+    margin-bottom: 1rem;
 }
 
-/* 2. La flèche tourne à 180 degrés */
 .itu-nav-dropdown:hover .dropdown-arrow {
     transform: rotate(180deg);
     color: var(--itu-vert);
 }
 
+
 /* =========================================
-   INDICATEUR DE SCROLL
+   8. HERO, BANNIÈRES & SECTIONS SPÉCIFIQUES
+   ========================================= */
+.itu-hero-title {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.itu-text-green { color: var(--itu-vert); }
+
+#itu-hero-title,
+#itu-hero-subtitle,
+#itu-hero-btn-wrapper {
+    opacity: 0;
+}
+
+/* Call To Action Banner */
+.itu-cta-banner {
+    transition: all 0.3s ease;
+    background-color: var(--itu-vert);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.itu-cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--stroke-pattern);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.cta-title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--itu-black);
+    font-weight: 900;
+}
+
+.cta-text {
+    color: var(--itu-black);
+    font-size: 1.1rem;
+}
+
+/* Section Formations */
+.itu-formation {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.itu-formation::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.itu-formations-info::before { background-image: var(--ascendant-pattern); }
+.itu-formations-design::before { background-image: var(--descendant-pattern); }
+
+/* Articles spécifiques */
+.itu-article {
+    flex: 1;
+    transition: all 0.3s ease;
+}
+.itu-article-vert { background-color: var(--itu-vert); color: var(--itu-bleu); }
+.itu-article-bleu { background-color: var(--itu-bleu); color: #ffffff; }
+
+/* Inscription Pattern */
+#inscrire {
+    transition: all 0.3s ease;
+    background-color: var(--bg-color);
+}
+.pattern {
+    position: relative;
+    z-index: 1;
+}
+.pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--stroke-pattern);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+
+/* =========================================
+   9. MODULES (Boutique, Actualités, Partenaires)
+   ========================================= */
+/* Boutique (Merch) */
+.filter-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid transparent;
+    color: #6c757d;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.filter-btn.active { color: #1a1a1a; border: 2px solid #1a1a1a; }
+.filter-btn:hover { color: #1a1a1a; }
+
+.merch-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.merch-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+.merch-img-container {
+    aspect-ratio: 3 / 4;
+    position: relative;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.merch-img-container img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.4s ease;
+}
+
+.img-front { z-index: 1; opacity: 1; }
+.img-back { z-index: 2; opacity: 0; }
+
+.merch-card:hover .img-back { opacity: 1; }
+.merch-card:hover .merch-img-container img { transform: scale(1.05); }
+
+.merch-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60%;
+    background: linear-gradient(to top, var(--itu-bleu) 10%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.merch-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1.5rem;
+    z-index: 3;
+    transition: transform 0.3s ease;
+    transform: translateY(10px);
+}
+
+.merch-title, .merch-price { transition: color 0.3s ease; }
+
+.merch-card:hover .merch-overlay { opacity: 1; }
+.merch-card:hover .merch-img-container img { transform: scale(1.08); }
+.merch-card:hover .merch-info { transform: translateY(0); }
+.merch-card:hover .merch-title { color: #ffffff !important; }
+.merch-card:hover .merch-price { color: var(--itu-vert) !important; }
+
+/* Actualités */
+.actu-card {
+    border: 2px solid #1a1a1a;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.actu-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0px var(--itu-bleu);
+}
+
+.actu-img-container {
+    height: 220px;
+    border-bottom: 2px solid #1a1a1a;
+    overflow: hidden;
+}
+
+.actu-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.actu-card:hover .actu-img-container img { transform: scale(1.05); }
+
+.actu-text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.actu-hero {
+    position: relative;
+    background-color: var(--itu-bleu);
+    z-index: 1;
+}
+
+.actu-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--ascendant-pattern);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Partenaires (Slider) */
+.partenaires-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.partenaires-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scrollPartenaires 35s linear infinite;
+}
+
+.partenaire-logo {
+    height: 60px;
+    width: auto;
+    margin: 0 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partenaire-logo:hover { transform: scale(1.1); }
+
+@keyframes scrollPartenaires {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+/* =========================================
+   10. INDICATEUR DE SCROLL & BOUTON TOP
    ========================================= */
 .scroll-indicator-wrapper {
     position: fixed;
@@ -491,284 +822,9 @@ img {
     border-radius: 50%;
 }
 
-.scroll-dot:active {
-    cursor: grabbing;
-}
+.scroll-dot:active { cursor: grabbing; }
 
-/* =========================================
-   BANNIÈRE CALL TO ACTION
-   ========================================= */
-.itu-cta-banner {
-    transition: all 0.3s ease;
-    background-color: var(--itu-vert);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.itu-cta-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--stroke-pattern);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-.itu-formation {
-    position: relative;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.itu-formation::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.05;
-    z-index: -1;
-}
-
-.itu-formations-info::before {
-    background-image: var(--ascendant-pattern);
-}
-
-.itu-formations-design::before {
-    background-image: var(--descendant-pattern);
-}
-
-.cta-title {
-    font-family: var(--font-title);
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    color: var(--itu-black);
-    font-weight: 900;
-}
-
-.cta-text {
-    color: var(--itu-black);
-    font-size: 1.1rem;
-}
-
-/* =========================================
-   SECTION PARCOURS
-   ========================================= */
-
-.itu-badge {
-    font-family: var(--font-title);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 5px 10px;
-}
-
-.itu-badge-vert {
-    color: var(--itu-bleu);
-    background-color: var(--itu-vert);
-}
-
-.itu-badge-bleu {
-    color: var(--itu-vert);
-    background-color: var(--itu-bleu);
-}
-
-.itu-badge-jaune {
-    color: var(--itu-bleu);
-    background-color: #ffc107;
-}
-
-.itu-article {
-    flex: 1;
-    transition: all 0.3s ease;
-}
-
-.itu-article-vert {
-    background-color: var(--itu-vert);
-    color: var(--itu-bleu);
-}
-
-.itu-article-bleu {
-    background-color: var(--itu-bleu);
-    color: #ffffff;
-}
-
-/* =========================================
-   SECTION INSCRIRE
-   ========================================= */
-#inscrire {
-    transition: all 0.3s ease;
-    background-color: var(--bg-color);
-}
-
-.pattern {
-    position: relative;
-    z-index: 1;
-}
-
-.pattern::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--stroke-pattern);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.05;
-    z-index: -1;
-}
-/* =========================================
-   CARROUSEL PARTENAIRES
-   ========================================= */
-.partenaires-slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
-    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
-}
-
-.partenaires-track {
-    display: flex;
-    align-items: center;
-    width: max-content;
-    animation: scrollPartenaires 35s linear infinite;
-}
-
-/* .partenaires-slider:hover .partenaires-track {
-    animation-play-state: paused;
-} */
-
-.partenaire-logo {
-    height: 60px;
-    width: auto;
-    margin: 0 40px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.partenaire-logo:hover {
-    transform: scale(1.1);
-}
-
-@keyframes scrollPartenaires {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-/* =========================================
-   FOOTER
-   ========================================= */
-.itu-footer {
-    background-color: #000000;
-}
-
-.footer-links a {
-    color: #cccccc;
-    text-decoration: none;
-    transition:
-        color 0.3s ease,
-        padding-left 0.3s ease;
-    display: inline-block;
-}
-
-.footer-links a:hover {
-    color: var(--itu-vert);
-    padding-left: 5px;
-}
-
-.social-link {
-    color: #ffffff;
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-    display: inline-block;
-}
-
-.social-link:hover {
-    color: var(--itu-vert);
-    transform: translateY(-4px);
-}
-
-.contact-link {
-    color: #cccccc;
-    transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-    color: var(--itu-vert);
-}
-
-.contact-link:hover i {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-}
-
-.newsletter-form .form-control {
-    color: #ffffff !important;
-    padding: 12px 15px;
-    transition: all 0.3s ease;
-}
-
-.newsletter-form .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border-color: var(--itu-vert) !important;
-    box-shadow: none;
-}
-
-.newsletter-form .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.newsletter-form .btn-itu-vert {
-    background-color: var(--itu-vert);
-    border: 1px solid var(--itu-vert);
-    color: var(--itu-bleu);
-    transition: all 0.3s ease;
-}
-
-.newsletter-form .btn-itu-vert:hover {
-    background-color: transparent;
-    color: var(--itu-vert);
-}
-
-.newsletter-form .form-check-input {
-    accent-color: var(--itu-vert);
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: none;
-}
-
-.newsletter-form .form-check-input:hover {
-    border-color: var(--itu-vert);
-}
-
-.newsletter-form .form-check-label {
-    cursor: pointer;
-}
-
-/* =========================================
-   BOUTON SCROLL TO TOP
-   ========================================= */
+/* Bouton Retour en haut */
 .btn-itu-top {
     position: fixed;
     bottom: 40px;
@@ -814,83 +870,132 @@ img {
     }
 }
 
-/* Suppression forcée de tous les arrondis */
-.card,
-.btn,
-.border,
-.rounded-0 {
-    border-radius: 0 !important;
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.itu-footer {
+    background-color: #000000;
 }
 
-/* Ombres pleines (Shadow Solid) */
-.shadow-solid-blue {
-    box-shadow: 10px 10px 0px var(--itu-bleu);
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
 }
 
-.shadow-solid-green {
-    box-shadow: 10px 10px 0px var(--itu-vert);
+.footer-links a:hover {
+    color: var(--itu-vert);
+    padding-left: 5px;
 }
 
-/* Animation au survol */
-.card {
-    transition: all 0.2s ease;
+.social-link {
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
-.card:hover {
-    transform: translate(-4px, -4px);
+.social-link:hover {
+    color: var(--itu-vert);
+    transform: translateY(-4px);
 }
 
-.card-info:hover {
-    box-shadow: 14px 14px 0px var(--itu-bleu);
+.contact-link {
+    color: #cccccc;
+    transition: color 0.3s ease;
 }
 
-.card-design:hover {
-    box-shadow: 14px 14px 0px var(--itu-vert);
-}
-
-.itu-icon-wrapper {
-    width: 100px;
-    height: 100px;
-    background-color: #f8f9fa;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+.contact-link:hover { color: var(--itu-vert); }
+.contact-link:hover i {
+    transform: scale(1.2);
     transition: transform 0.3s ease;
 }
 
-.itu-icon-wrapper:hover {
-    transform: scale(1.1);
-    background-color: #ffffff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-.text-muted {
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .bg-mobile-right {
-        object-position: 30% center !important;
-    }
-}
-.form-control:focus {
-    background-color: #fff !important;
-    border-color: var(--itu-vert) !important;
-    box-shadow: none;
-    outline: 0;
-}
-
-.cursus-card {
+/* Formulaire Newsletter Footer */
+.newsletter-form .form-control {
+    color: #ffffff !important;
+    padding: 12px 15px;
     transition: all 0.3s ease;
 }
 
-.cursus-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+.newsletter-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--itu-vert) !important;
+    box-shadow: none;
 }
 
+.newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.newsletter-form .btn-itu-vert {
+    background-color: var(--itu-vert);
+    border: 1px solid var(--itu-vert);
+    color: var(--itu-bleu);
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .btn-itu-vert:hover {
+    background-color: transparent;
+    color: var(--itu-vert);
+}
+
+.newsletter-form .form-check-input {
+    accent-color: var(--itu-vert);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+
+.newsletter-form .form-check-input:hover { border-color: var(--itu-vert); }
+.newsletter-form .form-check-label { cursor: pointer; }
+
+
+/* =========================================
+   12. ANIMATIONS (Reveal, Hero Texte)
+   ========================================= */
+/* Effet apparition au scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+/* Split Text Animation (Hero) */
+.char-clip {
+    overflow: hidden;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.char-wrapper {
+    display: inline-block;
+    position: relative;
+    color: var(--itu-vert);
+}
+
+.char-clone {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: var(--itu-bleu);
+}
+
+/* Hover design CTA */
 .itu-cta-design section {
     position: relative;
     transition: background-color 0.4s ease;
@@ -905,15 +1010,11 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     opacity: 0.15;
-
     pointer-events: none;
 }
 
-.itu-cta-design section .container {
-    position: relative;
-}
+.itu-cta-design section .container { position: relative; }
 
 .itu-cta-design .itu-banner-arrow {
     opacity: 0;
@@ -921,282 +1022,8 @@ img {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.itu-cta-design:hover section {
-    background-color: var(--itu-vert) !important;
-}
-
+.itu-cta-design:hover section { background-color: var(--itu-vert) !important; }
 .itu-cta-design:hover .itu-banner-arrow {
     opacity: 1;
     transform: translateX(0);
-}
-
-.itu-brutalist-card {
-    box-shadow: 6px 6px 0px #1a1a1a;
-    transition: all 0.2s ease-in-out;
-    background-color: var(--bg-color);
-    color: #000000;
-}
-
-.itu-brutalist-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 12px 12px 0px #1a1a1a;
-}
-
-.form-control {
-    background-color: transparent !important;
-    border: 2px solid #1a1a1a !important;
-    color: #000000 !important;
-    transition: all 0.3s ease;
-}
-
-.itu-brutalist-form .form-control:focus {
-    border: 2px solid #1a1a1a !important;
-    box-shadow: 4px 4px 0px #1a1a1a !important;
-    outline: none;
-}
-
-.btn-outline-dark:hover {
-    background-color: var(--itu-vert);
-    border-color: var(--itu-vert) !important;
-    color: white;
-}
-
-.resultats-article {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    box-shadow: 8px 8px 0px #1a1a1a;
-}
-
-.btn-group {
-    border-radius: 0px !important;
-}
-
-.filter-btn {
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 2px solid transparent;
-    color: #6c757d;
-    background: transparent;
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    cursor: pointer;
-}
-.filter-btn.active {
-    color: #1a1a1a;
-    border: 2px solid #1a1a1a;
-}
-.filter-btn:hover {
-    color: #1a1a1a;
-}
-
-.merch-card {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.merch-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 8px 8px 0px #1a1a1a;
-}
-
-.merch-img-container {
-    aspect-ratio: 3 / 4;
-    position: relative;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-
-.merch-img-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition:
-        transform 0.5s ease,
-        opacity 0.4s ease;
-}
-
-.img-front {
-    z-index: 1;
-    opacity: 1;
-}
-
-.img-back {
-    z-index: 2;
-    opacity: 0;
-}
-
-.merch-card:hover .img-back {
-    opacity: 1;
-}
-.merch-card:hover .merch-img-container img {
-    transform: scale(1.05);
-}
-
-.merch-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60%;
-    background: linear-gradient(to top, var(--itu-bleu) 10%, transparent 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-}
-
-.merch-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1.5rem;
-    z-index: 3;
-    transition: transform 0.3s ease;
-    transform: translateY(10px);
-}
-
-.merch-title,
-.merch-price {
-    transition: color 0.3s ease;
-}
-
-.merch-card:hover .merch-overlay {
-    opacity: 1;
-}
-
-.merch-card:hover .merch-img-container img {
-    transform: scale(1.08);
-}
-
-.merch-card:hover .merch-info {
-    transform: translateY(0);
-}
-
-.merch-card:hover .merch-title {
-    color: #ffffff !important;
-}
-
-.merch-card:hover .merch-price {
-    color: var(--itu-vert) !important;
-}
-
-.actu-card {
-    border: 2px solid #1a1a1a;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    background-color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.actu-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0px var(--itu-bleu);
-}
-
-.actu-img-container {
-    height: 220px;
-    border-bottom: 2px solid #1a1a1a;
-    overflow: hidden;
-}
-.actu-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.actu-card:hover .actu-img-container img {
-    transform: scale(1.05);
-}
-
-.actu-text-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.actu-hero {
-    position: relative;
-    background-color: var(--itu-bleu);
-    z-index: 1;
-}
-
-.actu-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-image: var(--ascendant-pattern);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    opacity: 0.15;
-
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* État de départ : L'élément est caché et poussé BEAUCOUP plus bas (150px) */
-.reveal {
-    opacity: 0;
-    transform: translateY(150px);
-
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.delay-1 {
-    transition-delay: 0.15s;
-}
-.delay-2 {
-    transition-delay: 0.3s;
-}
-.delay-3 {
-    transition-delay: 0.45s;
-}
-
-.itu-bg-pattern {
-    position: relative;
-}
-
-.itu-bg-pattern::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: var(--stroke-pattern);
-    background-repeat: repeat;
-    background-position: center;
-    opacity: var(--itu-pattern-opacity, 0.1);
-    z-index: 0;
-    pointer-events: none;
-}
-
-.itu-bg-pattern > .container {
-    position: relative;
-    z-index: 1;
-}
-
-#searchInput {
-    border: none !important;
-    border-left: 2px solid #1a1a1a !important;
 }
