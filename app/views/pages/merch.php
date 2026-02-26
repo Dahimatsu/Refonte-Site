@@ -4,7 +4,8 @@ $merchs = [
         'id' => 'sweat-noir',
         'nom' => 'Sweater Noir',
         'prix' => '65 000 Ar',
-        'categorie' => 'sweats',
+        'categorie' => 'Vêtements',
+        'text_color' => '#ffffff',
         'image_front' => 'sweat-noir-front.jpg',
         'image_back' => 'sweat-noir-back.jpg'
     ],
@@ -12,7 +13,8 @@ $merchs = [
         'id' => 'sweat-blanc',
         'nom' => 'Sweater Blanc',
         'prix' => '65 000 Ar',
-        'categorie' => 'sweats',
+        'categorie' => 'Vêtements',
+        'text_color' => '#000000',
         'image_front' => 'sweat-blanc-front.jpg',
         'image_back' => 'sweat-blanc-back.jpg'
     ],
@@ -20,7 +22,8 @@ $merchs = [
         'id' => 'crewneck-blanc',
         'nom' => 'Crewneck Blanc',
         'prix' => '60 000 Ar',
-        'categorie' => 'sweats',
+        'categorie' => 'Vêtements',
+        'text_color' => '#ffffff',
         'image_front' => 'crewneck-blanc-front.jpg',
         'image_back' => 'crewneck-blanc-back.jpg'
     ],
@@ -28,7 +31,8 @@ $merchs = [
         'id' => 'tshirt-noir',
         'nom' => 'T-Shirt Noir',
         'prix' => '35 000 Ar',
-        'categorie' => 't-shirts',
+        'categorie' => 'Vêtements',
+        'text_color' => '#ffffff',
         'image_front' => 'tshirt-noir-front.jpg',
         'image_back' => 'tshirt-noir-back.jpg'
     ],
@@ -36,7 +40,8 @@ $merchs = [
         'id' => 'tshirt-blanc',
         'nom' => 'T-Shirt Blanc',
         'prix' => '35 000 Ar',
-        'categorie' => 't-shirts',
+        'categorie' => 'Vêtements',
+        'text_color' => '#000000',
         'image_front' => 'tshirt-blanc-front.jpg',
         'image_back' => 'tshirt-blanc-back.jpg'
     ],
@@ -44,7 +49,8 @@ $merchs = [
         'id' => 'mug-itu',
         'nom' => 'Mug >_ Coder',
         'prix' => '15 000 Ar',
-        'categorie' => 'accessoires',
+        'categorie' => 'Objets',
+        'text_color' => '#000000',
         'image_front' => 'mug.png',
         'image_back' => null
     ],
@@ -52,7 +58,8 @@ $merchs = [
         'id' => 'gourde-itu',
         'nom' => 'Gourde Isotherme',
         'prix' => '25 000 Ar',
-        'categorie' => 'accessoires',
+        'categorie' => 'Objets',
+        'text_color' => '#000000',
         'image_front' => 'gourde.png',
         'image_back' => 'gourde-all-view.png'
     ],
@@ -60,7 +67,8 @@ $merchs = [
         'id' => 'pyjama-bleu',
         'nom' => 'Pyjama Bleu',
         'prix' => '45 000 Ar',
-        'categorie' => 'others',
+        'categorie' => 'Vêtements',
+        'text_color' => '#000000',
         'image_front' => 'pyjama_bleu_front.jpg',
         'image_back' => 'pyjama_bleu_back.jpg'
     ],
@@ -68,7 +76,8 @@ $merchs = [
         'id' => 'pyjama-rose',
         'nom' => 'Pyjama Rose',
         'prix' => '45 000 Ar',
-        'categorie' => 'others',
+        'categorie' => 'Vêtements',
+        'text_color' => '#000000',
         'image_front' => 'pyjama_rose_front.jpg',
         'image_back' => 'pyjama_rose_back.jpg'
     ]
@@ -135,10 +144,10 @@ $categories = array_unique(array_column($merchs, 'categorie'));
                             <div class="merch-overlay"></div>
 
                             <div class="merch-info">
-                                <h5 class="fw-black mb-1 text-uppercase fs-4 merch-title" style="letter-spacing: -1px;">
+                                <h5 class="fw-black mb-1 text-uppercase fs-4 merch-title" style="letter-spacing: -1px; color: <?= $item['text_color'] ?>">
                                     <?= $item['nom'] ?>
                                 </h5>
-                                <p class="mb-0 font-monospace fw-bold merch-price fs-5">
+                                <p class="mb-0 font-monospace fw-bold merch-price fs-5" style="color: <?= $item['text_color'] ?>">
                                     >_ <?= $item['prix'] ?>
                                 </p>
                             </div>

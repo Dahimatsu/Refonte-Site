@@ -206,7 +206,7 @@ $hasResults = (
     <main>
         <?php require __DIR__ . '/pages/' . $page . '.php'; ?>
     </main>
-    
+
     <!-- Footer -->
     <footer class="itu-footer text-white pt-5" data-section-theme="dark">
         <section class="container py-5">
@@ -281,9 +281,9 @@ $hasResults = (
                     <p class="text-white opacity-75 mb-4">Restez informé des actualités et des prochaines admissions de
                         l'université.</p>
 
-                    <form action="#" method="POST" class="newsletter-form">
+                    <form action="/subscribe" method="POST" class="newsletter-form">
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control bg-transparent text-white border-secondary"
+                            <input type="email" name="emailNewsletter" class="form-control bg-transparent text-white border-secondary"
                                 placeholder="Votre email" aria-label="Votre email" required
                                 style="border-radius: 0; border-right: none" />
                             <button class="btn btn-itu-vert" type="submit" style="border-radius: 0; padding: 10px 20px"

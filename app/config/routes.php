@@ -15,6 +15,7 @@ use app\controllers\InscriptionController;
 use app\controllers\ResultatsController;
 use app\controllers\MerchController;
 use app\controllers\ActualiteController;
+use app\controllers\NewsletterController;
 
 /** 
  * @var Router $router 
@@ -76,6 +77,10 @@ $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/actualites', function () use ($app) {
 		ActualiteController::showActualite($app);
+	});
+
+	$router->post('/subscribe', function () use ($app) {
+		NewsletterController::subscribe($app);
 	});
 
 }, [ SecurityHeadersMiddleware::class ]);

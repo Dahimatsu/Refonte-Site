@@ -983,7 +983,6 @@ img {
     cursor: pointer;
 }
 
-/* Effet Brutaliste au survol de la carte entière */
 .merch-card:hover {
     transform: translateY(-8px);
     box-shadow: 8px 8px 0px #1a1a1a;
@@ -1008,33 +1007,32 @@ img {
         opacity 0.4s ease;
 }
 
-/* L'image de face */
+
 .img-front {
     z-index: 1;
     opacity: 1;
 }
 
-/* L'image de dos (cachée par défaut) */
+
 .img-back {
     z-index: 2;
     opacity: 0;
 }
 
-/* Au survol, on montre le dos s'il existe, et on zoome l'image visible */
+
 .merch-card:hover .img-back {
     opacity: 1;
 }
 .merch-card:hover .merch-img-container img {
-    transform: scale(1.05); /* Zoom très léger et élégant */
+    transform: scale(1.05); 
 }
 
-/* Le dégradé bleu caché par défaut */
 .merch-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60%; /* Ne prend que le bas de l'image */
+    height: 60%; 
     background: linear-gradient(to top, var(--itu-bleu) 10%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1054,7 +1052,6 @@ img {
 
 .merch-title,
 .merch-price {
-    color: #1a1a1a;
     transition: color 0.3s ease;
 }
 
@@ -1071,11 +1068,11 @@ img {
 }
 
 .merch-card:hover .merch-title {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .merch-card:hover .merch-price {
-    color: var(--itu-vert);
+    color: var(--itu-vert) !important;
 }
 
 .actu-card {
@@ -1090,7 +1087,7 @@ img {
 }
 .actu-card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0px var(--itu-bleu); /* Ombre bleue au survol */
+    box-shadow: 8px 8px 0px var(--itu-bleu);
 }
 
 .actu-img-container {
