@@ -9,7 +9,7 @@ class ContactController
         $app->render('layout', [
             'page' => 'contact',
             'title' => 'Contact',
-            'description' => 'Faites nous part de vos questions, suggestions ou demandes d\'informations supplémentaires. Nous sommes là pour vous aider et répondre à toutes vos préoccupations concernant nos programmes, les admissions ou tout autre sujet lié à IT University.'
+            'description' => 'Une question sur nos parcours en informatique ou les admissions ? Contactez l\'équipe de l\'IT University. Nous sommes là pour vous guider !'
         ]);
     }
 }

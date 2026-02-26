@@ -41,22 +41,6 @@ $merchs = [
         'image_back' => 'tshirt-blanc-back.jpg'
     ],
     [
-        'id' => 'pyjama-bleu',
-        'nom' => 'Pyjama Bleu',
-        'prix' => '45 000 Ar',
-        'categorie' => 'others',
-        'image_front' => 'pyjama_bleu_front.jpg',
-        'image_back' => 'pyjama_bleu_back.jpg'
-    ],
-    [
-        'id' => 'pyjama-rose',
-        'nom' => 'Pyjama Rose',
-        'prix' => '45 000 Ar',
-        'categorie' => 'others',
-        'image_front' => 'pyjama_rose_front.jpg',
-        'image_back' => 'pyjama_rose_back.jpg'
-    ],
-    [
         'id' => 'mug-itu',
         'nom' => 'Mug >_ Coder',
         'prix' => '15 000 Ar',
@@ -71,8 +55,26 @@ $merchs = [
         'categorie' => 'accessoires',
         'image_front' => 'gourde.png',
         'image_back' => 'gourde-all-view.png'
+    ],
+    [
+        'id' => 'pyjama-bleu',
+        'nom' => 'Pyjama Bleu',
+        'prix' => '45 000 Ar',
+        'categorie' => 'others',
+        'image_front' => 'pyjama_bleu_front.jpg',
+        'image_back' => 'pyjama_bleu_back.jpg'
+    ],
+    [
+        'id' => 'pyjama-rose',
+        'nom' => 'Pyjama Rose',
+        'prix' => '45 000 Ar',
+        'categorie' => 'others',
+        'image_front' => 'pyjama_rose_front.jpg',
+        'image_back' => 'pyjama_rose_back.jpg'
     ]
 ];
+
+$categories = array_unique(array_column($merchs, 'categorie'));
 ?>
 <section class="hero position-relative min-vh-100 d-flex align-items-center text-start" id="accueil">
 
@@ -97,7 +99,7 @@ $merchs = [
     </div>
 </section>
 
-<section class="py-5 mb-5"  data-section-theme="light">
+<section class="py-5 mb-5" data-section-theme="light">
     <div class="container">
 
         <div
@@ -106,34 +108,32 @@ $merchs = [
 
             <div class="d-flex flex-wrap gap-2" id="merch-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="t-shirts">T-Shirts</button>
-                <button class="filter-btn" data-filter="sweats">Sweats & Hoodie</button>
-                <button class="filter-btn" data-filter="accessoires">Accessoires</button>
-                <button class="filter-btn" data-filter="hats">Hats</button>
-                <button class="filter-btn" data-filter="others">Others</button>
+                <?php foreach ($categories as $categorie) { ?>
+                    <button class="filter-btn" data-filter="<?= $categorie ?>"><?= ucfirst($categorie) ?></button>
+                <?php } ?>
             </div>
         </div>
 
         <div class="row g-4" id="merch-grid">
-            
+
             <?php foreach ($merchs as $item): ?>
                 <div class="col-12 col-sm-6 col-lg-4 merch-item" data-category="<?= $item['categorie'] ?>">
-        
+
                     <a href="#produit-<?= $item['id'] ?>"
                         class="card rounded-0 border-0 h-100 merch-card bg-transparent text-decoration-none d-block">
-        
+
                         <div class="merch-img-container border border-dark border-2 w-100">
-        
+
                             <img src="/assets/images/merch/<?= $item['image_front'] ?>" class="img-front"
                                 alt="<?= $item['nom'] ?> - Face">
-        
+
                             <?php if (!empty($item['image_back'])): ?>
                                 <img src="/assets/images/merch/<?= $item['image_back'] ?>" class="img-back"
                                     alt="<?= $item['nom'] ?> - Dos">
                             <?php endif; ?>
-        
+
                             <div class="merch-overlay"></div>
-        
+
                             <div class="merch-info">
                                 <h5 class="fw-black mb-1 text-uppercase fs-4 merch-title" style="letter-spacing: -1px;">
                                     <?= $item['nom'] ?>
@@ -143,12 +143,12 @@ $merchs = [
                                 </p>
                             </div>
                         </div>
-        
+
                     </a>
-        
+
                 </div>
             <?php endforeach; ?>
-        
+
         </div>
 
         <div id="no-products-msg" class="text-center py-5 d-none">

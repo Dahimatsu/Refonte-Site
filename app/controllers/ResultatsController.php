@@ -40,7 +40,7 @@ class ResultatsController
         $app->render('layout', [
             'page' => 'resultats',
             'title' => 'Résultats d\'Admission',
-            'description' => 'Découvrez la liste des admis et la liste d\'attente de l\'IT University pour la rentrée.',
+            'description' => 'Découvrez la liste des admis de l\'IT University pour la rentrée.',
             'candidats' => $tousLesCandidats, 
             'parcours' => $parcours
         ]);

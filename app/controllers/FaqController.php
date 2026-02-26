@@ -9,7 +9,7 @@ class FaqController
         $app->render('layout', [
             'page' => 'faq',
             'title' => 'FAQ',
-            'description' => 'IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011,qui a ppour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication.'
+            'description' => 'Vous avez des questions sur l\'IT University ? Admissions, modalités de paiement, diplômes et vie étudiante : trouvez toutes les réponses dans notre FAQ.'
         ]);
     }
 }

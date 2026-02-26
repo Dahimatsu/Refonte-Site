@@ -9,7 +9,7 @@ class FormationController
         $app->render('layout', [
             'page' => 'info',
             'title' => 'Formations Informatique',
-            'description' => 'IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011,qui a ppour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication.'
+            'description' => 'Formez-vous aux métiers du développement à l\'IT University. De la programmation à l\'architecture logicielle, créez l\'avenir du numérique avec nous.'
         ]);
     }
 
@@ -18,7 +18,7 @@ class FormationController
         $app->render('layout', [
             'page' => 'design',
             'title' => 'Formations Design',
-            'description' => 'IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011,qui a ppour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication.'
+            'description' => 'Révélez votre créativité avec la formation Design de l\'IT University. Maîtrisez l\'UI/UX, le graphisme et la création numérique. Lancez votre carrière !'
         ]);
     }
 }

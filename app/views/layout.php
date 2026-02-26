@@ -5,7 +5,7 @@ $description ??= 'IT University est un établissement d’enseignement supérieu
 
 $cspNonce = Flight::get('csp_nonce');
 
-$navlinks = [
+$offcanvas_links = [
     ['label' => 'Accueil', 'href' => '/'],
     [
         'label' => 'Parcours',
@@ -19,6 +19,16 @@ $navlinks = [
     ['label' => 'MBDS', 'href' => '/mbds'],
     ['label' => 'BIHAR', 'href' => '/bihar'],
     ['label' => 'Merch', 'href' => '/merch'],
+    ['label' => 'FAQ', 'href' => '/faq'],
+    ['label' => 'Contact', 'href' => '/contact'],
+];
+
+$footer_links = [
+    ['label' => 'Vos Diplômes', 'href' => '/diplomes'],
+    ['label' => 'Étudier avec nous', 'href' => '/formations'],
+    ['label' => 'ITUnited - Espace Etudiant', 'href' => '#'],
+    ['label' => 'Merch', 'href' => '/merch'],
+    ['label' => 'Actualités', 'href' => '/actualites'],
     ['label' => 'FAQ', 'href' => '/faq'],
     ['label' => 'Contact', 'href' => '/contact'],
 ];
@@ -148,7 +158,7 @@ $hasResults = (
 
         <div class="offcanvas-body d-flex flex-column justify-content-center px-4 px-lg-5">
             <nav class="nav flex-column itu-big-menu">
-                <?php foreach ($navlinks as $link) { ?>
+                <?php foreach ($offcanvas_links as $link) { ?>
 
                     <?php if (isset($link['sublinks'])) { ?>
                         <div class="nav-item itu-nav-dropdown">
@@ -196,6 +206,7 @@ $hasResults = (
     <main>
         <?php require __DIR__ . '/pages/' . $page . '.php'; ?>
     </main>
+    
     <!-- Footer -->
     <footer class="itu-footer text-white pt-5" data-section-theme="dark">
         <section class="container py-5">
@@ -214,10 +225,16 @@ $hasResults = (
                     <div class="d-flex gap-4 mb-4 fs-4">
                         <a href="https://www.facebook.com/profile.php?id=100064841042452" target="_blank"
                             rel="noopener noreferrer" class="social-link" title="Facebook"
-                            aria-label="Visitez notre page Facebook"><i class="bi bi-facebook"></i></a>
+                            aria-label="Visitez notre page Facebook"><i class="bi bi-facebook"></i>
+                        </a>
                         <a href="https://www.linkedin.com/company/it-university-mg" target="_blank"
                             rel="noopener noreferrer" class="social-link" title="LinkedIn"
-                            aria-label="Visitez notre page LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            aria-label="Visitez notre page LinkedIn"><i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://discord.gg/DJFMjqqpWE" target="_blank"
+                            rel="noopener noreferrer" class="social-link" title="Discord"
+                            aria-label="Visitez notre serveur Discord"><i class="bi bi-discord"></i>
+                        </a>
                     </div>
 
                     <article class="mt-4">
@@ -249,10 +266,13 @@ $hasResults = (
                 <nav class="col-lg-3 mt-lg-5 pt-lg-4" aria-label="Liens rapides du pied de page">
                     <h5 class="fw-bold mb-4 fs-4" style="color: var(--itu-vert)">Découvrir</h5>
                     <ul class="list-unstyled footer-links">
-                        <li class="mb-3"><a href="/diplomes">Vos Diplômes</a></li>
-                        <li class="mb-3"><a href="/formations">Étudier avec nous</a></li>
-                        <li class="mb-3"><a href="/faq">FAQ</a></li>
-                        <li class="mb-3"><a href="/contact">Contact</a></li>
+                        <?php foreach ($footer_links as $link) { ?>
+                            <li>
+                                <a href="<?= $link['href'] ?>" class="text-decoration-none footer-link">
+                                    <?= $link['label'] ?>
+                                </a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </nav>
 

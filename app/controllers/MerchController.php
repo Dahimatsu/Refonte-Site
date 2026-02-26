@@ -9,7 +9,7 @@ class MerchController
         $app->render('layout', [
             'page' => 'merch',
             'title' => 'Merchandise',
-            'description' => 'IT University est un établissement d’enseignement supérieur privé en informatique créé en 2011,qui a pour principal objectif de former les futurs professionnels dans les métiers des nouvelles technologies de l’information et de la communication.'
+            'description' => 'Découvrez la boutique officielle de l\'IT University. Sweats, t-shirts et accessoires premium pensés pour les devs. Portez fièrement nos couleurs !'
         ]);
     }
 }
