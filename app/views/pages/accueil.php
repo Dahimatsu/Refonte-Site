@@ -7,7 +7,7 @@ $partenaires = [
     ['src' => 'axian.png', 'alt' => 'Groupe Axian', 'link' => 'https://www.axian-group.com/'],
     ['src' => 'bred.png', 'alt' => 'BRED Banque Populaire', 'link' => 'https://www.bred.mg/'],
     ['src' => 'accesbanque.png', 'alt' => 'AccèsBanque Madagascar', 'link' => 'https://www.accesbanque.mg/'],
-    ['src' => 'bassan.png', 'alt' => 'Groupe Bassan', 'link' => 'https://www.bassan.mg/'],
+    ['src' => 'basan.png', 'alt' => 'Groupe Basan', 'link' => 'https://www.basan.mg/'],
     ['src' => 'qdata.png', 'alt' => 'Q-Data', 'link' => 'https://www.facebook.com/qdatamadagascar/'],
     ['src' => 'softwell.png', 'alt' => 'Softwell', 'link' => 'https://www.softwell.mg/'],
     ['src' => 'asisten.png', 'alt' => 'Asisten', 'link' => 'https://asisten-travel.com/'],
